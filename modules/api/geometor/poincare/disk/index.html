@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../../../../../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geometor.poincare.disk &mdash; GEOMETOR • poincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../../../../../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../../../../../_static/favicon.ico" />
+</head>
+
+<body class="book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../../../../../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../../../../../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="../../../../../science_and_hypothesis/index.html"  >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="../../../../../demos/index.html"  >demos</a>
+        </li>
+        <li>
+          <a href="../../../../../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../../../../index.html" class="is-active" aria-selected="true" >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../../../../../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-header-breadcrumbs book-header-badges" role="navigation" aria-label="Breadcrumbs">
+            <a class="book-crumb-link" href="../../../../index.html">modules</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../concordance/index.html" title="geometor.poincare.concordance">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../render/index.html" title="geometor.poincare.render"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content" role="main">
+        <section class="level-1" id="module-geometor.poincare.disk">
+        <span id="geometor-poincare-disk"></span><h1>geometor.poincare.disk<a class="headerlink" href="#module-geometor.poincare.disk" title="Link to this heading">¶</a></h1>
+        <p>Exact symbolic constructions in the Poincaré Conformal Hyperbolic Disk Model.</p>
+        <p>Implements Henri Poincaré’s <em>Translation Dictionary</em> (<em>La Science et l’Hypothèse</em>,
+        Part II, Chs. III–V, 1902) inside <code class="docutils literal notranslate"><span class="pre">geometor.model</span></code> using 100% exact SymPy symbolic
+        algebra over <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> and closed-form quadratic extensions—with zero
+        floating-point coordinates.</p>
+        <p>Because every hyperbolic geodesic in the unit disk
+        <span class="math notranslate nohighlight">\(\mathbb{D} = \{(x, y) : x^2 + y^2 &lt; 1\}\)</span> is either a Euclidean diameter through
+        the center <span class="math notranslate nohighlight">\(O = (0, 0)\)</span> or a Euclidean circle cutting the horizon circle
+        <span class="math notranslate nohighlight">\(\Omega: x^2 + y^2 = 1\)</span> orthogonally, <code class="docutils literal notranslate"><span class="pre">geometor.model</span></code>’s straightedge-and-compass
+        kernel constructs hyperbolic lines, circle inversions, limiting horoparallels,
+        ultraparallels, ideal triangles, Saccheri quadrilaterals, Weierstrass–Beltrami–Klein
+        projections, and Wildberger’s Rational Hyperbolic Quadrances with complete algebraic
+        exactness.</p>
+        <section class="level-2" id="attributes">
+        <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_saccheri_triangle_defect" title="geometor.poincare.disk.construct_saccheri_triangle_defect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_saccheri_triangle_defect</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="classes">
+        <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HyperbolicGeodesic</span></code></a></p></td>
+        <td><p>Exact hyperbolic geodesic in the Poincaré Conformal Disk <span class="math notranslate nohighlight">\(\mathbb{D}\)</span>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.HyperbolicMetricReport" title="geometor.poincare.disk.HyperbolicMetricReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HyperbolicMetricReport</span></code></a></p></td>
+        <td><p>Exact cross-ratio and Rational Hyperbolic Quadrance invariants for <span class="math notranslate nohighlight">\(P, Q \in \mathbb{D}\)</span>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.UltraparallelPencil" title="geometor.poincare.disk.UltraparallelPencil"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UltraparallelPencil</span></code></a></p></td>
+        <td><p>Hyperbolic parallel &amp; ultraparallel pencil demonstrating Postulate V independence.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.IdealTriangleResult" title="geometor.poincare.disk.IdealTriangleResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IdealTriangleResult</span></code></a></p></td>
+        <td><p>Exact Pythagorean ideal hyperbolic triangle on <span class="math notranslate nohighlight">\(\partial\Omega\)</span> with <span class="math notranslate nohighlight">\(0^\circ\)</span> angles.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.SaccheriDefectResult" title="geometor.poincare.disk.SaccheriDefectResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SaccheriDefectResult</span></code></a></p></td>
+        <td><p>Exact rational hyperbolic right-triangle &amp; Saccheri quadrilateral defect proof.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.DedekindCutResult" title="geometor.poincare.disk.DedekindCutResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DedekindCutResult</span></code></a></p></td>
+        <td><p>Exact model for Unit 1: Dedekind continuum cut (<span class="math notranslate nohighlight">\(\sqrt{2}/2\)</span>) &amp; rational thresholds.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.HeatedDiskResult" title="geometor.poincare.disk.HeatedDiskResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">HeatedDiskResult</span></code></a></p></td>
+        <td><p>Exact model for Unit 3: Poincaré's Heated Disk optical rays &amp; isothermals (Ch. IV).</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.BeltramiKleinBridgeResult" title="geometor.poincare.disk.BeltramiKleinBridgeResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BeltramiKleinBridgeResult</span></code></a></p></td>
+        <td><p>Exact straightedge correspondence between Poincaré conformal arcs &amp; Beltrami–Klein chords.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.StellarParallaxResult" title="geometor.poincare.disk.StellarParallaxResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StellarParallaxResult</span></code></a></p></td>
+        <td><p>Exact model for Unit 4: Stellar parallax triangle &amp; Poincaré conventionalism (Ch. V § 3).</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="functions">
+        <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_unit_horizon" title="geometor.poincare.disk.construct_unit_horizon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_unit_horizon</span></code></a>(model) → tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Circle]</p></td>
+        <td><p>Ensure the unit horizon circle <span class="math notranslate nohighlight">\(\Omega: x^2 + y^2 = 1\)</span> exists in <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.euclidean_tangent_at_circle_point" title="geometor.poincare.disk.euclidean_tangent_at_circle_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">euclidean_tangent_at_circle_point</span></code></a>(model, circle, ...) → sympy.geometry.Line2D</p></td>
+        <td><p>Construct the Euclidean tangent line to <code class="docutils literal notranslate"><span class="pre">circle</span></code> at boundary point <code class="docutils literal notranslate"><span class="pre">pt_on_circle</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_inversion_in_horizon" title="geometor.poincare.disk.construct_inversion_in_horizon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_inversion_in_horizon</span></code></a>(model, P, *[, label]) → sympy.geometry.Point2D</p></td>
+        <td><p>Construct the exact Euclidean inverse <span class="math notranslate nohighlight">\(P^* = P / \|P\|^2\)</span> in <span class="math notranslate nohighlight">\(\Omega: x^2+y^2=1\)</span>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_hyperbolic_geodesic" title="geometor.poincare.disk.construct_hyperbolic_geodesic"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_hyperbolic_geodesic</span></code></a>(model, P, Q, *[, ...]) → HyperbolicGeodesic</p></td>
+        <td><p>Construct the unique hyperbolic geodesic through <span class="math notranslate nohighlight">\(P, Q \in \overline{\mathbb{D}}\)</span>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.hyperbolic_cross_ratio_and_quadrance" title="geometor.poincare.disk.hyperbolic_cross_ratio_and_quadrance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hyperbolic_cross_ratio_and_quadrance</span></code></a>(P, Q[, U, V]) → HyperbolicMetricReport</p></td>
+        <td><p>Compute the exact algebraic cross-ratio and Wildberger's Rational Hyperbolic Quadrance.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_ultraparallels_through_point" title="geometor.poincare.disk.construct_ultraparallels_through_point"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_ultraparallels_through_point</span></code></a>([model, L_hyp, P]) → UltraparallelPencil</p></td>
+        <td><p>Construct two limiting horoparallels and two ultraparallels to <code class="docutils literal notranslate"><span class="pre">L_hyp</span></code> through <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_ideal_hyperbolic_triangle" title="geometor.poincare.disk.construct_ideal_hyperbolic_triangle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_ideal_hyperbolic_triangle</span></code></a>([model]) → IdealTriangleResult</p></td>
+        <td><p>Construct the exact rational ideal hyperbolic triangle on <span class="math notranslate nohighlight">\(U_1, U_2, U_3 \in \partial\Omega\)</span>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_saccheri_triangleDefect" title="geometor.poincare.disk.construct_saccheri_triangleDefect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_saccheri_triangleDefect</span></code></a>([model]) → SaccheriDefectResult</p></td>
+        <td><p>Construct an exact hyperbolic right triangle &amp; Saccheri quadrilateral proving defect &gt; 0.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_dedekind_continuum_cut" title="geometor.poincare.disk.construct_dedekind_continuum_cut"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_dedekind_continuum_cut</span></code></a>([model]) → DedekindCutResult</p></td>
+        <td><p>Construct the incommensurable diagonal-circle Dedekind cut for Chs. I–II.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_heated_disk_optical_rays" title="geometor.poincare.disk.construct_heated_disk_optical_rays"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_heated_disk_optical_rays</span></code></a>([model]) → HeatedDiskResult</p></td>
+        <td><p>Construct Poincaré's Heated-Disk optical world (<span class="math notranslate nohighlight">\(T \propto 1 - r^2,\; n \propto (1-r^2)^{-1}\)</span>).</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_beltrami_klein_bridge" title="geometor.poincare.disk.construct_beltrami_klein_bridge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_beltrami_klein_bridge</span></code></a>([model]) → BeltramiKleinBridgeResult</p></td>
+        <td><p>Construct the exact Weierstrass radial projection <span class="math notranslate nohighlight">\(K(P) = \frac{2P}{1 + \|P\|^2}\)</span>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.disk.construct_stellar_parallax_conventionalism" title="geometor.poincare.disk.construct_stellar_parallax_conventionalism"><code class="xref py py-obj docutils literal notranslate"><span class="pre">construct_stellar_parallax_conventionalism</span></code></a>([model]) → StellarParallaxResult</p></td>
+        <td><p>Construct Poincaré's astronomical parallax triangle (Ch. V, <em>Experience and Geometry</em>).</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="module-contents">
+        <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_unit_horizon">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_unit_horizon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_unit_horizon" title="Link to this definition">¶</a></dt>
+        <dd><p>Ensure the unit horizon circle <span class="math notranslate nohighlight">\(\Omega: x^2 + y^2 = 1\)</span> exists in <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>model</strong> – Active <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code> (recommended <code class="docutils literal notranslate"><span class="pre">auto_intersect=False</span></code>).</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Tuple <code class="docutils literal notranslate"><span class="pre">(O,</span> <span class="pre">Ex,</span> <span class="pre">Omega)</span></code> consisting of center <code class="docutils literal notranslate"><span class="pre">O</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">0)</span></code>, horizon unit point
+        <code class="docutils literal notranslate"><span class="pre">Ex</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">0)</span></code>, and Euclidean unit circle <code class="docutils literal notranslate"><span class="pre">Omega</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.euclidean_tangent_at_circle_point">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">euclidean_tangent_at_circle_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Circle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pt_on_circle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sympy.geometry.Line2D</span></span></span><a class="headerlink" href="#geometor.poincare.disk.euclidean_tangent_at_circle_point" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the Euclidean tangent line to <code class="docutils literal notranslate"><span class="pre">circle</span></code> at boundary point <code class="docutils literal notranslate"><span class="pre">pt_on_circle</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>model</strong> – Active <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code>.</p></li>
+        <li><p><strong>circle</strong> – Circle element whose center is registered or constructible in <code class="docutils literal notranslate"><span class="pre">model</span></code>.</p></li>
+        <li><p><strong>pt_on_circle</strong> – Point lying on <code class="docutils literal notranslate"><span class="pre">circle</span></code>.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Exact <code class="docutils literal notranslate"><span class="pre">spg.Line2D</span></code> tangent to <code class="docutils literal notranslate"><span class="pre">circle</span></code> at <code class="docutils literal notranslate"><span class="pre">pt_on_circle</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_inversion_in_horizon">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_inversion_in_horizon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">sympy.geometry.Point2D</span></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_inversion_in_horizon" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the exact Euclidean inverse <span class="math notranslate nohighlight">\(P^* = P / \|P\|^2\)</span> in <span class="math notranslate nohighlight">\(\Omega: x^2+y^2=1\)</span>.</p>
+        <p>Uses pure straightedge-and-compass geometry inside <code class="docutils literal notranslate"><span class="pre">model</span></code>:</p>
+        <ul class="simple">
+        <li><p>If <span class="math notranslate nohighlight">\(P \in \partial\Omega\)</span> (<span class="math notranslate nohighlight">\(\|P\|^2 = 1\)</span>), returns <span class="math notranslate nohighlight">\(P\)</span> itself.</p></li>
+        <li><p>If <span class="math notranslate nohighlight">\(0 &lt; \|P\|^2 &lt; 1\)</span> (<span class="math notranslate nohighlight">\(P \in \mathbb{D} \setminus \{O\}\)</span>), erects the chord
+        perpendicular to <span class="math notranslate nohighlight">\(OP\)</span> at <span class="math notranslate nohighlight">\(P\)</span> meeting <span class="math notranslate nohighlight">\(\Omega\)</span> at <span class="math notranslate nohighlight">\(T_1\)</span>, then
+        intersects the horizon tangent at <span class="math notranslate nohighlight">\(T_1\)</span> with ray <span class="math notranslate nohighlight">\(OP\)</span> (Euclid VI.8:
+        <span class="math notranslate nohighlight">\(|OP|\cdot|OP^*| = |OT_1|^2 = 1\)</span>).</p></li>
+        <li><p>If <span class="math notranslate nohighlight">\(\|P\|^2 &gt; 1\)</span>, constructs the Thales circle on diameter <span class="math notranslate nohighlight">\(OP\)</span> meeting
+        <span class="math notranslate nohighlight">\(\Omega\)</span> at <span class="math notranslate nohighlight">\(T_1, T_2\)</span> and intersects polar chord <span class="math notranslate nohighlight">\(T_1 T_2\)</span> with <span class="math notranslate nohighlight">\(OP\)</span>.</p></li>
+        </ul>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>model</strong> – Active <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code>.</p></li>
+        <li><p><strong>P</strong> – Exact non-origin point <code class="docutils literal notranslate"><span class="pre">spg.Point2D</span></code>.</p></li>
+        <li><p><strong>label</strong> – Optional label for the constructed inverse point <code class="docutils literal notranslate"><span class="pre">P*</span></code>.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Exact inverse point <span class="math notranslate nohighlight">\(P^*\)</span> satisfying <span class="math notranslate nohighlight">\(Q(O, P) \cdot Q(O, P^*) = 1\)</span>.</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">P</span></code> contains floating-point coordinates.</p></li>
+        <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">P</span></code> coincides with the horizon center <code class="docutils literal notranslate"><span class="pre">O</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">0)</span></code>.</p></li>
+        </ul>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">HyperbolicGeodesic</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact hyperbolic geodesic in the Poincaré Conformal Disk <span class="math notranslate nohighlight">\(\mathbb{D}\)</span>.</p>
+        <p>Supports both named attribute inspection (<code class="docutils literal notranslate"><span class="pre">.carrier</span></code>, <code class="docutils literal notranslate"><span class="pre">.U</span></code>, <code class="docutils literal notranslate"><span class="pre">.V</span></code>,
+        <code class="docutils literal notranslate"><span class="pre">.ideal_points</span></code>) and 3-tuple unpacking <code class="docutils literal notranslate"><span class="pre">carrier,</span> <span class="pre">U,</span> <span class="pre">V</span> <span class="pre">=</span> <span class="pre">geodesic</span></code>.
+        Stores the underlying <code class="docutils literal notranslate"><span class="pre">spg.Line2D</span></code> diameter or orthogonal <code class="docutils literal notranslate"><span class="pre">spg.Circle</span></code>
+        carrier, ordered ideal horizon endpoints <code class="docutils literal notranslate"><span class="pre">(U,</span> <span class="pre">V)</span></code>, optional inverse point
+        <span class="math notranslate nohighlight">\(P^*\)</span>, Euclidean circle center, squared radius <span class="math notranslate nohighlight">\(r^2 = |OC|^2 - 1\)</span>,
+        and exact orthogonality residual <span class="math notranslate nohighlight">\(|OC|^2 - r^2 - 1 = 0\)</span>.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.carrier">
+        <span class="sig-name descname"><span class="pre">carrier</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Line2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.carrier" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.U">
+        <span class="sig-name descname"><span class="pre">U</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.U" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.V">
+        <span class="sig-name descname"><span class="pre">V</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.V" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.inverse_point">
+        <span class="sig-name descname"><span class="pre">inverse_point</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.inverse_point" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.is_diameter">
+        <span class="sig-name descname"><span class="pre">is_diameter</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.is_diameter" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.center">
+        <span class="sig-name descname"><span class="pre">center</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.center" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.radius_squared">
+        <span class="sig-name descname"><span class="pre">radius_squared</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.radius_squared" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.orthogonality_residual">
+        <span class="sig-name descname"><span class="pre">orthogonality_residual</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.orthogonality_residual" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py property">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.ideal_points">
+        <span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ideal_points</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.ideal_points" title="Link to this definition">¶</a></dt>
+        <dd><p>Return ordered ideal boundary endpoints <code class="docutils literal notranslate"><span class="pre">(U,</span> <span class="pre">V)</span></code> on <span class="math notranslate nohighlight">\(\partial\Omega\)</span>.</p>
+        </dd></dl>
+
+        <dl class="py method">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicGeodesic.__iter__">
+        <span class="sig-name descname"><span class="pre">__iter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">collections.abc.Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Line2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicGeodesic.__iter__" title="Link to this definition">¶</a></dt>
+        <dd><p>Yield <code class="docutils literal notranslate"><span class="pre">(carrier,</span> <span class="pre">U,</span> <span class="pre">V)</span></code> for ergonomic tuple unpacking.</p>
+        </dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_hyperbolic_geodesic">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_hyperbolic_geodesic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">classes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_hyperbolic_geodesic" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the unique hyperbolic geodesic through <span class="math notranslate nohighlight">\(P, Q \in \overline{\mathbb{D}}\)</span>.</p>
+        <p>Implements Poincaré’s Translation Dictionary (<em>La Science et l’Hypothèse</em>, Ch. III):</p>
+        <ul class="simple">
+        <li><p>When <span class="math notranslate nohighlight">\(O, P, Q\)</span> are collinear, constructs the Euclidean diameter line <span class="math notranslate nohighlight">\(PQ\)</span>
+        and intersects it with <span class="math notranslate nohighlight">\(\Omega\)</span> to obtain antipodal ideal points <span class="math notranslate nohighlight">\(U, V\)</span>.</p></li>
+        <li><p>When <span class="math notranslate nohighlight">\(O, P, Q\)</span> are non-collinear and at least one point lies strictly inside
+        <span class="math notranslate nohighlight">\(\mathbb{D}\)</span>, constructs its horizon inverse <span class="math notranslate nohighlight">\(P^* = P / \|P\|^2\)</span> and
+        circumscribes the unique Euclidean circle through <span class="math notranslate nohighlight">\((P, Q, P^*)\)</span>. By power-of-a-point
+        (<span class="math notranslate nohighlight">\(|OP|\cdot|OP^*| = 1 = R_\Omega^2\)</span>), this circle cuts <span class="math notranslate nohighlight">\(\Omega\)</span> orthogonally
+        at two exact ideal points <span class="math notranslate nohighlight">\(U, V \in \partial\Omega\)</span>.</p></li>
+        <li><p>When both <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> lie on <span class="math notranslate nohighlight">\(\partial\Omega\)</span> (ideal geodesic),
+        intersects the Euclidean horizon tangents at <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(Q\)</span> to locate the
+        exact orthogonal circle center <span class="math notranslate nohighlight">\(C\)</span>.</p></li>
+        </ul>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>model</strong> – Active <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code>.</p></li>
+        <li><p><strong>P</strong> – First point in <span class="math notranslate nohighlight">\(\overline{\mathbb{D}}\)</span>.</p></li>
+        <li><p><strong>Q</strong> – Second distinct point in <span class="math notranslate nohighlight">\(\overline{\mathbb{D}}\)</span>.</p></li>
+        <li><p><strong>classes</strong> – Optional CSS/semantic class tags for the constructed geodesic element.</p></li>
+        <li><p><strong>label</strong> – Optional identifier for the constructed geodesic element.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Populated <a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><code class="xref py py-class docutils literal notranslate"><span class="pre">HyperbolicGeodesic</span></code></a> dataclass (unpackable as <code class="docutils literal notranslate"><span class="pre">(carrier,</span> <span class="pre">U,</span> <span class="pre">V)</span></code>).</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>TypeError</strong> – If <code class="docutils literal notranslate"><span class="pre">P</span></code> or <code class="docutils literal notranslate"><span class="pre">Q</span></code> contains floating-point coordinates.</p></li>
+        <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">==</span> <span class="pre">Q</span></code> or either point lies outside <span class="math notranslate nohighlight">\(\overline{\mathbb{D}}\)</span>.</p></li>
+        </ul>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">HyperbolicMetricReport</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact cross-ratio and Rational Hyperbolic Quadrance invariants for <span class="math notranslate nohighlight">\(P, Q \in \mathbb{D}\)</span>.</p>
+        <p>Unites Poincaré’s cross-ratio logarithmic distance with Norman Wildberger’s
+        transcendental-free Universal Hyperbolic Geometry (UHG) and Cayley–Klein quadrances:</p>
+        <ul class="simple">
+        <li><p><code class="docutils literal notranslate"><span class="pre">cross_ratio</span></code>: <span class="math notranslate nohighlight">\(\chi(P, Q; U, V) = \frac{|PV|\cdot|QU|}{|PU|\cdot|QV|} \ge 1\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">cross_ratio_squared</span></code>: <span class="math notranslate nohighlight">\(\chi^2(P, Q; U, V) = \frac{Q(P,V)\,Q(Q,U)}{Q(P,U)\,Q(Q,V)}\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">poincare_distance</span></code>: <span class="math notranslate nohighlight">\(d_{\mathbb{H}}(P, Q) = \ln \chi(P, Q; U, V)\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">conformal_quadrance</span></code>: <span class="math notranslate nohighlight">\(\tau(P, Q) = \frac{\|P-Q\|^2}{\|1 - \bar{P}Q\|^2} = \left(\frac{\chi-1}{\chi+1}\right)^2 \in [0, 1)\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">wildberger_uhg_quadrance</span></code>: <span class="math notranslate nohighlight">\(q_{\text{UHG}}(P, Q) = -\frac{4\tau}{(1-\tau)^2} = -\sinh^2 d_{\mathbb{H}}(P, Q) \in \mathbb{Q}(P, Q)\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">cayley_klein_quadrance</span></code>: <span class="math notranslate nohighlight">\(q_{\text{CK}}(P, Q) = \frac{4\tau}{(1+\tau)^2} = \tanh^2 d_{\mathbb{H}}(P, Q) \in [0, 1)\)</span></p></li>
+        <li><p><code class="docutils literal notranslate"><span class="pre">isometric_delta</span></code>: <span class="math notranslate nohighlight">\(\delta(P, Q) = \frac{2\|P-Q\|^2}{(1-\|P\|^2)(1-\|Q\|^2)} = \cosh d_{\mathbb{H}}(P, Q) - 1\)</span></p></li>
+        </ul>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.cross_ratio">
+        <span class="sig-name descname"><span class="pre">cross_ratio</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.cross_ratio" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.cross_ratio_squared">
+        <span class="sig-name descname"><span class="pre">cross_ratio_squared</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.cross_ratio_squared" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.poincare_distance">
+        <span class="sig-name descname"><span class="pre">poincare_distance</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.poincare_distance" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.conformal_quadrance">
+        <span class="sig-name descname"><span class="pre">conformal_quadrance</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.conformal_quadrance" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.wildberger_uhg_quadrance">
+        <span class="sig-name descname"><span class="pre">wildberger_uhg_quadrance</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.wildberger_uhg_quadrance" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.cayley_klein_quadrance">
+        <span class="sig-name descname"><span class="pre">cayley_klein_quadrance</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.cayley_klein_quadrance" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HyperbolicMetricReport.isometric_delta">
+        <span class="sig-name descname"><span class="pre">isometric_delta</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.HyperbolicMetricReport.isometric_delta" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.hyperbolic_cross_ratio_and_quadrance">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">hyperbolic_cross_ratio_and_quadrance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">V</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.HyperbolicMetricReport" title="geometor.poincare.disk.HyperbolicMetricReport"><span class="pre">HyperbolicMetricReport</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.hyperbolic_cross_ratio_and_quadrance" title="Link to this definition">¶</a></dt>
+        <dd><p>Compute the exact algebraic cross-ratio and Wildberger’s Rational Hyperbolic Quadrance.</p>
+        <p>Eliminates transcendental logarithms for algebraic comparison while verifying the
+        exact polynomial bridge <span class="math notranslate nohighlight">\((1 - \tau)^2 (\chi^2 + 1)^2 = 4 (1 + \tau)^2 \chi^2\)</span>
+        between the 4-point circle chord cross-ratio <span class="math notranslate nohighlight">\(\chi(P, Q; U, V)\)</span> and the
+        purely rational conformal/UHG quadrances over <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>P</strong> – First interior point <span class="math notranslate nohighlight">\(P \in \mathbb{D}\)</span>.</p></li>
+        <li><p><strong>Q</strong> – Second interior point <span class="math notranslate nohighlight">\(Q \in \mathbb{D}\)</span>.</p></li>
+        <li><p><strong>U</strong> – First ideal endpoint on <span class="math notranslate nohighlight">\(\partial\Omega\)</span> (constructed automatically if <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p></li>
+        <li><p><strong>V</strong> – Second ideal endpoint on <span class="math notranslate nohighlight">\(\partial\Omega\)</span> (constructed automatically if <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Populated <a class="reference internal" href="#geometor.poincare.disk.HyperbolicMetricReport" title="geometor.poincare.disk.HyperbolicMetricReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">HyperbolicMetricReport</span></code></a> with 100% exact SymPy invariants.</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>TypeError</strong> – If any point contains <code class="docutils literal notranslate"><span class="pre">sp.Float</span></code> coordinates.</p></li>
+        <li><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">P</span></code> or <code class="docutils literal notranslate"><span class="pre">Q</span></code> does not lie strictly inside <span class="math notranslate nohighlight">\(\mathbb{D}\)</span>.</p></li>
+        </ul>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">UltraparallelPencil</span></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil" title="Link to this definition">¶</a></dt>
+        <dd><p>Hyperbolic parallel &amp; ultraparallel pencil demonstrating Postulate V independence.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil.base_geodesic">
+        <span class="sig-name descname"><span class="pre">base_geodesic</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil.base_geodesic" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil.point">
+        <span class="sig-name descname"><span class="pre">point</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil.point" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil.limiting_parallels">
+        <span class="sig-name descname"><span class="pre">limiting_parallels</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil.limiting_parallels" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.UltraparallelPencil.ultraparallels">
+        <span class="sig-name descname"><span class="pre">ultraparallels</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.UltraparallelPencil.ultraparallels" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_ultraparallels_through_point">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_ultraparallels_through_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_hyp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">sympy.geometry.Line2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">sympy.geometry.Point2D</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.UltraparallelPencil" title="geometor.poincare.disk.UltraparallelPencil"><span class="pre">UltraparallelPencil</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_ultraparallels_through_point" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct two limiting horoparallels and two ultraparallels to <code class="docutils literal notranslate"><span class="pre">L_hyp</span></code> through <code class="docutils literal notranslate"><span class="pre">P</span></code>.</p>
+        <p>Demonstrates inside <code class="docutils literal notranslate"><span class="pre">geometor.model</span></code> that Euclid’s Fifth Postulate fails in the
+        Poincaré disk while Postulates I–IV (in Poincaré’s dictionary) hold identically:
+        through a single point <span class="math notranslate nohighlight">\(P \notin L_{\text{hyp}}\)</span>, infinitely many hyperbolic
+        lines fail to meet <span class="math notranslate nohighlight">\(L_{\text{hyp}}\)</span>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>model</strong> – Optional <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code> (created if <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p></li>
+        <li><p><strong>L_hyp</strong> – Reference hyperbolic geodesic (or its <code class="docutils literal notranslate"><span class="pre">Circle</span></code>/<code class="docutils literal notranslate"><span class="pre">Line2D</span></code> carrier). If
+        omitted, constructs the rational geodesic with ideal endpoints
+        <span class="math notranslate nohighlight">\((\frac{4}{5}, -\frac{3}{5})\)</span> and <span class="math notranslate nohighlight">\((-\frac{4}{5}, -\frac{3}{5})\)</span>.</p></li>
+        <li><p><strong>P</strong> – Exterior point in <span class="math notranslate nohighlight">\(\mathbb{D} \setminus L_{\text{hyp}}\)</span>. Defaults to
+        <span class="math notranslate nohighlight">\((\frac{1}{6}, \frac{2}{5})\)</span>.</p></li>
+        </ul>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Verified <a class="reference internal" href="#geometor.poincare.disk.UltraparallelPencil" title="geometor.poincare.disk.UltraparallelPencil"><code class="xref py py-class docutils literal notranslate"><span class="pre">UltraparallelPencil</span></code></a> with exact disjointness over <span class="math notranslate nohighlight">\(\overline{\mathbb{D}}\)</span>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">IdealTriangleResult</span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact Pythagorean ideal hyperbolic triangle on <span class="math notranslate nohighlight">\(\partial\Omega\)</span> with <span class="math notranslate nohighlight">\(0^\circ\)</span> angles.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.vertices">
+        <span class="sig-name descname"><span class="pre">vertices</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.vertices" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.sides">
+        <span class="sig-name descname"><span class="pre">sides</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.sides" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.centers">
+        <span class="sig-name descname"><span class="pre">centers</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.centers" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.radii">
+        <span class="sig-name descname"><span class="pre">radii</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Rational</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Rational</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Rational</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.radii" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.vertex_spreads">
+        <span class="sig-name descname"><span class="pre">vertex_spreads</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.vertex_spreads" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.IdealTriangleResult.angular_defect">
+        <span class="sig-name descname"><span class="pre">angular_defect</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.IdealTriangleResult.angular_defect" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_ideal_hyperbolic_triangle">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_ideal_hyperbolic_triangle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.IdealTriangleResult" title="geometor.poincare.disk.IdealTriangleResult"><span class="pre">IdealTriangleResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_ideal_hyperbolic_triangle" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the exact rational ideal hyperbolic triangle on <span class="math notranslate nohighlight">\(U_1, U_2, U_3 \in \partial\Omega\)</span>.</p>
+        <p>Uses Pythagorean horizon points <span class="math notranslate nohighlight">\(U_1 = (1, 0)\)</span>,
+        <span class="math notranslate nohighlight">\(U_2 = (-\frac{3}{5}, \frac{4}{5})\)</span>, and
+        <span class="math notranslate nohighlight">\(U_3 = (-\frac{3}{5}, -\frac{4}{5})\)</span>. Every side is an orthogonal Euclidean
+        circle with 100% rational center and rational radius:</p>
+        <ul class="simple">
+        <li><p><span class="math notranslate nohighlight">\(C_{12} = (1, 2),\; r_{12} = 2\)</span></p></li>
+        <li><p><span class="math notranslate nohighlight">\(C_{13} = (1, -2),\; r_{13} = 2\)</span></p></li>
+        <li><p><span class="math notranslate nohighlight">\(C_{23} = (-\frac{5}{3}, 0),\; r_{23} = \frac{4}{3}\)</span></p></li>
+        </ul>
+        <p>Meeting tangentially along radii <span class="math notranslate nohighlight">\(OU_1, OU_2, OU_3\)</span> with interior spreads <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>
+        (<span class="math notranslate nohighlight">\(0^\circ\)</span> angle sum, maximal Gauss–Bonnet defect <span class="math notranslate nohighlight">\(\pi\)</span>).</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>model</strong> – Optional <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code> (created if <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Verified <a class="reference internal" href="#geometor.poincare.disk.IdealTriangleResult" title="geometor.poincare.disk.IdealTriangleResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">IdealTriangleResult</span></code></a>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">SaccheriDefectResult</span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact rational hyperbolic right-triangle &amp; Saccheri quadrilateral defect proof.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.triangle_vertices">
+        <span class="sig-name descname"><span class="pre">triangle_vertices</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.triangle_vertices" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.triangle_hypotenuse">
+        <span class="sig-name descname"><span class="pre">triangle_hypotenuse</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.triangle_hypotenuse" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.triangle_spreads">
+        <span class="sig-name descname"><span class="pre">triangle_spreads</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.triangle_spreads" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.triangle_defect">
+        <span class="sig-name descname"><span class="pre">triangle_defect</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.triangle_defect" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_vertices">
+        <span class="sig-name descname"><span class="pre">saccheri_vertices</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_vertices" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_base">
+        <span class="sig-name descname"><span class="pre">saccheri_base</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_base" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_legs">
+        <span class="sig-name descname"><span class="pre">saccheri_legs</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_legs" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_summit">
+        <span class="sig-name descname"><span class="pre">saccheri_summit</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_summit" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_base_spreads">
+        <span class="sig-name descname"><span class="pre">saccheri_base_spreads</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_base_spreads" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_summit_spreads">
+        <span class="sig-name descname"><span class="pre">saccheri_summit_spreads</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_summit_spreads" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_leg_uhg_quadrances">
+        <span class="sig-name descname"><span class="pre">saccheri_leg_uhg_quadrances</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.Expr</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_leg_uhg_quadrances" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.SaccheriDefectResult.saccheri_defect">
+        <span class="sig-name descname"><span class="pre">saccheri_defect</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.Expr</span></span><a class="headerlink" href="#geometor.poincare.disk.SaccheriDefectResult.saccheri_defect" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_saccheri_triangleDefect">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_saccheri_triangleDefect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.SaccheriDefectResult" title="geometor.poincare.disk.SaccheriDefectResult"><span class="pre">SaccheriDefectResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_saccheri_triangleDefect" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct an exact hyperbolic right triangle &amp; Saccheri quadrilateral proving defect &gt; 0.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>model</strong> – Optional <code class="docutils literal notranslate"><span class="pre">geometor.model.Model</span></code> (created if <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Verified <a class="reference internal" href="#geometor.poincare.disk.SaccheriDefectResult" title="geometor.poincare.disk.SaccheriDefectResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SaccheriDefectResult</span></code></a> with 100% rational spreads and quadrances.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py data">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_saccheri_triangle_defect">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_saccheri_triangle_defect</span></span><a class="headerlink" href="#geometor.poincare.disk.construct_saccheri_triangle_defect" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.DedekindCutResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">DedekindCutResult</span></span><a class="headerlink" href="#geometor.poincare.disk.DedekindCutResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact model for Unit 1: Dedekind continuum cut (<span class="math notranslate nohighlight">\(\sqrt{2}/2\)</span>) &amp; rational thresholds.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.DedekindCutResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.DedekindCutResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.DedekindCutResult.cut_point">
+        <span class="sig-name descname"><span class="pre">cut_point</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.DedekindCutResult.cut_point" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.DedekindCutResult.lower_rational">
+        <span class="sig-name descname"><span class="pre">lower_rational</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.DedekindCutResult.lower_rational" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.DedekindCutResult.upper_rational">
+        <span class="sig-name descname"><span class="pre">upper_rational</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.DedekindCutResult.upper_rational" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_dedekind_continuum_cut">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_dedekind_continuum_cut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.DedekindCutResult" title="geometor.poincare.disk.DedekindCutResult"><span class="pre">DedekindCutResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_dedekind_continuum_cut" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the incommensurable diagonal-circle Dedekind cut for Chs. I–II.</p>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HeatedDiskResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">HeatedDiskResult</span></span><a class="headerlink" href="#geometor.poincare.disk.HeatedDiskResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact model for Unit 3: Poincaré’s Heated Disk optical rays &amp; isothermals (Ch. IV).</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HeatedDiskResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.HeatedDiskResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HeatedDiskResult.source">
+        <span class="sig-name descname"><span class="pre">source</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span></span><a class="headerlink" href="#geometor.poincare.disk.HeatedDiskResult.source" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HeatedDiskResult.isothermals">
+        <span class="sig-name descname"><span class="pre">isothermals</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Circle</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Circle</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.HeatedDiskResult.isothermals" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.HeatedDiskResult.light_rays">
+        <span class="sig-name descname"><span class="pre">light_rays</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.HeatedDiskResult.light_rays" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_heated_disk_optical_rays">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_heated_disk_optical_rays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.HeatedDiskResult" title="geometor.poincare.disk.HeatedDiskResult"><span class="pre">HeatedDiskResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_heated_disk_optical_rays" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct Poincaré’s Heated-Disk optical world (<span class="math notranslate nohighlight">\(T \propto 1 - r^2,\; n \propto (1-r^2)^{-1}\)</span>).</p>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">BeltramiKleinBridgeResult</span></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact straightedge correspondence between Poincaré conformal arcs &amp; Beltrami–Klein chords.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult.poincare_geodesic">
+        <span class="sig-name descname"><span class="pre">poincare_geodesic</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult.poincare_geodesic" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult.beltrami_klein_chord">
+        <span class="sig-name descname"><span class="pre">beltrami_klein_chord</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">sympy.geometry.Line2D</span></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult.beltrami_klein_chord" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult.poincare_points">
+        <span class="sig-name descname"><span class="pre">poincare_points</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult.poincare_points" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.BeltramiKleinBridgeResult.klein_points">
+        <span class="sig-name descname"><span class="pre">klein_points</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.BeltramiKleinBridgeResult.klein_points" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_beltrami_klein_bridge">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_beltrami_klein_bridge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.BeltramiKleinBridgeResult" title="geometor.poincare.disk.BeltramiKleinBridgeResult"><span class="pre">BeltramiKleinBridgeResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_beltrami_klein_bridge" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct the exact Weierstrass radial projection <span class="math notranslate nohighlight">\(K(P) = \frac{2P}{1 + \|P\|^2}\)</span>.</p>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.StellarParallaxResult">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">StellarParallaxResult</span></span><a class="headerlink" href="#geometor.poincare.disk.StellarParallaxResult" title="Link to this definition">¶</a></dt>
+        <dd><p>Exact model for Unit 4: Stellar parallax triangle &amp; Poincaré conventionalism (Ch. V § 3).</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.StellarParallaxResult.model">
+        <span class="sig-name descname"><span class="pre">model</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">geometor.model.Model</span></span><a class="headerlink" href="#geometor.poincare.disk.StellarParallaxResult.model" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.StellarParallaxResult.stars">
+        <span class="sig-name descname"><span class="pre">stars</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Point2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.StellarParallaxResult.stars" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.StellarParallaxResult.lobachevsky_rays">
+        <span class="sig-name descname"><span class="pre">lobachevsky_rays</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#geometor.poincare.disk.HyperbolicGeodesic" title="geometor.poincare.disk.HyperbolicGeodesic"><span class="pre">HyperbolicGeodesic</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.StellarParallaxResult.lobachevsky_rays" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.StellarParallaxResult.euclidean_chords">
+        <span class="sig-name descname"><span class="pre">euclidean_chords</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">sympy.geometry.Line2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Line2D</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">sympy.geometry.Line2D</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.disk.StellarParallaxResult.euclidean_chords" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.disk.construct_stellar_parallax_conventionalism">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.disk.</span></span><span class="sig-name descname"><span class="pre">construct_stellar_parallax_conventionalism</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">geometor.model.Model</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.disk.StellarParallaxResult" title="geometor.poincare.disk.StellarParallaxResult"><span class="pre">StellarParallaxResult</span></a></span></span><a class="headerlink" href="#geometor.poincare.disk.construct_stellar_parallax_conventionalism" title="Link to this definition">¶</a></dt>
+        <dd><p>Construct Poincaré’s astronomical parallax triangle (Ch. V, <em>Experience and Geometry</em>).</p>
+        </dd></dl>
+
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../concordance/index.html" title="geometor.poincare.concordance">&larr; <span class="nav-label">geometor.poincare.concordance</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../render/index.html" title="geometor.poincare.render"><span class="nav-label">geometor.poincare.render</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../../../../../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../../../../../about/index.html"  >about</a></li>
+        <li><a href="../../../../../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../../../../../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../../../../../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../../../../../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script src="../../../../../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

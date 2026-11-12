@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit II: Non-Euclidean Geometries &mdash; LA SCIENCE ET L’HYPOTHÈSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../../_static/favicon.ico" />
+</head>
+
+<body class="is-book-page book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="../index.html" class="is-active" aria-selected="true" >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="../../demos/index.html"  >demos</a>
+        </li>
+        <li>
+          <a href="../../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../../modules/index.html"  >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="../index.html">LA SCIENCE ET L’HYPOTHÈSE</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../unit-1-number-and-magnitude/unit-1-number-and-magnitude-en.html" title="Unit I: Number and Magnitude">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+            <nav class="book-tracks-nav" aria-label="Document Tracks">
+              <strong class="book-track-item is-active" aria-current="page">English</strong>
+              <span class="book-track-sep">&middot;</span>
+              <a class="book-track-item" href="unit-2-non-euclidean-geometries-fr.html">French (1902)</a>
+              <span class="book-track-sep">&middot;</span>
+              <a class="book-track-item" href="unit-2-non-euclidean-geometries-summary.html">Summary</a>
+              <span class="book-track-sep">&middot;</span>
+              <a class="book-track-item" href="unit-2-non-euclidean-geometries-notes.html">Notes</a>
+            </nav>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../unit-3-space-and-geometry/unit-3-space-and-geometry-en.html" title="Unit III: Space and Geometry"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content folio-book-page" role="main">
+        <section class="level-1" id="unit-ii-non-euclidean-geometries">
+        <span id="science-and-hypothesis-unit-2-en"></span><h1>Unit II: Non-Euclidean Geometries<a class="headerlink" href="#unit-ii-non-euclidean-geometries" title="Link to this heading">¶</a></h1>
+        <p class="rubric">Henri Poincaré — <em>Science and Hypothesis</em>, Part II (<em>Space</em>), Chapter III</p>
+        <nav class="contents local" id="in-this-unit">
+        <p class="topic-title">In This Unit</p>
+        <ul class="simple">
+        <li><p><a class="reference internal" href="#chapter-iii-non-euclidean-geometries-p-3541" id="id4">Chapter III: Non-Euclidean Geometries (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">35–41]</span></code>)</a></p></li>
+        <li><p><a class="reference internal" href="#interpretation-of-non-euclidean-geometries-poincare-s-dictionary-p-4143" id="id5">Interpretation of Non-Euclidean Geometries: Poincaré’s Dictionary (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">41–43]</span></code>)</a></p></li>
+        <li><p><a class="reference internal" href="#critical-restoration-hilbert-s-non-archimedean-geometries-fr-pp-6364" id="id6">Critical Restoration: Hilbert’s Non-Archimedean Geometries (<code class="docutils literal notranslate"><span class="pre">[FR</span> <span class="pre">pp.</span> <span class="pre">63–64]</span></code>)</a></p></li>
+        <li><p><a class="reference internal" href="#on-the-nature-of-axioms-geometric-conventionalism-p-4850" id="id7">On the Nature of Axioms: Geometric Conventionalism (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">48–50]</span></code>)</a></p></li>
+        </ul>
+        </nav>
+        <section class="level-2" id="chapter-iii-non-euclidean-geometries-p-3541">
+        <h2>Chapter III: Non-Euclidean Geometries (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">35–41]</span></code>)<a class="headerlink" href="#chapter-iii-non-euclidean-geometries-p-3541" title="Link to this heading">¶</a></h2>
+        <p>Every conclusion presumes premisses. These premisses are either self-evident and need no demonstration, or can be established only if based on other propositions; and, as we cannot go back in this way to infinity, every deductive science, and geometry in particular, must rest upon a certain number of indemonstrable axioms. All treatises of geometry begin therefore with the enunciation of these axioms. But there is a distinction to be drawn between them. Some of these, for example, “Things which are equal to the same thing are equal to one another,” are not propositions in geometry but propositions in analysis. I look upon them as analytical <em>à priori</em>intuitions, and they concern me no further. But I must insist on other axioms which are special to geometry. Of these most treatises explicitly enunciate three:—(1) Only one line can pass through two points; (2) a straight line is the <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">36]</span></code> shortest distance between two points; (3) through one point only one parallel can be drawn to a given straight line. Although we generally dispense with proving the second of these axioms, it would be possible to deduce it from the other two, and from those much more numerous axioms which are implicitly admitted without enunciation, as I shall explain further on. For a long time a proof of the third axiom known as Euclid’s postulate was sought in vain. It is impossible to imagine the efforts that have been spent in pursuit of this chimera. Finally, at the beginning of the nineteenth century, and almost simultaneously, two scientists, a Russian and a Bulgarian <a class="footnote-reference brackets" href="#u2bolyai" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, Lobatschewsky and Bolyai, showed irrefutably that this proof is impossible. They have nearly rid us of inventors of geometries without a postulate, and ever since the Académie des Sciences receives only about one or two new demonstrations a year. But the question was not exhausted, and it was not long before a great step was taken by the celebrated memoir of Riemann, entitled:<em>Ueber die Hypothesen welche der Geometrie zum Grunde liegen</em>. This little work has inspired most of the recent treatises to which I shall later on refer, and among which I may mention those of Beltrami and Helmholtz.</p>
+        <p><em>The Geometry of Lobatschewsky</em>.—If it were possible to deduce Euclid’s postulate from the several axioms, it is evident that by rejecting the postulate and retaining the other axioms we <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">37]</span></code> should be led to contradictory consequences. It would be, therefore, impossible to found on those premisses a coherent geometry. Now, this is precisely what Lobatschewsky has done. He assumes at the outset that several parallels may be drawn through a point to a given straight line, and he retains all the other axioms of Euclid. From these hypotheses he deduces a series of theorems between which it is impossible to find any contradiction, and he constructs a geometry as impeccable in its logic as Euclidean geometry. The theorems are very different, however, from those to which we are accustomed, and at first will be found a little disconcerting. For instance, the sum of the angles of a triangle is always less than two right angles, and the difference between that sum and two right angles is proportional to the area of the triangle. It is impossible to construct a figure similar to a given figure but of different dimensions. If the circumference of a circle be divided into<em>n</em>equal parts, and tangents be drawn at the points of intersection, the<em>n</em> tangents will form a polygon if the radius of the circle is small enough, but if the radius is large enough they will never meet. We need not multiply these examples. Lobatschewsky’s propositions have no relation to those of Euclid, but they are none the less logically interconnected.</p>
+        <p><em>Riemann’s Geometry</em>.—Let us imagine to ourselves a world only peopled with beings of no thickness, and suppose these “infinitely flat” <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">38]</span></code> animals are all in one and the same plane, from which they cannot emerge. Let us further admit that this world is sufficiently distant from other worlds to be withdrawn from their influence, and while we are making these hypotheses it will not cost us much to endow these beings with reasoning power, and to believe them capable of making a geometry. In that case they will certainly attribute to space only two dimensions. But now suppose that these imaginary animals, while remaining without thickness, have the form of a spherical, and not of a plane figure, and are all on the same sphere, from which they cannot escape. What kind of a geometry will they construct? In the first place, it is clear that they will attribute to space only two dimensions. The straight line to them will be the shortest distance from one point on the sphere to another—that is to say, an arc of a great circle. In a word, their geometry will be spherical geometry. What they will call space will be the sphere on which they are confined, and on which take place all the phenomena with which they are acquainted. Their space will therefore be<em>unbounded</em>, since on a sphere one may always walk forward without ever being brought to a stop, and yet it will be<em>finite</em>; the end will never be found, but the complete tour can be made. Well, Riemann’s geometry is spherical geometry extended to three dimensions. To construct it, the German mathematician had first of all to throw overboard, not only Euclid’s postulate <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">39]</span></code> but also the first axiom that<em>only one line can pass through two points</em>. On a sphere, through two given points, we can<em>in general</em> draw only one great circle which, as we have just seen, would be to our imaginary beings a straight line. But there was one exception. If the two given points are at the ends of a diameter, an infinite number of great circles can be drawn through them. In the same way, in Riemann’s geometry—at least in one of its forms—through two points only one straight line can in general be drawn, but there are exceptional cases in which through two points an infinite number of straight lines can be drawn. So there is a kind of opposition between the geometries of Riemann and Lobatschewsky. For instance, the sum of the angles of a triangle is equal to two right angles in Euclid’s geometry, less than two right angles in that of Lobatschewsky, and greater than two right angles in that of Riemann. The number of parallel lines that can be drawn through a given point to a given line is one in Euclid’s geometry, none in Riemann’s, and an infinite number in the geometry of Lobatschewsky. Let us add that Riemann’s space is finite, although unbounded in the sense which we have above attached to these words.</p>
+        <p><em>Surfaces with Constant Curvature</em>.—One objection, however, remains possible. There is no contradiction between the theorems of Lobatschewsky and Riemann; but however numerous are the other consequences that these geometers have deduced <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">40]</span></code> from their hypotheses, they had to arrest their course before they exhausted them all, for the number would be infinite; and who can say that if they had carried their deductions further they would not have eventually reached some contradiction? This difficulty does not exist for Riemann’s geometry, provided it is limited to two dimensions. As we have seen, the two-dimensional geometry of Riemann, in fact, does not differ from spherical geometry, which is only a branch of ordinary geometry, and is therefore outside all contradiction. Beltrami, by showing that Lobatschewsky’s two-dimensional geometry was only a branch of ordinary geometry, has equally refuted the objection as far as it is concerned. This is the course of his argument: Let us consider any figure whatever on a surface. Imagine this figure to be traced on a flexible and inextensible canvas applied to the surface, in such a way that when the canvas is displaced and deformed the different lines of the figure change their form without changing their length. As a rule, this flexible and inextensible figure cannot be displaced without leaving the surface. But there are certain surfaces for which such a movement would be possible. They are surfaces of constant curvature. If we resume the comparison that we made just now, and imagine beings without thickness living on one of these surfaces, they will regard as possible the motion of a figure all the lines of which remain of a constant length. Such <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">41]</span></code> a movement would appear absurd, on the other hand, to animals without thickness living on a surface of variable curvature. These surfaces of constant curvature are of two kinds. The curvature of some is<em>positive</em>, and they may be deformed so as to be applied to a sphere. The geometry of these surfaces is therefore reduced to spherical geometry—namely, Riemann’s. The curvature of others is<em>negative</em>. Beltrami has shown that the geometry of these surfaces is identical with that of Lobatschewsky. Thus the two-dimensional geometries of Riemann and Lobatschewsky are connected with Euclidean geometry.</p>
+        <p><em>Interpretation of Non-Euclidean Geometries</em>.—Thus vanishes the objection so far as two-dimensional geometries are concerned. It would be easy to extend Beltrami’s reasoning to three-dimensional geometries, and minds which do not recoil before space of four dimensions will see no difficulty in it; but such minds are few in number. I prefer, then, to proceed otherwise. Let us consider a certain plane, which I shall call the fundamental plane, and let us construct a kind of dictionary by making a double series of terms written in two columns, and corresponding each to each, just as in ordinary dictionaries the words in two languages which have the same signification correspond to one another:—</p>
+        <figure class="photon-picture photon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig3_lobachevsky_parallels" data-graphic-id="fig3_lobachevsky_parallels" viewBox="0 0 660 520" role="img" aria-label="Lobachevsky limiting horoparallels and ultraparallels violating Euclid Postulate V">
+          <defs>
+            <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+              <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+              <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+          </defs>
+          <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="660" height="520" rx="8"/>
+          <g class="geometry-layer" fill="none">
+            <circle class="disk-interior" cx="330" cy="258.19" r="180.8"/>
+            <circle class="horizon-circle" data-ref="Omega" cx="330" cy="258.19" r="180.8"><title>Horizon Ω: x^2 + y^2 = 1</title></circle>
+            <path class="featured-arc" data-ref="L_hyp" d="M 474.64 366.67 A 241.07 241.07 0 0 0 330 318.46 A 241.07 241.07 0 0 0 185.36 366.67"><title>Base hyperbolic line L_hyp</title></path>
+            <path class="horoparallel-arc" data-ref="l1" d="M 357.53 79.5 A 301.57 301.57 0 0 0 376.34 239.29 A 301.57 301.57 0 0 0 474.64 366.67"><title>First limiting horoparallel l1</title></path>
+            <path class="horoparallel-arc" data-ref="l2" d="M 413.49 97.82 A 794.88 794.88 0 0 1 314.52 245.06 A 794.88 794.88 0 0 1 185.36 366.67"><title>Second limiting horoparallel l2</title></path>
+            <path class="ultraparallel-arc" data-ref="m1" d="M 432.45 109.22 A 343.77 343.77 0 0 1 309.22 218.68 A 343.77 343.77 0 0 1 149.2 258.19"><title>First ultraparallel m1</title></path>
+            <path class="ultraparallel-arc" data-ref="m2" d="M 318.11 77.78 A 193.1 193.1 0 0 0 378.82 206.05 A 193.1 193.1 0 0 0 510.8 258.19"><title>Second ultraparallel m2</title></path>
+          </g>
+          <g id="highlights"></g>
+          <g class="points-layer">
+            <circle class="pt-featured" data-ref="P" cx="360.13" cy="185.87" r="4.3"><title>P (1/6, 2/5) = (1/6, 2/5)</title></circle>
+            <circle class="pt-ideal" data-ref="UL" cx="474.64" cy="366.67" r="4.3"><title>U_L (4/5, -3/5) = (4/5, -3/5)</title></circle>
+            <circle class="pt-ideal" data-ref="VL" cx="185.36" cy="366.67" r="4.3"><title>V_L (-4/5, -3/5) = (-4/5, -3/5)</title></circle>
+            <circle class="pt-ideal" data-ref="m1_end" cx="432.45" cy="109.22" r="4.3"><title>m₁ = (1355761/2392561, 1971360/2392561)</title></circle>
+            <circle class="pt-ideal" data-ref="m2_end" cx="510.8" cy="258.19" r="4.3"><title>m₂ = (1, 0)</title></circle>
+          </g>
+          <g class="labels-layer">
+            <text class="geom-label" data-ref="P" x="376.13" y="189.87" text-anchor="start">P (1/6, 2/5)</text>
+            <text class="geom-label" data-ref="UL" x="484.64" y="380.67" text-anchor="start">U_L (4/5, -3/5)</text>
+            <text class="geom-label" data-ref="VL" x="175.36" y="380.67" text-anchor="end">V_L (-4/5, -3/5)</text>
+            <text class="geom-label" data-ref="m1_end" x="442.45" y="103.22" text-anchor="start">m₁</text>
+            <text class="geom-label" data-ref="m2_end" x="522.8" y="254.19" text-anchor="start">m₂</text>
+            <text class="geom-caption" x="330" y="510" text-anchor="middle">Fig. 3 — Ch. III: Independence of Euclid Postulate V — Base Line L_hyp, Horoparallels (l₁, l₂) &amp; Ultraparallels (m₁, m₂)</text>
+          </g>
+        </svg>
+        <figcaption>**Fig. 3 — Independence of Euclid's Fifth Postulate.** Relative to the base hyperbolic line :g:`L_hyp <fig3_lobachevsky_parallels:L_hyp>` joining Pythagorean ideal endpoints :g:`U_L (4/5, -3/5) <fig3_lobachevsky_parallels:UL>` and :g:`V_L (-4/5, -3/5) <fig3_lobachevsky_parallels:VL>`, through the exterior point :g:`P (1/6, 2/5) <fig3_lobachevsky_parallels:P>` pass two asymptotic limiting horoparallels (:g:`l₁ <fig3_lobachevsky_parallels:l1>`, :g:`l₂ <fig3_lobachevsky_parallels:l2>`) and infinitely many strictly disjoint ultraparallels (:g:`m₁ <fig3_lobachevsky_parallels:m1>`, :g:`m₂ <fig3_lobachevsky_parallels:m2>`).</figcaption>
+        </figure>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="interpretation-of-non-euclidean-geometries-poincare-s-dictionary-p-4143">
+        <h2>Interpretation of Non-Euclidean Geometries: Poincaré’s Dictionary (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">41–43]</span></code>)<a class="headerlink" href="#interpretation-of-non-euclidean-geometries-poincare-s-dictionary-p-4143" title="Link to this heading">¶</a></h2>
+        <table class="docutils align-default" id="id3">
+        <caption><span class="caption-text">Poincaré’s Non-Euclidean Translation Dictionary (<em>EN pp. 41–42</em>)</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
+        <colgroup>
+        <col style="width: 32.0%" />
+        <col style="width: 68.0%" />
+        </colgroup>
+        <thead>
+        <tr class="row-odd"><th class="head"><p>Lobachevskian Term</p></th>
+        <th class="head"><p>Ordinary Euclidean Translation</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="row-even"><td><p><em>Space</em></p></td>
+        <td><p>The portion of space situated above the fundamental plane. <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">42]</span></code></p></td>
+        </tr>
+        <tr class="row-odd"><td><p><em>Plane</em></p></td>
+        <td><p>Sphere cutting orthogonally the fundamental plane.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><em>Line</em></p></td>
+        <td><p>Circle cutting orthogonally the fundamental plane.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><em>Sphere</em></p></td>
+        <td><p>Sphere.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><em>Circle</em></p></td>
+        <td><p>Circle.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><em>Angle</em></p></td>
+        <td><p>Angle.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><em>Distance between two points</em></p></td>
+        <td><p>Logarithm of the anharmonic ratio of these two points and of the intersection of the fundamental plane with the circle passing through these two points and cutting it orthogonally.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><em>Etc.</em></p></td>
+        <td><p><em>Etc.</em></p></td>
+        </tr>
+        </tbody>
+        </table>
+        <figure class="photon-picture photon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig2_poincare_dictionary_inversion" data-graphic-id="fig2_poincare_dictionary_inversion" viewBox="0 0 680 500" role="img" aria-label="Poincaré&#x27;s Translation Dictionary and horizon circle inversion P to P*">
+          <defs>
+            <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+              <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+              <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+          </defs>
+          <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="680" height="500" rx="8"/>
+          <g class="geometry-layer" fill="none">
+            <circle class="disk-interior" cx="278.96" cy="318.09" r="117.39"/>
+            <circle class="horizon-circle" data-ref="Omega" cx="278.96" cy="318.09" r="117.39"><title>Fundamental horizon Ω: x^2 + y^2 = 1</title></circle>
+            <circle class="carrier-ghost" data-ref="( P Q Pstar )" cx="317.11" cy="86.24" r="203.54"><title>Full orthogonal Euclidean circle through P, Q, P*</title></circle>
+            <path class="guide-line" data-ref="/ O Pstar /" d="M 278.96 318.09 L 372.87 271.13 L 466.78 224.17"><title>Inversion ray OP·OP* = 1</title></path>
+            <path class="guide-line" data-ref="/ O U /" d="M 278.96 318.09 L 333.89 297.41 L 388.82 276.73"/>
+            <path class="guide-line" data-ref="/ C U /" d="M 317.11 86.24 L 352.96 181.48 L 388.82 276.73"/>
+            <path class="featured-arc" data-ref="( U V )" d="M 388.82 276.73 A 203.54 203.54 0 0 1 284.06 287.08 A 203.54 203.54 0 0 1 188.14 243.7"><title>Hyperbolic geodesic arc UV orthogonal to Ω</title></path>
+          </g>
+          <g id="highlights"></g>
+          <g class="points-layer">
+            <circle class="pt-interior" data-ref="O" cx="278.96" cy="318.09" r="4.3"><title>O = (0, 0)</title></circle>
+            <circle class="pt-featured" data-ref="P" cx="337.65" cy="288.74" r="4.3"><title>P (1/2, 1/4) = (1/2, 1/4)</title></circle>
+            <circle class="pt-featured" data-ref="Q" cx="232" cy="271.13" r="4.3"><title>Q (-2/5, 2/5) = (-2/5, 2/5)</title></circle>
+            <circle class="pt-inverse" data-ref="Pstar" cx="466.78" cy="224.17" r="4.3"><title>P* (8/5, 4/5) = (8/5, 4/5)</title></circle>
+            <circle class="pt-interior" data-ref="C" cx="317.11" cy="86.24" r="4.3"><title>C (9/16, 33/16) = (13/40, 79/40)</title></circle>
+            <circle class="pt-ideal" data-ref="U" cx="388.82" cy="276.73" r="4.3"><title>U = (52/641 + 79*sqrt(4810)/6410, 316/641 - 13*sqrt(4810)/6410)</title></circle>
+            <circle class="pt-ideal" data-ref="V" cx="188.14" cy="243.7" r="4.3"><title>V = (52/641 - 79*sqrt(4810)/6410, 13*sqrt(4810)/6410 + 316/641)</title></circle>
+          </g>
+          <g class="labels-layer">
+            <text class="geom-label" data-ref="O" x="268.96" y="334.09" text-anchor="end">O</text>
+            <text class="geom-label" data-ref="P" x="337.65" y="306.74" text-anchor="middle">P (1/2, 1/4)</text>
+            <text class="geom-label" data-ref="Q" x="226" y="289.13" text-anchor="end">Q (-2/5, 2/5)</text>
+            <text class="geom-label" data-ref="Pstar" x="476.78" y="216.17" text-anchor="start">P* (8/5, 4/5)</text>
+            <text class="geom-label" data-ref="C" x="327.11" y="90.24" text-anchor="start">C (9/16, 33/16)</text>
+            <text class="geom-label" data-ref="U" x="398.82" y="282.73" text-anchor="start">U</text>
+            <text class="geom-label" data-ref="V" x="178.14" y="235.7" text-anchor="end">V</text>
+            <text class="geom-caption" x="340" y="490" text-anchor="middle">Fig. 2 — Ch. III: Poincaré&#x27;s Dictionary — Horizon Inversion OP·OP* = 1 &amp; Orthogonal Geodesic Circle (P, Q, P*)</text>
+          </g>
+        </svg>
+        <figcaption>**Fig. 2 — Poincaré's Non-Euclidean Translation Dictionary.** Given interior points :g:`P (1/2, 1/4) <fig2_poincare_dictionary_inversion:P>` and :g:`Q (-2/5, 2/5) <fig2_poincare_dictionary_inversion:Q>` inside the fundamental horizon :g:`Ω <fig2_poincare_dictionary_inversion:Omega>`, Euclidean inversion along :g:`/ O Pstar / <fig2_poincare_dictionary_inversion:/ O Pstar />` yields :g:`P* (8/5, 4/5) <fig2_poincare_dictionary_inversion:Pstar>`. The unique circle :g:`( P Q Pstar ) <fig2_poincare_dictionary_inversion:( P Q Pstar )>` with rational center :g:`C (9/16, 33/16) <fig2_poincare_dictionary_inversion:C>` cuts :g:`Ω <fig2_poincare_dictionary_inversion:Omega>` orthogonally ($|OC|^2 - r^2 = 1$) at ideal points :g:`U <fig2_poincare_dictionary_inversion:U>` and :g:`V <fig2_poincare_dictionary_inversion:V>`, defining the hyperbolic straight line :g:`( U V ) <fig2_poincare_dictionary_inversion:( U V )>`.</figcaption>
+        </figure>
+        <p>Let us now take Lobatschewsky’s theorems and translate them by the aid of this dictionary, as we would translate a German text with the aid of a German - French dictionary. <em>We shall then obtain the theorems of ordinary geometry</em>. For instance, Lobatschewsky’s theorem: “The sum of the angles of a triangle is less than two right angles,” may be translated thus: “If a curvilinear triangle has for its sides arcs of circles which if produced would cut orthogonally the fundamental plane, the sum of the angles of this curvilinear triangle will be less than two right angles.” Thus, however far the consequences of Lobatschewsky’s hypotheses are carried, they will never lead to a <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">43]</span></code> contradiction; in fact, if two of Lobatschewsky’s theorems were contradictory, the translations of these two theorems made by the aid of our dictionary would be contradictory also. But these translations are theorems of ordinary geometry, and no one doubts that ordinary geometry is exempt from contradiction. Whence is the certainty derived, and how far is it justified? That is a question upon which I cannot enter here, but it is a very interesting question, and I think not insoluble. Nothing, therefore, is left of the objection I formulated above. But this is not all. Lobatschewsky’s geometry being susceptible of a concrete interpretation, ceases to be a useless logical exercise, and may be applied. I have no time here to deal with these applications, nor with what Herr Klein and myself have done by using them in the integration of linear equations. Further, this interpretation is not unique, and several dictionaries may be constructed analogous to that above, which will enable us by a simple translation to convert Lobatschewsky’s theorems into the theorems of ordinary geometry.</p>
+        <p><em>Implicit Axioms.</em>—Are the axioms implicitly enunciated in our text-books the only foundation of geometry? We may be assured of the contrary when we see that, when they are abandoned one after another, there are still left standing some propositions which are common to the geometries of Euclid, Lobatschewsky, and Riemann. These propositions must be based on premisses that <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">44]</span></code> geometers admit without enunciation. It is interesting to try and extract them from the classical proofs.</p>
+        <p>John Stuart Mill asserted <a class="footnote-reference brackets" href="#u2b1" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> that every definition contains an axiom, because by defining we implicitly affirm the existence of the object defined. That is going rather too far. It is but rarely in mathematics that a definition is given without following it up by the proof of the existence of the object defined, and when this is not done it is generally because the reader can easily supply it; and it must not be forgotten that the word “existence” has not the same meaning when it refers to a mathematical entity as when it refers to a material object.</p>
+        <p>A mathematical entity exists provided there is no contradiction implied in its definition, either in itself, or with the propositions previously admitted. But if the observation of John Stuart Mill cannot be applied to all definitions, it is none the less true for some of them. A plane is sometimes defined in the following manner:—The plane is a surface such that the line which joins any two points upon it lies wholly on that surface. Now, there is obviously a new axiom concealed in this definition. It is true we might change it, and that would be preferable, but then we should have to enunciate the axiom explicitly. Other definitions may give rise to no less important reflections, such as, for example, that of the equality of two figures. Two <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">45]</span></code> figures are equal when they can be superposed. To superpose them, one of them must be displaced until it coincides with the other. But how must it be displaced? If we asked that question, no doubt we should be told that it ought to be done without deforming it, and as an invariable solid is displaced. The vicious circle would then be evident. As a matter of fact, this definition defines nothing. It has no meaning to a being living in a world in which there are only fluids. If it seems clear to us, it is because we are accustomed to the properties of natural solids which do not much differ from those of the ideal solids, all of whose dimensions are invariable. However, imperfect as it may be, this definition implies an axiom. The possibility of the motion of an invariable figure is not a self-evident truth. At least it is only so in the application to Euclid’s postulate, and not as an analytical <em>à priori</em> intuition would be. Moreover, when we study the definitions and the proofs of geometry, we see that we are compelled to admit without proof not only the possibility of this motion, but also some of its properties. This first arises in the definition of the straight line. Many defective definitions have been given, but the true one is that which is understood in all the proofs in which the straight line intervenes. “It may happen that the motion of an invariable figure may be such that all the points of a line belonging to the figure are motionless, while all the points situate outside that line are in motion. Such a <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">46]</span></code> line would be called a straight line.” We have deliberately in this enunciation separated the definition from the axiom which it implies. Many proofs such as those of the cases of the equality of triangles, of the possibility of drawing a perpendicular from a point to a straight line, assume propositions the enunciations of which are dispensed with, for they necessarily imply that it is possible to move a figure in space in a certain way.</p>
+        <p><em>The Fourth Geometry.</em>—Among these explicit axioms there is one which seems to me to deserve some attention, because when we abandon it we can construct a fourth geometry as coherent as those of Euclid, Lobatschewsky, and Riemann. To prove that we can always draw a perpendicular at a point A to a straight line A B, we consider a straight line A C movable about the point A, and initially identical with the fixed straight line A B. We then can make it turn about the point A until it lies in A B produced. Thus we assume two propositions—first, that such a rotation is possible, and then that it may continue until the two lines lie the one in the other produced. If the first point is conceded and the second rejected, we are led to a series of theorems even stranger than those of Lobatschewsky and Riemann, but equally free from contradiction. I shall give only one of these theorems, and I shall not choose the least remarkable of them.<em>A real straight line may be perpendicular to itself</em>.</p>
+        <p><em>Lie’s Theorem.</em>—The number of axioms implicitly <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">47]</span></code> introduced into classical proofs is greater than necessary, and it would be interesting to reduce them to a minimum. It may be asked, in the first place, if this reduction is possible—if the number of necessary axioms and that of imaginable geometries is not infinite? A theorem due to Sophus Lie is of weighty importance in this discussion. It may be enunciated in the following manner:—Suppose the following premisses are admitted: (1) space has<em>n</em>dimensions; (2) the movement of an invariable figure is possible; (3)<em>p</em> conditions are necessary to determine the position of this figure in space.</p>
+        <p><em>The number of geometries compatible with these premisses will be limited</em>. I may even add that if<em>n</em>is given, a superior limit can be assigned to<em>p</em>. If, therefore, the possibility of the movement is granted, we can only invent a finite and even a rather restricted number of three-dimensional geometries.</p>
+        <p><em>Riemann’s Geometries.</em>—However, this result seems contradicted by Riemann, for that scientist constructs an infinite number of geometries, and that to which his name is usually attached is only a particular case of them. All depends, he says, on the manner in which the length of a curve is defined. Now, there is an infinite number of ways of defining this length, and each of them may be the starting-point of a new geometry. That is perfectly true, but most of these definitions are incompatible with the movement of a variable figure such as we assume to be possible in Lie’s theorem. <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">48]</span></code> These geometries of Riemann, so interesting on various grounds, can never be, therefore, purely analytical, and would not lend themselves to proofs analogous to those of Euclid.</p>
+        <figure class="photon-picture photon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig4_ideal_hyperbolic_triangle" data-graphic-id="fig4_ideal_hyperbolic_triangle" viewBox="0 0 680 520" role="img" aria-label="Rational Pythagorean ideal hyperbolic triangle with zero interior angles and defect pi">
+          <defs>
+            <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+              <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+              <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+          </defs>
+          <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="680" height="520" rx="8"/>
+          <g class="geometry-layer" fill="none">
+            <circle class="disk-interior" cx="340" cy="260" r="136.97"/>
+            <path class="ideal-region" data-ref="&lt; U1 U2 U3 &gt;" d="M 476.97 260 A 273.94 273.94 0 0 1 257.82 150.42 A 182.63 182.63 0 0 1 257.82 369.58 A 273.94 273.94 0 0 1 476.97 260 Z"/>
+            <circle class="carrier-ghost" data-ref="C12_circle" cx="476.97" cy="-13.94" r="273.94"/>
+            <circle class="carrier-ghost" data-ref="C13_circle" cx="476.97" cy="533.94" r="273.94"/>
+            <circle class="carrier-ghost" data-ref="C23_circle" cx="111.72" cy="260" r="182.63"/>
+            <circle class="horizon-circle" data-ref="Omega" cx="340" cy="260" r="136.97"/>
+            <path class="guide-line" data-ref="/ O U1 /" d="M 340 260 L 408.48 260 L 476.97 260"/>
+            <path class="guide-line" data-ref="/ O U2 /" d="M 340 260 L 298.91 205.21 L 257.82 150.42"/>
+            <path class="guide-line" data-ref="/ O U3 /" d="M 340 260 L 298.91 314.79 L 257.82 369.58"/>
+            <path class="featured-arc" data-ref="( U1 U2 )" d="M 476.97 260 A 273.94 273.94 0 0 1 354.46 231.08 A 273.94 273.94 0 0 1 257.82 150.42"><title>Side U1U2: center (1, 2), r = 2</title></path>
+            <path class="featured-arc" data-ref="( U2 U3 )" d="M 257.82 150.42 A 182.63 182.63 0 0 1 294.34 260 A 182.63 182.63 0 0 1 257.82 369.58"><title>Side U2U3: center (-5/3, 0), r = 4/3</title></path>
+            <path class="featured-arc" data-ref="( U1 U3 )" d="M 476.97 260 A 273.94 273.94 0 0 0 354.46 288.92 A 273.94 273.94 0 0 0 257.82 369.58"><title>Side U1U3: center (1, -2), r = 2</title></path>
+          </g>
+          <g id="highlights"></g>
+          <g class="points-layer">
+            <circle class="pt-interior" data-ref="O" cx="340" cy="260" r="4.3"><title>O = (0, 0)</title></circle>
+            <circle class="pt-ideal" data-ref="U1" cx="476.97" cy="260" r="4.3"><title>U₁ (1, 0) = (1, 0)</title></circle>
+            <circle class="pt-ideal" data-ref="U2" cx="257.82" cy="150.42" r="4.3"><title>U₂ (-3/5, 4/5) = (-3/5, 4/5)</title></circle>
+            <circle class="pt-ideal" data-ref="U3" cx="257.82" cy="369.58" r="4.3"><title>U₃ (-3/5, -4/5) = (-3/5, -4/5)</title></circle>
+            <circle class="pt-inverse" data-ref="C23" cx="111.72" cy="260" r="4.3"><title>C₂₃ (-5/3, 0) = (-5/3, 0)</title></circle>
+          </g>
+          <g class="labels-layer">
+            <text class="geom-label" data-ref="O" x="330" y="275" text-anchor="end">O</text>
+            <text class="geom-label" data-ref="U1" x="486.97" y="250" text-anchor="start">U₁ (1, 0)</text>
+            <text class="geom-label" data-ref="U2" x="245.82" y="140.42" text-anchor="end">U₂ (-3/5, 4/5)</text>
+            <text class="geom-label" data-ref="U3" x="245.82" y="387.58" text-anchor="end">U₃ (-3/5, -4/5)</text>
+            <text class="geom-label" data-ref="C23" x="111.72" y="248" text-anchor="middle">C₂₃ (-5/3, 0)</text>
+            <text class="geom-caption" x="340" y="510" text-anchor="middle">Fig. 4 — Ch. III: Rational Ideal Triangle U₁U₂U₃ — Orthogonal Circles C₁₂=(1,2), C₁₃=(1,-2), C₂₃=(-5/3,0), Angle Sum 0°</text>
+          </g>
+        </svg>
+        <figcaption>**Fig. 4 — Rational Ideal Hyperbolic Triangle (Angle Sum $0^\circ$, Defect $\pi$).** Ideal vertices :g:`U₁ (1, 0) <fig4_ideal_hyperbolic_triangle:U1>`, :g:`U₂ (-3/5, 4/5) <fig4_ideal_hyperbolic_triangle:U2>`, and :g:`U₃ (-3/5, -4/5) <fig4_ideal_hyperbolic_triangle:U3>` on :g:`Ω <fig4_ideal_hyperbolic_triangle:Omega>` bound :g:`△U₁U₂U₃ <fig4_ideal_hyperbolic_triangle:< U1 U2 U3 >>` via orthogonal circles :g:`( U1 U2 ) <fig4_ideal_hyperbolic_triangle:( U1 U2 )>`, :g:`( U2 U3 ) <fig4_ideal_hyperbolic_triangle:( U2 U3 )>` (center :g:`C₂₃ (-5/3, 0) <fig4_ideal_hyperbolic_triangle:C23>`), and :g:`( U1 U3 ) <fig4_ideal_hyperbolic_triangle:( U1 U3 )>` whose tangents coincide at all three vertices (exact spreads $(0, 0, 0)$).</figcaption>
+        </figure>
+        <figure class="photon-picture photon-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig5_saccheri_angular_defect" data-graphic-id="fig5_saccheri_angular_defect" viewBox="0 0 660 520" role="img" aria-label="Saccheri quadrilateral A1A2B2B1 and right hyperbolic triangle OAB proving acute summit angles">
+          <defs>
+            <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+              <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+            <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+              <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+            </marker>
+          </defs>
+          <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="660" height="520" rx="8"/>
+          <g class="geometry-layer" fill="none">
+            <circle class="disk-interior" cx="330" cy="265.6" r="186.78"/>
+            <circle class="horizon-circle" data-ref="Omega" cx="330" cy="265.6" r="186.78"/>
+            <path class="guide-line" data-ref="x_diam" d="M 143.22 265.6 L 330 265.6 L 516.78 265.6"/>
+            <path class="guide-line" data-ref="y_diam" d="M 330 452.38 L 330 265.6 L 330 78.83"/>
+            <path class="geodesic-arc" data-ref="/ A1 A2 /" d="M 267.74 265.6 L 330 265.6 L 392.26 265.6"><title>Saccheri base A1A2</title></path>
+            <path class="horoparallel-arc" data-ref="( A1 B1 )" d="M 267.74 265.6 A 249.04 249.04 0 0 0 262.9 216.76 A 249.04 249.04 0 0 0 248.58 169.82"><title>Left leg A1B1 (q_UHG = -225/64)</title></path>
+            <path class="horoparallel-arc" data-ref="( A2 B2 )" d="M 392.26 265.6 A 249.04 249.04 0 0 1 397.1 216.76 A 249.04 249.04 0 0 1 411.42 169.82"><title>Right leg A2B2 (q_UHG = -225/64)</title></path>
+            <path class="featured-arc" data-ref="( B1 B2 )" d="M 248.58 169.82 A 187.42 187.42 0 0 0 330 188.43 A 187.42 187.42 0 0 0 411.42 169.82"><title>Saccheri summit B1B2 (acute spread 64/145 &lt; 1)</title></path>
+            <path class="ultraparallel-arc" data-ref="( A B )" d="M 423.39 265.6 A 272.27 272.27 0 0 1 370.95 224.66 A 272.27 272.27 0 0 1 330 172.21"><title>Right triangle hypotenuse AB (spread at A, B = 9/34 &lt; 1/2)</title></path>
+          </g>
+          <g id="highlights"></g>
+          <g class="points-layer">
+            <circle class="pt-interior" data-ref="O" cx="330" cy="265.6" r="4.3"><title>O = (0, 0)</title></circle>
+            <circle class="pt-interior" data-ref="A1" cx="267.74" cy="265.6" r="4.3"><title>A₁ (-1/3, 0) = (-1/3, 0)</title></circle>
+            <circle class="pt-interior" data-ref="A2" cx="392.26" cy="265.6" r="4.3"><title>A₂ (1/3, 0) = (1/3, 0)</title></circle>
+            <circle class="pt-featured" data-ref="B1" cx="248.58" cy="169.82" r="4.3"><title>B₁ (-17/39, 20/39) = (-17/39, 20/39)</title></circle>
+            <circle class="pt-featured" data-ref="B2" cx="411.42" cy="169.82" r="4.3"><title>B₂ (17/39, 20/39) = (17/39, 20/39)</title></circle>
+            <circle class="pt-inverse" data-ref="A" cx="423.39" cy="265.6" r="4.3"><title>A (1/2, 0) = (1/2, 0)</title></circle>
+            <circle class="pt-inverse" data-ref="B" cx="330" cy="172.21" r="4.3"><title>B (0, 1/2) = (0, 1/2)</title></circle>
+          </g>
+          <g class="labels-layer">
+            <text class="geom-label" data-ref="O" x="320" y="281.6" text-anchor="end">O</text>
+            <text class="geom-label" data-ref="A1" x="257.74" y="283.6" text-anchor="end">A₁ (-1/3, 0)</text>
+            <text class="geom-label" data-ref="A2" x="390.26" y="283.6" text-anchor="middle">A₂ (1/3, 0)</text>
+            <text class="geom-label" data-ref="B1" x="242.58" y="157.82" text-anchor="end">B₁ (-17/39, 20/39)</text>
+            <text class="geom-label" data-ref="B2" x="417.42" y="157.82" text-anchor="start">B₂ (17/39, 20/39)</text>
+            <text class="geom-label" data-ref="A" x="441.39" y="259.6" text-anchor="start">A (1/2, 0)</text>
+            <text class="geom-label" data-ref="B" x="330" y="158.21" text-anchor="middle">B (0, 1/2)</text>
+            <text class="geom-caption" x="330" y="510" text-anchor="middle">Fig. 5 — Ch. III: Acute Summit Spread s = 64/145 &lt; 1 in Saccheri A₁A₂B₂B₁ &amp; Right Triangle OAB (s_A = 9/34 &lt; 1/2)</text>
+          </g>
+        </svg>
+        <figcaption>**Fig. 5 — Saccheri's Acute Angle Hypothesis & Triangle Angular Defect.** Over base :g:`A₁A₂ <fig5_saccheri_angular_defect:/ A1 A2 />` (:g:`A₁ <fig5_saccheri_angular_defect:A1>`, :g:`A₂ <fig5_saccheri_angular_defect:A2>`) with equal perpendicular legs :g:`( A1 B1 ) <fig5_saccheri_angular_defect:( A1 B1 )>` and :g:`( A2 B2 ) <fig5_saccheri_angular_defect:( A2 B2 )>` ($q_{\mathrm{UHG}} = -225/64$), the summit :g:`( B1 B2 ) <fig5_saccheri_angular_defect:( B1 B2 )>` meets the legs at :g:`B₁ <fig5_saccheri_angular_defect:B1>` and :g:`B₂ <fig5_saccheri_angular_defect:B2>` with strictly acute rational spread $s = 64/145 < 1$; likewise right triangle $OAB$ (:g:`O <fig5_saccheri_angular_defect:O>`, :g:`A <fig5_saccheri_angular_defect:A>`, :g:`B <fig5_saccheri_angular_defect:B>`, hypotenuse :g:`( A B ) <fig5_saccheri_angular_defect:( A B )>`) exhibits vertex spreads $9/34 < 1/2$.</figcaption>
+        </figure>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="critical-restoration-hilbert-s-non-archimedean-geometries-fr-pp-6364">
+        <h2>Critical Restoration: Hilbert’s Non-Archimedean Geometries (<code class="docutils literal notranslate"><span class="pre">[FR</span> <span class="pre">pp.</span> <span class="pre">63–64]</span></code>)<a class="headerlink" href="#critical-restoration-hilbert-s-non-archimedean-geometries-fr-pp-6364" title="Link to this heading">¶</a></h2>
+        <div class="admonition note">
+        <p class="admonition-title">Note</p>
+        <p><strong>Editorial Collation:</strong> Because <a class="person-ref" id="occ-person-greenstreet-1" href="../persons.html#person-greenstreet" data-person="greenstreet" title="William John Greenstreet (1861–1930) — British mathematician, editor of The Mathematical Gazette, and translator of Science and Hypothesis (1905)">Greenstreet</a>’s 1905 translation of Chapter III followed Poincaré’s 1891 <em>Revue générale des sciences</em> text prior to Poincaré’s 1902 insertion on <a class="person-ref" id="occ-person-hilbert-1" href="../persons.html#person-hilbert" data-person="hilbert" title="David Hilbert (1862–1943) — German mathematician; author of Grundlagen der Geometrie (1899)">Hilbert</a>, the paragraph <strong>Les Géométries de Hilbert</strong> (Flammarion pp. 63–64; translated in <a class="person-ref" id="occ-person-halsted-1" href="../persons.html#person-halsted" data-person="halsted" title="George Bruce Halsted (1853–1922) — American mathematician and historian of non-Euclidean geometry; translator of Bolyai, Lobachevsky, Saccheri, and Poincaré">Halsted</a> 1905) was omitted on EN p. 48. It is restored here in faithful English translation directly from our 1902 French witness.</p>
+        </div>
+        <p><em>Hilbert’s Geometries.</em>—Finally, M. <a class="person-ref" id="occ-person-veronese-1" href="../persons.html#person-veronese" data-person="veronese" title="Giuseppe Veronese (1854–1917) — Italian projective geometer; pioneer of synthetic non-Archimedean geometry">Veronese</a> and M. <a class="person-ref" id="occ-person-hilbert-2" href="../persons.html#person-hilbert" data-person="hilbert" title="David Hilbert (1862–1943) — German mathematician; author of Grundlagen der Geometrie (1899)">Hilbert</a> have imagined new geometries stranger still, which they call <em>non-Archimedean</em> <code class="docutils literal notranslate"><span class="pre">[FR</span> <span class="pre">p.</span> <span class="pre">64]</span></code>. They construct them by rejecting the <em>axiom of Archimedes</em>, in virtue of which any given length, multiplied by a sufficiently large integer, will eventually surpass any other given length however great it may be. Upon a non-Archimedean straight line, all the points of our ordinary geometry exist, yet there is an infinity of others which come to intercalate themselves among them, in such a way that between two segments which geometers of the old school would have regarded as contiguous, one can pack an infinity of new points. In a word, non-Archimedean space is no longer a continuum of the second order, to employ the language of the preceding chapter, but a <a class="term-ref glossary-term" id="occ-term-continu-troisieme-ordre-1" href="../glossary.html#term-continu-troisieme-ordre" data-term="continu-troisieme-ordre" title="Continu du troisième ordre (Continuum of the Third Order (Non-Archimedean Continuum)): An enriched ordered continuum constructed by inserting actual infinitesimals (Veronese 1891; Hilbert 1899) between Dedekind real numbers, violating Archimedes&#x27; axiom.">continuum of the third order</a>.</p>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="on-the-nature-of-axioms-geometric-conventionalism-p-4850">
+        <h2>On the Nature of Axioms: Geometric Conventionalism (<code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">48–50]</span></code>)<a class="headerlink" href="#on-the-nature-of-axioms-geometric-conventionalism-p-4850" title="Link to this heading">¶</a></h2>
+        <p><em>On the Nature of Axioms.</em>—Most mathematicians regard Lobatschewsky’s geometry as a mere logical curiosity. Some of them have, however, gone further. If several geometries are possible, they say, is it certain that our geometry is the one that is true? Experiment no doubt teaches us that the sum of the angles of a triangle is equal to two right angles, but this is because the triangles we deal with are too small. According to Lobatschewsky, the difference is proportional to the area of the triangle, and will not this become sensible when we operate on much larger triangles, and when our measurements become more accurate? Euclid’s geometry would thus be a provisory geometry. Now, to discuss this view we must first of all ask ourselves, what is the nature of geometrical axioms? Are they synthetic<em>à priori</em>intuitions, as Kant affirmed? They would then be imposed upon us with such a force that we could not conceive of the contrary proposition, nor could we build upon it a theoretical edifice. There would be no non-Euclidean geometry. To convince ourselves of this, let us take a true synthetic<em>à priori</em>intuition—the following, for instance, which played an important part in the first chapter:—If a theorem is true for the number 1, and if it has been proved that it is true of<em>n</em>+ 1, provided it is <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">49]</span></code> true of<em>n</em>, it will be true for all positive integers. Let us next try to get rid of this, and while rejecting this proposition let us construct a false arithmetic analogous to non-Euclidean geometry. We shall not be able to do it. We shall be even tempted at the outset to look upon these intuitions as analytical. Besides, to take up again our fiction of animals without thickness, we can scarcely admit that these beings, if their minds are like ours, would adopt the Euclidean geometry, which would be contradicted by all their experience. Ought we, then, to conclude that the axioms of geometry are experimental truths? But we do not make experiments on ideal lines or ideal circles; we can only make them on material objects. On what, therefore, would experiments serving as a foundation for geometry be based? The answer is easy. We have seen above that we constantly reason as if the geometrical figures behaved like solids. What geometry would borrow from experiment would be therefore the properties of these bodies. The properties of light and its propagation in a straight line have also given rise to some of the propositions of geometry, and in particular to those of projective geometry, so that from that point of view one would be tempted to say that metrical geometry is the study of solids, and projective geometry that of light. But a difficulty remains, and is unsurmountable. If geometry were an experimental science, it would not be an exact science. It would be subjected to <code class="docutils literal notranslate"><span class="pre">[p.</span> <span class="pre">50]</span></code> continual revision. Nay, it would from that day forth be proved to be erroneous, for we know that no rigorously invariable solid exists.<em>The geometrical axioms are therefore neither synthetic à priori intuitions nor experimental facts</em>. They are conventions. Our choice among all possible conventions is<em>guided</em>by experimental facts; but it remains<em>free</em>, and is only limited by the necessity of avoiding every contradiction, and thus it is that postulates may remain rigorously true even when the experimental laws which have determined their adoption are only approximate. In other words,<em>the axioms of geometry</em>(I do not speak of those of arithmetic)<em>are only definitions in disguise</em>. What, then, are we to think of the question: Is Euclidean geometry true? It has no meaning. We might as well ask if the metric system is true, and if the old weights and measures are false; if Cartesian co-ordinates are true and polar co-ordinates false. One geometry cannot be more true than another; it can only be more convenient. Now, Euclidean geometry is, and will remain, the most convenient: 1st, because it is the simplest, and it is not so only because of our mental habits or because of the kind of direct intuition that we have of Euclidean space; it is the simplest in itself, just as a polynomial of the first degree is simpler than a polynomial of the second degree; 2nd, because it sufficiently agrees with the properties of natural solids, those bodies which we can compare and measure by means of our senses.</p>
+        <hr class="docutils" />
+        <p class="rubric">Critical &amp; Witness Footnotes</p>
+        <aside class="footnote-list brackets">
+        <aside class="footnote brackets" id="u2bolyai" role="doc-footnote">
+        <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+        <p><em>Editorial correction:</em> Greenstreet’s 1905 London printing inadvertently translates Flammarion p. 50 (<em>« un Russe et un Hongrois, Lobatchevsky et Bolyai »</em>) as <em>“a Russian and a Bulgarian”</em>; <a class="person-ref" id="occ-person-bolyai-1" href="../persons.html#person-bolyai" data-person="bolyai" title="János Bolyai (1802–1860) — Hungarian mathematician and military engineer; independent co-discoverer of absolute and hyperbolic geometry">János Bolyai</a> (1802–1860) was Hungarian, as rightly rendered in <a class="person-ref" id="occ-person-halsted-2" href="../persons.html#person-halsted" data-person="halsted" title="George Bruce Halsted (1853–1922) — American mathematician and historian of non-Euclidean geometry; translator of Bolyai, Lobachevsky, Saccheri, and Poincaré">Halsted</a>’s 1905 American edition (<em>“a Russian and a Hungarian”</em>).</p>
+        </aside>
+        <aside class="footnote brackets" id="u2b1" role="doc-footnote">
+        <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+        <p><em>Logic</em>, c. viii., cf. Definitions, § 5-6. Tr.</p>
+        </aside>
+        </aside>
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../unit-1-number-and-magnitude/unit-1-number-and-magnitude-en.html" title="Unit I: Number and Magnitude">&larr; <span class="nav-label">Unit I: Number and Magnitude</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="../index.html">LA SCIENCE ET L’HYPOTHÈSE</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../unit-3-space-and-geometry/unit-3-space-and-geometry-en.html" title="Unit III: Space and Geometry"><span class="nav-label">Unit III: Space and Geometry</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../../about/index.html"  >about</a></li>
+        <li><a href="../../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script src="../../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

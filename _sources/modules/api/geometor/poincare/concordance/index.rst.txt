@@ -1,0 +1,149 @@
+geometor.poincare.concordance
+=============================
+
+.. py:module:: geometor.poincare.concordance
+
+.. autoapi-nested-parse::
+
+   Scholarly concordance, archival witness verification, and RST apparatus compiler.
+
+   Manages the JSON registries in ``resources/science_and_hypothesis/`` (mirrored to
+   ``resources/`` for PHOTON Publish hover-card resolution), verifies SHA-256 digests of
+   the public-domain 1902 French and 1905 English primary witnesses, checks 4-track Book
+   Codex synchronization, and compiles ``concordance.rst``, ``bibliography.rst``,
+   ``persons.rst``, and ``glossary.rst``.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   geometor.poincare.concordance.CODEX_UNITS
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   geometor.poincare.concordance.CodexAuditReport
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   geometor.poincare.concordance.default_repo_root
+   geometor.poincare.concordance.load_sources_manifest
+   geometor.poincare.concordance.load_concordance
+   geometor.poincare.concordance.verify_sources_manifest
+   geometor.poincare.concordance.sync_root_apparatus_json
+   geometor.poincare.concordance.compile_apparatus_rst
+   geometor.poincare.concordance.audit_codex_repository
+
+
+Module Contents
+---------------
+
+.. py:data:: CODEX_UNITS
+   :type:  tuple[str, ...]
+   :value: ('unit-1-number-and-magnitude', 'unit-2-non-euclidean-geometries', 'unit-3-space-and-geometry',...
+
+
+.. py:function:: default_repo_root() -> pathlib.Path
+
+   Return the root directory of ``geometor/poincare``.
+
+
+.. py:function:: load_sources_manifest(repo_root: pathlib.Path | None = None) -> dict[str, Any]
+
+   Load ``resources/science_and_hypothesis/sources_manifest.json``.
+
+
+.. py:function:: load_concordance(repo_root: pathlib.Path | None = None) -> dict[str, Any]
+
+   Load ``resources/science_and_hypothesis/concordance.json``.
+
+
+.. py:function:: verify_sources_manifest(repo_root: pathlib.Path | None = None) -> list[dict[str, Any]]
+
+   Verify SHA-256 digests and byte counts of all archival witness files.
+
+   :param repo_root: Optional repository root path.
+
+   :returns: List of verified witness records.
+
+   :raises FileNotFoundError: If any witness file is missing.
+   :raises ValueError: If a SHA-256 digest or byte count mismatches ``sources_manifest.json``.
+
+
+.. py:function:: sync_root_apparatus_json(repo_root: pathlib.Path | None = None) -> list[pathlib.Path]
+
+   Mirror ``persons.json``, ``citations.json``, and ``glossary.json`` into ``resources/``.
+
+   :param repo_root: Optional repository root path.
+
+   :returns: List of destination paths written in ``resources/``.
+
+
+.. py:function:: compile_apparatus_rst(repo_root: pathlib.Path | None = None) -> list[pathlib.Path]
+
+   Compile ``concordance.rst``, ``bibliography.rst``, ``persons.rst``, and ``glossary.rst``.
+
+   :param repo_root: Optional repository root path.
+
+   :returns: List of generated ``.rst`` paths under ``docsrc/science_and_hypothesis/``.
+
+
+.. py:class:: CodexAuditReport
+
+   Summary of verified codex witnesses, apparatus registries, figures, and 4-track units.
+
+
+   .. py:attribute:: witness_count
+      :type:  int
+
+
+   .. py:attribute:: concordance_entries
+      :type:  int
+
+
+   .. py:attribute:: dictionary_rows
+      :type:  int
+
+
+   .. py:attribute:: persons_count
+      :type:  int
+
+
+   .. py:attribute:: citations_count
+      :type:  int
+
+
+   .. py:attribute:: glossary_count
+      :type:  int
+
+
+   .. py:attribute:: figure_count
+      :type:  int
+
+
+   .. py:attribute:: unit_track_files
+      :type:  int
+
+
+.. py:function:: audit_codex_repository(repo_root: pathlib.Path | None = None) -> CodexAuditReport
+
+   Audit all primary witnesses, apparatus JSONs, 8 SVGs, and 16 4-track unit RST files.
+
+   :param repo_root: Optional repository root path.
+
+   :returns: Verified :class:`CodexAuditReport`.
+
+   :raises FileNotFoundError: If any expected codex track or SVG figure is missing.
+   :raises ValueError: If any ``:layout: book`` file embeds a ``.. py_file::`` script.
+
+

@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../../../../../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geometor.poincare.render &mdash; GEOMETOR • poincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../../../../../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../../../../../_static/favicon.ico" />
+</head>
+
+<body class="book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../../../../../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../../../../../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="../../../../../science_and_hypothesis/index.html"  >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="../../../../../demos/index.html"  >demos</a>
+        </li>
+        <li>
+          <a href="../../../../../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../../../../index.html" class="is-active" aria-selected="true" >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../../../../../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-header-breadcrumbs book-header-badges" role="navigation" aria-label="Breadcrumbs">
+            <a class="book-crumb-link" href="../../../../index.html">modules</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../disk/index.html" title="geometor.poincare.disk">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../sphinx_ext/index.html" title="geometor.poincare.sphinx_ext"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content" role="main">
+        <section class="level-1" id="module-geometor.poincare.render">
+        <span id="geometor-poincare-render"></span><h1>geometor.poincare.render<a class="headerlink" href="#module-geometor.poincare.render" title="Link to this heading">¶</a></h1>
+        <p>Publication-grade interactive <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> SVG renderer for <code class="docutils literal notranslate"><span class="pre">geometor.poincare</span></code>.</p>
+        <p>Generates theme-adaptive SVGs directly from exact <a class="reference internal" href="../disk/index.html#module-geometor.poincare.disk" title="geometor.poincare.disk"><code class="xref py py-mod docutils literal notranslate"><span class="pre">geometor.poincare.disk</span></code></a> symbolic
+        constructions while preserving canonical <code class="docutils literal notranslate"><span class="pre">data-ref</span></code> attributes, <code class="docutils literal notranslate"><span class="pre">&lt;defs&gt;</span></code> midpoint
+        tick markers (<code class="docutils literal notranslate"><span class="pre">#geom-tick-1..3</span></code>), 3-vertex midpoint <code class="docutils literal notranslate"><span class="pre">&lt;path&gt;</span></code> arcs and segments, and
+        <code class="docutils literal notranslate"><span class="pre">#highlights</span></code> overlay groups consumed by PHOTON Publish’s <code class="docutils literal notranslate"><span class="pre">geometor_interactive.js</span></code>
+        and <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">picture::</span></code> directive.</p>
+        <section class="level-2" id="attributes">
+        <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.render.EMBEDDED_SVG_STYLE" title="geometor.poincare.render.EMBEDDED_SVG_STYLE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EMBEDDED_SVG_STYLE</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.render.FIGURE_SPECS" title="geometor.poincare.render.FIGURE_SPECS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FIGURE_SPECS</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.render.render_figure_svg" title="geometor.poincare.render.render_figure_svg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render_figure_svg</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="functions">
+        <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.render.render_codex_figure" title="geometor.poincare.render.render_codex_figure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">render_codex_figure</span></code></a>(filename) → str</p></td>
+        <td><p>Render one of the 8 canonical <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> codex figures by filename.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.render.export_all_codex_figures" title="geometor.poincare.render.export_all_codex_figures"><code class="xref py py-obj docutils literal notranslate"><span class="pre">export_all_codex_figures</span></code></a>(output_dir) → list[pathlib.Path]</p></td>
+        <td><p>Generate and write all 8 standalone <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> SVGs into <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="module-contents">
+        <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+        <dl class="py data">
+        <dt class="sig sig-object py" id="geometor.poincare.render.EMBEDDED_SVG_STYLE">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.render.</span></span><span class="sig-name descname"><span class="pre">EMBEDDED_SVG_STYLE</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></span><a class="headerlink" href="#geometor.poincare.render.EMBEDDED_SVG_STYLE" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py data">
+        <dt class="sig sig-object py" id="geometor.poincare.render.FIGURE_SPECS">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.render.</span></span><span class="sig-name descname"><span class="pre">FIGURE_SPECS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#geometor.poincare.render.FIGURE_SPECS" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.render.render_codex_figure">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.render.</span></span><span class="sig-name descname"><span class="pre">render_codex_figure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#geometor.poincare.render.render_codex_figure" title="Link to this definition">¶</a></dt>
+        <dd><p>Render one of the 8 canonical <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> codex figures by filename.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>filename</strong> – Key in <a class="reference internal" href="#geometor.poincare.render.FIGURE_SPECS" title="geometor.poincare.render.FIGURE_SPECS"><code class="xref py py-data docutils literal notranslate"><span class="pre">FIGURE_SPECS</span></code></a> (with or without <code class="docutils literal notranslate"><span class="pre">.svg</span></code> suffix).</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Complete UTF-8 SVG document string.</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>KeyError</strong> – If <code class="docutils literal notranslate"><span class="pre">filename</span></code> is not a recognized codex figure.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.render.export_all_codex_figures">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.render.</span></span><span class="sig-name descname"><span class="pre">export_all_codex_figures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.render.export_all_codex_figures" title="Link to this definition">¶</a></dt>
+        <dd><p>Generate and write all 8 standalone <code class="docutils literal notranslate"><span class="pre">.euclid-graphic</span></code> SVGs into <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>output_dir</strong> – Target directory (e.g. <code class="docutils literal notranslate"><span class="pre">docsrc/_static/figures</span></code>).</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Sorted list of written SVG file paths.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py data">
+        <dt class="sig sig-object py" id="geometor.poincare.render.render_figure_svg">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.render.</span></span><span class="sig-name descname"><span class="pre">render_figure_svg</span></span><a class="headerlink" href="#geometor.poincare.render.render_figure_svg" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../disk/index.html" title="geometor.poincare.disk">&larr; <span class="nav-label">geometor.poincare.disk</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../sphinx_ext/index.html" title="geometor.poincare.sphinx_ext"><span class="nav-label">geometor.poincare.sphinx_ext</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../../../../../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../../../../../about/index.html"  >about</a></li>
+        <li><a href="../../../../../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../../../../../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../../../../../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../../../../../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script src="../../../../../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

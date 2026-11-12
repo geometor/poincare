@@ -1,0 +1,50 @@
+geometor.poincare.sphinx_ext
+============================
+
+.. py:module:: geometor.poincare.sphinx_ext
+
+.. autoapi-nested-parse::
+
+   Runtime Sphinx & photon-platform/publish integration for GEOMETOR Poincaré.
+
+   Registers the ``fr`` ("French (1902)") companion track in ``photon_platform.publish.book``
+   at build time (without modifying ``photon-platform/publish``) and configures
+   offline-safe local intersphinx inventories across the GEOMETOR ecosystem.
+
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   geometor.poincare.sphinx_ext.register_french_book_track
+   geometor.poincare.sphinx_ext.configure_local_intersphinx
+   geometor.poincare.sphinx_ext.setup
+
+
+Module Contents
+---------------
+
+.. py:function:: register_french_book_track() -> None
+
+   Extend ``photon_platform.publish.book`` to recognize ``<stem>-fr`` French tracks.
+
+
+.. py:function:: configure_local_intersphinx(intersphinx_mapping: dict[str, Any], project_root: pathlib.Path) -> None
+
+   Bind local ``objects.inv`` files across GEOMETOR sister repos and prune offline-unreachable URLs.
+
+   :param intersphinx_mapping: Mutable Sphinx ``intersphinx_mapping`` dictionary.
+   :param project_root: Root directory of the ``geometor/poincare`` repository.
+
+
+.. py:function:: setup(app: object) -> dict[str, Any]
+
+   Sphinx extension entry point.
+
+   :param app: Active Sphinx application instance.
+
+   :returns: Extension metadata dictionary.
+
+

@@ -1,0 +1,548 @@
+geometor.poincare.disk
+======================
+
+.. py:module:: geometor.poincare.disk
+
+.. autoapi-nested-parse::
+
+   Exact symbolic constructions in the Poincaré Conformal Hyperbolic Disk Model.
+
+   Implements Henri Poincaré's *Translation Dictionary* (*La Science et l'Hypothèse*,
+   Part II, Chs. III–V, 1902) inside ``geometor.model`` using 100% exact SymPy symbolic
+   algebra over :math:`\mathbb{Q}` and closed-form quadratic extensions—with zero
+   floating-point coordinates.
+
+   Because every hyperbolic geodesic in the unit disk
+   :math:`\mathbb{D} = \{(x, y) : x^2 + y^2 < 1\}` is either a Euclidean diameter through
+   the center :math:`O = (0, 0)` or a Euclidean circle cutting the horizon circle
+   :math:`\Omega: x^2 + y^2 = 1` orthogonally, ``geometor.model``'s straightedge-and-compass
+   kernel constructs hyperbolic lines, circle inversions, limiting horoparallels,
+   ultraparallels, ideal triangles, Saccheri quadrilaterals, Weierstrass–Beltrami–Klein
+   projections, and Wildberger's Rational Hyperbolic Quadrances with complete algebraic
+   exactness.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   geometor.poincare.disk.construct_saccheri_triangle_defect
+
+
+Classes
+-------
+
+.. autoapisummary::
+
+   geometor.poincare.disk.HyperbolicGeodesic
+   geometor.poincare.disk.HyperbolicMetricReport
+   geometor.poincare.disk.UltraparallelPencil
+   geometor.poincare.disk.IdealTriangleResult
+   geometor.poincare.disk.SaccheriDefectResult
+   geometor.poincare.disk.DedekindCutResult
+   geometor.poincare.disk.HeatedDiskResult
+   geometor.poincare.disk.BeltramiKleinBridgeResult
+   geometor.poincare.disk.StellarParallaxResult
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   geometor.poincare.disk.construct_unit_horizon
+   geometor.poincare.disk.euclidean_tangent_at_circle_point
+   geometor.poincare.disk.construct_inversion_in_horizon
+   geometor.poincare.disk.construct_hyperbolic_geodesic
+   geometor.poincare.disk.hyperbolic_cross_ratio_and_quadrance
+   geometor.poincare.disk.construct_ultraparallels_through_point
+   geometor.poincare.disk.construct_ideal_hyperbolic_triangle
+   geometor.poincare.disk.construct_saccheri_triangleDefect
+   geometor.poincare.disk.construct_dedekind_continuum_cut
+   geometor.poincare.disk.construct_heated_disk_optical_rays
+   geometor.poincare.disk.construct_beltrami_klein_bridge
+   geometor.poincare.disk.construct_stellar_parallax_conventionalism
+
+
+Module Contents
+---------------
+
+.. py:function:: construct_unit_horizon(model: geometor.model.Model) -> tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Circle]
+
+   Ensure the unit horizon circle :math:`\Omega: x^2 + y^2 = 1` exists in ``model``.
+
+   :param model: Active ``geometor.model.Model`` (recommended ``auto_intersect=False``).
+
+   :returns: Tuple ``(O, Ex, Omega)`` consisting of center ``O = (0, 0)``, horizon unit point
+             ``Ex = (1, 0)``, and Euclidean unit circle ``Omega``.
+
+
+.. py:function:: euclidean_tangent_at_circle_point(model: geometor.model.Model, circle: sympy.geometry.Circle, pt_on_circle: sympy.geometry.Point2D) -> sympy.geometry.Line2D
+
+   Construct the Euclidean tangent line to ``circle`` at boundary point ``pt_on_circle``.
+
+   :param model: Active ``geometor.model.Model``.
+   :param circle: Circle element whose center is registered or constructible in ``model``.
+   :param pt_on_circle: Point lying on ``circle``.
+
+   :returns: Exact ``spg.Line2D`` tangent to ``circle`` at ``pt_on_circle``.
+
+
+.. py:function:: construct_inversion_in_horizon(model: geometor.model.Model, P: sympy.geometry.Point2D, *, label: str | None = None) -> sympy.geometry.Point2D
+
+   Construct the exact Euclidean inverse :math:`P^* = P / \|P\|^2` in :math:`\Omega: x^2+y^2=1`.
+
+   Uses pure straightedge-and-compass geometry inside ``model``:
+
+   - If :math:`P \in \partial\Omega` (:math:`\|P\|^2 = 1`), returns :math:`P` itself.
+   - If :math:`0 < \|P\|^2 < 1` (:math:`P \in \mathbb{D} \setminus \{O\}`), erects the chord
+     perpendicular to :math:`OP` at :math:`P` meeting :math:`\Omega` at :math:`T_1`, then
+     intersects the horizon tangent at :math:`T_1` with ray :math:`OP` (Euclid VI.8:
+     :math:`|OP|\cdot|OP^*| = |OT_1|^2 = 1`).
+   - If :math:`\|P\|^2 > 1`, constructs the Thales circle on diameter :math:`OP` meeting
+     :math:`\Omega` at :math:`T_1, T_2` and intersects polar chord :math:`T_1 T_2` with :math:`OP`.
+
+   :param model: Active ``geometor.model.Model``.
+   :param P: Exact non-origin point ``spg.Point2D``.
+   :param label: Optional label for the constructed inverse point ``P*``.
+
+   :returns: Exact inverse point :math:`P^*` satisfying :math:`Q(O, P) \cdot Q(O, P^*) = 1`.
+
+   :raises TypeError: If ``P`` contains floating-point coordinates.
+   :raises ValueError: If ``P`` coincides with the horizon center ``O = (0, 0)``.
+
+
+.. py:class:: HyperbolicGeodesic
+
+   Exact hyperbolic geodesic in the Poincaré Conformal Disk :math:`\mathbb{D}`.
+
+   Supports both named attribute inspection (``.carrier``, ``.U``, ``.V``,
+   ``.ideal_points``) and 3-tuple unpacking ``carrier, U, V = geodesic``.
+   Stores the underlying ``spg.Line2D`` diameter or orthogonal ``spg.Circle``
+   carrier, ordered ideal horizon endpoints ``(U, V)``, optional inverse point
+   :math:`P^*`, Euclidean circle center, squared radius :math:`r^2 = |OC|^2 - 1`,
+   and exact orthogonality residual :math:`|OC|^2 - r^2 - 1 = 0`.
+
+
+   .. py:attribute:: carrier
+      :type:  sympy.geometry.Line2D | sympy.geometry.Circle
+
+
+   .. py:attribute:: U
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: V
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: inverse_point
+      :type:  sympy.geometry.Point2D | None
+      :value: None
+
+
+
+   .. py:attribute:: is_diameter
+      :type:  bool
+      :value: False
+
+
+
+   .. py:attribute:: center
+      :type:  sympy.geometry.Point2D | None
+      :value: None
+
+
+
+   .. py:attribute:: radius_squared
+      :type:  sympy.Expr | None
+      :value: None
+
+
+
+   .. py:attribute:: orthogonality_residual
+      :type:  sympy.Expr
+
+
+   .. py:property:: ideal_points
+      :type: tuple[sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+      Return ordered ideal boundary endpoints ``(U, V)`` on :math:`\partial\Omega`.
+
+
+   .. py:method:: __iter__() -> collections.abc.Iterator[sympy.geometry.Line2D | sympy.geometry.Circle | sympy.geometry.Point2D]
+
+      Yield ``(carrier, U, V)`` for ergonomic tuple unpacking.
+
+
+
+.. py:function:: construct_hyperbolic_geodesic(model: geometor.model.Model, P: sympy.geometry.Point2D, Q: sympy.geometry.Point2D, *, classes: list[str] | None = None, label: str | None = None) -> HyperbolicGeodesic
+
+   Construct the unique hyperbolic geodesic through :math:`P, Q \in \overline{\mathbb{D}}`.
+
+   Implements Poincaré's Translation Dictionary (*La Science et l'Hypothèse*, Ch. III):
+
+   - When :math:`O, P, Q` are collinear, constructs the Euclidean diameter line :math:`PQ`
+     and intersects it with :math:`\Omega` to obtain antipodal ideal points :math:`U, V`.
+   - When :math:`O, P, Q` are non-collinear and at least one point lies strictly inside
+     :math:`\mathbb{D}`, constructs its horizon inverse :math:`P^* = P / \|P\|^2` and
+     circumscribes the unique Euclidean circle through :math:`(P, Q, P^*)`. By power-of-a-point
+     (:math:`|OP|\cdot|OP^*| = 1 = R_\Omega^2`), this circle cuts :math:`\Omega` orthogonally
+     at two exact ideal points :math:`U, V \in \partial\Omega`.
+   - When both :math:`P` and :math:`Q` lie on :math:`\partial\Omega` (ideal geodesic),
+     intersects the Euclidean horizon tangents at :math:`P` and :math:`Q` to locate the
+     exact orthogonal circle center :math:`C`.
+
+   :param model: Active ``geometor.model.Model``.
+   :param P: First point in :math:`\overline{\mathbb{D}}`.
+   :param Q: Second distinct point in :math:`\overline{\mathbb{D}}`.
+   :param classes: Optional CSS/semantic class tags for the constructed geodesic element.
+   :param label: Optional identifier for the constructed geodesic element.
+
+   :returns: Populated :class:`HyperbolicGeodesic` dataclass (unpackable as ``(carrier, U, V)``).
+
+   :raises TypeError: If ``P`` or ``Q`` contains floating-point coordinates.
+   :raises ValueError: If ``P == Q`` or either point lies outside :math:`\overline{\mathbb{D}}`.
+
+
+.. py:class:: HyperbolicMetricReport
+
+   Exact cross-ratio and Rational Hyperbolic Quadrance invariants for :math:`P, Q \in \mathbb{D}`.
+
+   Unites Poincaré's cross-ratio logarithmic distance with Norman Wildberger's
+   transcendental-free Universal Hyperbolic Geometry (UHG) and Cayley–Klein quadrances:
+
+   - ``cross_ratio``: :math:`\chi(P, Q; U, V) = \frac{|PV|\cdot|QU|}{|PU|\cdot|QV|} \ge 1`
+   - ``cross_ratio_squared``: :math:`\chi^2(P, Q; U, V) = \frac{Q(P,V)\,Q(Q,U)}{Q(P,U)\,Q(Q,V)}`
+   - ``poincare_distance``: :math:`d_{\mathbb{H}}(P, Q) = \ln \chi(P, Q; U, V)`
+   - ``conformal_quadrance``: :math:`\tau(P, Q) = \frac{\|P-Q\|^2}{\|1 - \bar{P}Q\|^2} = \left(\frac{\chi-1}{\chi+1}\right)^2 \in [0, 1)`
+   - ``wildberger_uhg_quadrance``: :math:`q_{\text{UHG}}(P, Q) = -\frac{4\tau}{(1-\tau)^2} = -\sinh^2 d_{\mathbb{H}}(P, Q) \in \mathbb{Q}(P, Q)`
+   - ``cayley_klein_quadrance``: :math:`q_{\text{CK}}(P, Q) = \frac{4\tau}{(1+\tau)^2} = \tanh^2 d_{\mathbb{H}}(P, Q) \in [0, 1)`
+   - ``isometric_delta``: :math:`\delta(P, Q) = \frac{2\|P-Q\|^2}{(1-\|P\|^2)(1-\|Q\|^2)} = \cosh d_{\mathbb{H}}(P, Q) - 1`
+
+
+   .. py:attribute:: cross_ratio
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: cross_ratio_squared
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: poincare_distance
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: conformal_quadrance
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: wildberger_uhg_quadrance
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: cayley_klein_quadrance
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: isometric_delta
+      :type:  sympy.Expr
+
+
+.. py:function:: hyperbolic_cross_ratio_and_quadrance(P: sympy.geometry.Point2D, Q: sympy.geometry.Point2D, U: sympy.geometry.Point2D | None = None, V: sympy.geometry.Point2D | None = None) -> HyperbolicMetricReport
+
+   Compute the exact algebraic cross-ratio and Wildberger's Rational Hyperbolic Quadrance.
+
+   Eliminates transcendental logarithms for algebraic comparison while verifying the
+   exact polynomial bridge :math:`(1 - \tau)^2 (\chi^2 + 1)^2 = 4 (1 + \tau)^2 \chi^2`
+   between the 4-point circle chord cross-ratio :math:`\chi(P, Q; U, V)` and the
+   purely rational conformal/UHG quadrances over :math:`\mathbb{Q}`.
+
+   :param P: First interior point :math:`P \in \mathbb{D}`.
+   :param Q: Second interior point :math:`Q \in \mathbb{D}`.
+   :param U: First ideal endpoint on :math:`\partial\Omega` (constructed automatically if ``None``).
+   :param V: Second ideal endpoint on :math:`\partial\Omega` (constructed automatically if ``None``).
+
+   :returns: Populated :class:`HyperbolicMetricReport` with 100% exact SymPy invariants.
+
+   :raises TypeError: If any point contains ``sp.Float`` coordinates.
+   :raises ValueError: If ``P`` or ``Q`` does not lie strictly inside :math:`\mathbb{D}`.
+
+
+.. py:class:: UltraparallelPencil
+
+   Hyperbolic parallel & ultraparallel pencil demonstrating Postulate V independence.
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: base_geodesic
+      :type:  HyperbolicGeodesic
+
+
+   .. py:attribute:: point
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: limiting_parallels
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+   .. py:attribute:: ultraparallels
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+.. py:function:: construct_ultraparallels_through_point(model: geometor.model.Model | None = None, L_hyp: HyperbolicGeodesic | sympy.geometry.Circle | sympy.geometry.Line2D | None = None, P: sympy.geometry.Point2D | None = None) -> UltraparallelPencil
+
+   Construct two limiting horoparallels and two ultraparallels to ``L_hyp`` through ``P``.
+
+   Demonstrates inside ``geometor.model`` that Euclid's Fifth Postulate fails in the
+   Poincaré disk while Postulates I–IV (in Poincaré's dictionary) hold identically:
+   through a single point :math:`P \notin L_{\text{hyp}}`, infinitely many hyperbolic
+   lines fail to meet :math:`L_{\text{hyp}}`.
+
+   :param model: Optional ``geometor.model.Model`` (created if ``None``).
+   :param L_hyp: Reference hyperbolic geodesic (or its ``Circle``/``Line2D`` carrier). If
+                 omitted, constructs the rational geodesic with ideal endpoints
+                 :math:`(\frac{4}{5}, -\frac{3}{5})` and :math:`(-\frac{4}{5}, -\frac{3}{5})`.
+   :param P: Exterior point in :math:`\mathbb{D} \setminus L_{\text{hyp}}`. Defaults to
+             :math:`(\frac{1}{6}, \frac{2}{5})`.
+
+   :returns: Verified :class:`UltraparallelPencil` with exact disjointness over :math:`\overline{\mathbb{D}}`.
+
+
+.. py:class:: IdealTriangleResult
+
+   Exact Pythagorean ideal hyperbolic triangle on :math:`\partial\Omega` with :math:`0^\circ` angles.
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: vertices
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: sides
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+   .. py:attribute:: centers
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: radii
+      :type:  tuple[sympy.Rational, sympy.Rational, sympy.Rational]
+
+
+   .. py:attribute:: vertex_spreads
+      :type:  tuple[sympy.Expr, sympy.Expr, sympy.Expr]
+
+
+   .. py:attribute:: angular_defect
+      :type:  sympy.Expr
+
+
+.. py:function:: construct_ideal_hyperbolic_triangle(model: geometor.model.Model | None = None) -> IdealTriangleResult
+
+   Construct the exact rational ideal hyperbolic triangle on :math:`U_1, U_2, U_3 \in \partial\Omega`.
+
+   Uses Pythagorean horizon points :math:`U_1 = (1, 0)`,
+   :math:`U_2 = (-\frac{3}{5}, \frac{4}{5})`, and
+   :math:`U_3 = (-\frac{3}{5}, -\frac{4}{5})`. Every side is an orthogonal Euclidean
+   circle with 100% rational center and rational radius:
+
+   - :math:`C_{12} = (1, 2),\; r_{12} = 2`
+   - :math:`C_{13} = (1, -2),\; r_{13} = 2`
+   - :math:`C_{23} = (-\frac{5}{3}, 0),\; r_{23} = \frac{4}{3}`
+
+   Meeting tangentially along radii :math:`OU_1, OU_2, OU_3` with interior spreads ``(0, 0, 0)``
+   (:math:`0^\circ` angle sum, maximal Gauss–Bonnet defect :math:`\pi`).
+
+   :param model: Optional ``geometor.model.Model`` (created if ``None``).
+
+   :returns: Verified :class:`IdealTriangleResult`.
+
+
+.. py:class:: SaccheriDefectResult
+
+   Exact rational hyperbolic right-triangle & Saccheri quadrilateral defect proof.
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: triangle_vertices
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: triangle_hypotenuse
+      :type:  HyperbolicGeodesic
+
+
+   .. py:attribute:: triangle_spreads
+      :type:  tuple[sympy.Expr, sympy.Expr, sympy.Expr]
+
+
+   .. py:attribute:: triangle_defect
+      :type:  sympy.Expr
+
+
+   .. py:attribute:: saccheri_vertices
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: saccheri_base
+      :type:  HyperbolicGeodesic
+
+
+   .. py:attribute:: saccheri_legs
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+   .. py:attribute:: saccheri_summit
+      :type:  HyperbolicGeodesic
+
+
+   .. py:attribute:: saccheri_base_spreads
+      :type:  tuple[sympy.Expr, sympy.Expr]
+
+
+   .. py:attribute:: saccheri_summit_spreads
+      :type:  tuple[sympy.Expr, sympy.Expr]
+
+
+   .. py:attribute:: saccheri_leg_uhg_quadrances
+      :type:  tuple[sympy.Expr, sympy.Expr]
+
+
+   .. py:attribute:: saccheri_defect
+      :type:  sympy.Expr
+
+
+.. py:function:: construct_saccheri_triangleDefect(model: geometor.model.Model | None = None) -> SaccheriDefectResult
+
+   Construct an exact hyperbolic right triangle & Saccheri quadrilateral proving defect > 0.
+
+   :param model: Optional ``geometor.model.Model`` (created if ``None``).
+
+   :returns: Verified :class:`SaccheriDefectResult` with 100% rational spreads and quadrances.
+
+
+.. py:data:: construct_saccheri_triangle_defect
+
+.. py:class:: DedekindCutResult
+
+   Exact model for Unit 1: Dedekind continuum cut (:math:`\sqrt{2}/2`) & rational thresholds.
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: cut_point
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: lower_rational
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: upper_rational
+      :type:  sympy.geometry.Point2D
+
+
+.. py:function:: construct_dedekind_continuum_cut(model: geometor.model.Model | None = None) -> DedekindCutResult
+
+   Construct the incommensurable diagonal-circle Dedekind cut for Chs. I–II.
+
+
+.. py:class:: HeatedDiskResult
+
+   Exact model for Unit 3: Poincaré's Heated Disk optical rays & isothermals (Ch. IV).
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: source
+      :type:  sympy.geometry.Point2D
+
+
+   .. py:attribute:: isothermals
+      :type:  tuple[sympy.geometry.Circle, sympy.geometry.Circle, sympy.geometry.Circle]
+
+
+   .. py:attribute:: light_rays
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic, HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+.. py:function:: construct_heated_disk_optical_rays(model: geometor.model.Model | None = None) -> HeatedDiskResult
+
+   Construct Poincaré's Heated-Disk optical world (:math:`T \propto 1 - r^2,\; n \propto (1-r^2)^{-1}`).
+
+
+.. py:class:: BeltramiKleinBridgeResult
+
+   Exact straightedge correspondence between Poincaré conformal arcs & Beltrami–Klein chords.
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: poincare_geodesic
+      :type:  HyperbolicGeodesic
+
+
+   .. py:attribute:: beltrami_klein_chord
+      :type:  sympy.geometry.Line2D
+
+
+   .. py:attribute:: poincare_points
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: klein_points
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+.. py:function:: construct_beltrami_klein_bridge(model: geometor.model.Model | None = None) -> BeltramiKleinBridgeResult
+
+   Construct the exact Weierstrass radial projection :math:`K(P) = \frac{2P}{1 + \|P\|^2}`.
+
+
+.. py:class:: StellarParallaxResult
+
+   Exact model for Unit 4: Stellar parallax triangle & Poincaré conventionalism (Ch. V § 3).
+
+
+   .. py:attribute:: model
+      :type:  geometor.model.Model
+
+
+   .. py:attribute:: stars
+      :type:  tuple[sympy.geometry.Point2D, sympy.geometry.Point2D, sympy.geometry.Point2D]
+
+
+   .. py:attribute:: lobachevsky_rays
+      :type:  tuple[HyperbolicGeodesic, HyperbolicGeodesic, HyperbolicGeodesic]
+
+
+   .. py:attribute:: euclidean_chords
+      :type:  tuple[sympy.geometry.Line2D, sympy.geometry.Line2D, sympy.geometry.Line2D]
+
+
+.. py:function:: construct_stellar_parallax_conventionalism(model: geometor.model.Model | None = None) -> StellarParallaxResult
+
+   Construct Poincaré's astronomical parallax triangle (Ch. V, *Experience and Geometry*).
+
+

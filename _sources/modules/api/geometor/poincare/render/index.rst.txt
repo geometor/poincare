@@ -1,0 +1,69 @@
+geometor.poincare.render
+========================
+
+.. py:module:: geometor.poincare.render
+
+.. autoapi-nested-parse::
+
+   Publication-grade interactive ``.euclid-graphic`` SVG renderer for ``geometor.poincare``.
+
+   Generates theme-adaptive SVGs directly from exact :mod:`geometor.poincare.disk` symbolic
+   constructions while preserving canonical ``data-ref`` attributes, ``<defs>`` midpoint
+   tick markers (``#geom-tick-1..3``), 3-vertex midpoint ``<path>`` arcs and segments, and
+   ``#highlights`` overlay groups consumed by PHOTON Publish's ``geometor_interactive.js``
+   and ``.. picture::`` directive.
+
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   geometor.poincare.render.EMBEDDED_SVG_STYLE
+   geometor.poincare.render.FIGURE_SPECS
+   geometor.poincare.render.render_figure_svg
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   geometor.poincare.render.render_codex_figure
+   geometor.poincare.render.export_all_codex_figures
+
+
+Module Contents
+---------------
+
+.. py:data:: EMBEDDED_SVG_STYLE
+   :type:  str
+   :value: ''
+
+
+.. py:data:: FIGURE_SPECS
+   :type:  dict[str, str]
+
+.. py:function:: render_codex_figure(filename: str) -> str
+
+   Render one of the 8 canonical ``.euclid-graphic`` codex figures by filename.
+
+   :param filename: Key in :data:`FIGURE_SPECS` (with or without ``.svg`` suffix).
+
+   :returns: Complete UTF-8 SVG document string.
+
+   :raises KeyError: If ``filename`` is not a recognized codex figure.
+
+
+.. py:function:: export_all_codex_figures(output_dir: pathlib.Path) -> list[pathlib.Path]
+
+   Generate and write all 8 standalone ``.euclid-graphic`` SVGs into ``output_dir``.
+
+   :param output_dir: Target directory (e.g. ``docsrc/_static/figures``).
+
+   :returns: Sorted list of written SVG file paths.
+
+
+.. py:data:: render_figure_svg
+

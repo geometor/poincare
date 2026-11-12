@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poincaré Translation Dictionary &amp; Cross-Corpus Concordance &mdash; LA SCIENCE ET L’HYPOTHÈSE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../_static/favicon.ico" />
+</head>
+
+<body class="is-book-page book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="index.html" class="is-active" aria-selected="true" >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="../demos/index.html"  >demos</a>
+        </li>
+        <li>
+          <a href="../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../modules/index.html"  >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="index.html">LA SCIENCE ET L’HYPOTHÈSE</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="unit-4-experience-and-geometry/unit-4-experience-and-geometry-en.html" title="Unit IV: Experience, Geometry &amp; Physical Hypotheses">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="bibliography.html" title="Systematic Bibliography"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content folio-book-page" role="main">
+        <section class="level-1" id="poincare-translation-dictionary-cross-corpus-concordance">
+        <span id="concordance"></span><h1>Poincaré Translation Dictionary &amp; Cross-Corpus Concordance<a class="headerlink" href="#poincare-translation-dictionary-cross-corpus-concordance" title="Link to this heading">¶</a></h1>
+        <p class="rubric">Mapping <em>La Science et l’Hypothèse</em> (1902 / 1905) across the GEOMETOR Digital Scriptorium &amp; Symbolic Engine</p>
+        <p>Maps Henri Poincaré’s La Science et l’Hypothèse (1902 / 1905)—specifically his synthetic a priori arithmetic induction, Dedekind vs. perceptual continua, Non-Euclidean Translation Dictionary, Heated-Disk conformal metric, Lie displacement groups, and geometric conventionalism—directly onto exact SymPy + geometor.model constructions and eleven sister GEOMETOR repositories.</p>
+        <hr class="docutils" />
+        <section class="level-2" id="i-poincare-s-hyperbolic-translation-dictionary-ch-iii-pp-5658">
+        <h2>I. Poincaré’s Hyperbolic Translation Dictionary (<em>Ch. III, pp. 56–58</em>)<a class="headerlink" href="#i-poincare-s-hyperbolic-translation-dictionary-ch-iii-pp-5658" title="Link to this heading">¶</a></h2>
+        <table class="docutils align-default">
+        <colgroup>
+        <col style="width: 24.0%" />
+        <col style="width: 30.0%" />
+        <col style="width: 46.0%" />
+        </colgroup>
+        <thead>
+        <tr class="row-odd"><th class="head"><p>Lobachevskian Term</p></th>
+        <th class="head"><p>Euclidean Disk Model Translation (<span class="math notranslate nohighlight">\(\mathbb{D} \subset \mathbb{R}^2\)</span>)</p></th>
+        <th class="head"><p>Exact <code class="docutils literal notranslate"><span class="pre">geometor.poincare</span></code> Algebraic Realization</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="row-even"><td><p><strong>Space / Hyperbolic Plane</strong> (<em>L’espace / Le plan de Lobatchefsky</em>)</p></td>
+        <td><p>Open interior D = {(x, y) : x^2 + y^2 &lt; 1} above/within the fundamental circle Ω: x^2 + y^2 = 1</p></td>
+        <td><p>construct_unit_horizon(model) -&gt; (O, Ex, Omega) with interior predicate exact_sign(x^2 + y^2 - 1) &lt; 0</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><strong>Ideal Horizon / Infinity</strong> (<em>Le plan fondamental / L’infini</em>)</p></td>
+        <td><p>Euclidean unit boundary circle ∂Ω: x^2 + y^2 = 1 where hyperbolic rulers shrink to zero</p></td>
+        <td><p>Boundary locus quadrance(O, U) == 1; rational Pythagorean points U = ((1-t^2)/(1+t^2), 2t/(1+t^2))</p></td>
+        </tr>
+        <tr class="row-even"><td><p><strong>Hyperbolic Reflection in Ω</strong> (<em>Inversion par rapport au cercle fondamental</em>)</p></td>
+        <td><p>Euclidean circle inversion <code class="docutils literal notranslate"><span class="pre">P</span> <span class="pre">&lt;-&gt;</span> <span class="pre">P*</span> <span class="pre">=</span> <span class="pre">P</span> <span class="pre">/</span> <span class="pre">||P||^2</span></code> satisfying <code class="docutils literal notranslate"><span class="pre">OP</span> <span class="pre">·</span> <span class="pre">OP*</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">=</span> <span class="pre">R_Ω^2</span></code></p></td>
+        <td><p><code class="docutils literal notranslate"><span class="pre">construct_inversion_in_horizon(model,</span> <span class="pre">P)</span></code> via Euclid VI.8 chord-and-tangent construction</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><strong>Hyperbolic Straight Line</strong> (<em>La droite non-euclidienne</em>)</p></td>
+        <td><p>Euclidean diameter through <code class="docutils literal notranslate"><span class="pre">O</span></code> or unique Euclidean circle through <code class="docutils literal notranslate"><span class="pre">(P,</span> <span class="pre">Q,</span> <span class="pre">P*)</span></code> cutting Ω orthogonally (<code class="docutils literal notranslate"><span class="pre">||OC||^2</span> <span class="pre">-</span> <span class="pre">r^2</span> <span class="pre">=</span> <span class="pre">1</span></code>)</p></td>
+        <td><p><code class="docutils literal notranslate"><span class="pre">construct_hyperbolic_geodesic(model,</span> <span class="pre">P,</span> <span class="pre">Q)</span> <span class="pre">-&gt;</span> <span class="pre">HyperbolicGeodesic(carrier,</span> <span class="pre">U,</span> <span class="pre">V)</span></code></p></td>
+        </tr>
+        <tr class="row-even"><td><p><strong>Hyperbolic Angle</strong> (<em>L’angle de deux droites</em>)</p></td>
+        <td><p>True Euclidean angle between the intersecting circles/diameters (100% conformal preservation)</p></td>
+        <td><p><code class="docutils literal notranslate"><span class="pre">line_spread(tan_1,</span> <span class="pre">tan_2)</span></code> via <code class="docutils literal notranslate"><span class="pre">euclidean_tangent_at_circle_point(model,</span> <span class="pre">circle,</span> <span class="pre">vertex)</span></code></p></td>
+        </tr>
+        <tr class="row-odd"><td><p><strong>Hyperbolic Distance</strong> (<em>La distance de deux points</em>)</p></td>
+        <td><p>Logarithm of the 4-point chord cross-ratio <span class="math notranslate nohighlight">\(\chi(P, Q; U, V) = \frac{|PV|\cdot|QU|}{|PU|\cdot|QV|}\)</span> along the orthogonal circle</p></td>
+        <td><p><code class="docutils literal notranslate"><span class="pre">hyperbolic_cross_ratio_and_quadrance(P,</span> <span class="pre">Q,</span> <span class="pre">U,</span> <span class="pre">V)</span></code> -&gt; <span class="math notranslate nohighlight">\(\ln\chi\)</span> paired with rational <span class="math notranslate nohighlight">\(\tau(P,Q)\)</span> and Wildberger <span class="math notranslate nohighlight">\(q_{\mathrm{UHG}}(P,Q)\)</span></p></td>
+        </tr>
+        <tr class="row-even"><td><p><strong>Rigid Hyperbolic Displacement</strong> (<em>Le mouvement d’une figure invariable</em>)</p></td>
+        <td><p>Group <code class="docutils literal notranslate"><span class="pre">PSU(1,</span> <span class="pre">1)</span></code> of Möbius inversions/homographies mapping Ω onto itself and preserving angles + cross-ratios</p></td>
+        <td><p>Compositions of orthogonal circle inversions preserving <code class="docutils literal notranslate"><span class="pre">conformal_quadrance</span></code> and <code class="docutils literal notranslate"><span class="pre">wildberger_uhg_quadrance</span></code></p></td>
+        </tr>
+        <tr class="row-odd"><td><p><strong>Beltrami–Klein Straight Chord</strong> (<em>La corde rectiligne de Beltrami–Klein</em>)</p></td>
+        <td><p>Straight chord <code class="docutils literal notranslate"><span class="pre">UV</span></code> inside Ω connected to Poincaré arc <code class="docutils literal notranslate"><span class="pre">UV</span></code> by radial Weierstrass map <code class="docutils literal notranslate"><span class="pre">K(P)</span> <span class="pre">=</span> <span class="pre">2P</span> <span class="pre">/</span> <span class="pre">(1</span> <span class="pre">+</span> <span class="pre">||P||^2)</span></code></p></td>
+        <td><p><code class="docutils literal notranslate"><span class="pre">construct_beltrami_klein_bridge(model)</span></code>: radial line <code class="docutils literal notranslate"><span class="pre">OP</span></code> meets straight chord <code class="docutils literal notranslate"><span class="pre">UV</span></code> at exact <code class="docutils literal notranslate"><span class="pre">K(P)</span></code></p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="ii-cross-repository-philosophical-geometric-concordance">
+        <h2>II. Cross-Repository Philosophical &amp; Geometric Concordance<a class="headerlink" href="#ii-cross-repository-philosophical-geometric-concordance" title="Link to this heading">¶</a></h2>
+        <section class="level-3" id="pc-01-reasoning-by-recurrence-vs-logicism-and-formalism">
+        <h3>PC.01 — Reasoning by Recurrence vs. Logicism and Formalism<a class="headerlink" href="#pc-01-reasoning-by-recurrence-vs-logicism-and-formalism" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Introduction &amp; Part I, Ch. I (FR pp. 9–28 / EN pp. 1–17) (<a class="reference internal" href="unit-1-number-and-magnitude/unit-1-number-and-magnitude-en.html#science-and-hypothesis-unit-1-en"><span class="std std-ref">Unit I (Ch. I)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/bertrand-russell</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/aquinas</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hoenen</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_dedekind_continuum_cut</span></code></p></li>
+        </ul>
+        <p>Poincaré defends complete mathematical induction (raisonnement par récurrence) as an irreducible synthetic a priori intuition condensing an infinite cascade of syllogisms into a single formula—challenging both Bertrand Russell’s logicist reduction in Principles of Mathematics (1903) and David Hilbert’s purely formal consistency program.</p>
+        </section>
+        <section class="level-3" id="pc-02-dedekind-s-irrational-cuts-vs-fechner-s-perceptual-continuum">
+        <h3>PC.02 — Dedekind’s Irrational Cuts vs. Fechner’s Perceptual Continuum<a class="headerlink" href="#pc-02-dedekind-s-irrational-cuts-vs-fechner-s-perceptual-continuum" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part I, Ch. II (FR pp. 29–48 / EN pp. 18–34) (<a class="reference internal" href="unit-1-number-and-magnitude/unit-1-number-and-magnitude-en.html#science-and-hypothesis-unit-1-en"><span class="std std-ref">Unit I (Ch. II)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/euclid</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/elements</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/aristotle</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_dedekind_continuum_cut</span></code></p></li>
+        </ul>
+        <p>Contrasts the physical continuum governed by Fechner’s threshold paradox (A = B, B = C, A &lt; C) against the mathematical continuum created via Dedekind cuts (such as √2/2 bisecting the unit square diagonal on x^2 + y^2 = 1), culminating in multidimensional cuts and Analysis Situs.</p>
+        </section>
+        <section class="level-3" id="pc-03-independence-of-euclid-s-fifth-postulate-lobachevsky-horoparallels-ultraparallels">
+        <h3>PC.03 — Independence of Euclid’s Fifth Postulate: Lobachevsky Horoparallels &amp; Ultraparallels<a class="headerlink" href="#pc-03-independence-of-euclid-s-fifth-postulate-lobachevsky-horoparallels-ultraparallels" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III §§ 1–2 (FR pp. 49–53 / EN pp. 35–39) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/euclid</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/elements</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/proclus</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_ultraparallels_through_point</span></code></p></li>
+        </ul>
+        <p>Resolves two millennia of attempts (from Posidonius and Proclus to Saccheri and Legendre) to deduce Euclid’s Postulate V from Postulates I–IV: in the Poincaré disk, through P ∉ L_hyp pass two asymptotic horoparallels and infinitely many disjoint ultraparallels.</p>
+        </section>
+        <section class="level-3" id="pc-04-poincare-s-translation-dictionary-relative-consistency-via-circle-inversion">
+        <h3>PC.04 — Poincaré’s Translation Dictionary &amp; Relative Consistency via Circle Inversion<a class="headerlink" href="#pc-04-poincare-s-translation-dictionary-relative-consistency-via-circle-inversion" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III §§ 5–6 (FR pp. 55–58 / EN pp. 41–43) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/casey</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/lemoine</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/pappus</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_inversion_in_horizon</span> <span class="pre">/</span> <span class="pre">construct_hyperbolic_geodesic</span></code></p></li>
+        </ul>
+        <p>Applies Casey’s theory of orthogonal circles and Lemoine/Adler horizon inversion (OP · OP* = 1) to translate every theorem of Lobachevsky into an ordinary Euclidean theorem about circles orthogonal to Ω—establishing the model-theoretic proof of relative consistency alongside Hilbert (1899).</p>
+        </section>
+        <section class="level-3" id="pc-05-cross-ratio-logarithmic-metric-wildberger-s-rational-hyperbolic-quadrance">
+        <h3>PC.05 — Cross-Ratio Logarithmic Metric &amp; Wildberger’s Rational Hyperbolic Quadrance<a class="headerlink" href="#pc-05-cross-ratio-logarithmic-metric-wildberger-s-rational-hyperbolic-quadrance" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III § 5 (FR p. 57 / EN p. 42) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/pappus</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/wildberger</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/klein</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/codes</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">hyperbolic_cross_ratio_and_quadrance</span></code></p></li>
+        </ul>
+        <p>Unites Pappus’s projective cross-ratio χ(P, Q; U, V) and Poincaré’s logarithmic metric d_H = ln(χ) with Norman Wildberger’s transcendental-free Universal Hyperbolic Quadrance q_UHG(P, Q) = -4τ/(1-τ)^2 over Q, proven algebraically equivalent via (1-τ)^2(χ^2+1)^2 = 4(1+τ)^2 χ^2.</p>
+        </section>
+        <section class="level-3" id="pc-06-ideal-hyperbolic-triangles-saccheri-s-acute-angle-hypothesis">
+        <h3>PC.06 — Ideal Hyperbolic Triangles &amp; Saccheri’s Acute Angle Hypothesis<a class="headerlink" href="#pc-06-ideal-hyperbolic-triangles-saccheri-s-acute-angle-hypothesis" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III §§ 1, 5 (FR pp. 50, 57 / EN pp. 36, 42) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/euclid</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/elements</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/wildberger</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_ideal_hyperbolic_triangle</span> <span class="pre">/</span> <span class="pre">construct_saccheri_triangleDefect</span></code></p></li>
+        </ul>
+        <p>Demonstrates over pure Q that Pythagorean ideal vertices U_1=(1,0), U_2=(-3/5,4/5), U_3=(-3/5,-4/5) bound an orthogonal-circle triangle with rational centers (1,2), (1,-2), (-5/3,0) and 0° interior spreads (defect π), while Saccheri quadrilateral A_1 A_2 B_2 B_1 exhibits acute summit spread 64/145 &lt; 1.</p>
+        </section>
+        <section class="level-3" id="pc-07-the-fourth-indefinite-geometry-chromogeometric-red-metric">
+        <h3>PC.07 — The Fourth Indefinite Geometry &amp; Chromogeometric Red Metric<a class="headerlink" href="#pc-07-the-fourth-indefinite-geometry-chromogeometric-red-metric" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III § 8 (FR pp. 60–61 / EN pp. 46–47) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/wildberger</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/klein</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">hyperbolic_cross_ratio_and_quadrance</span></code></p></li>
+        </ul>
+        <p>Poincaré’s little-noticed ‘Fourth Geometry’—generated by reflections across the exterior of the fundamental circle where a real line can be perpendicular to itself (isotropic null line)—anticipates both Minkowski spacetime (1905–1908) and Wildberger’s Red relativistic metric in Chromogeometry.</p>
+        </section>
+        <section class="level-3" id="pc-08-veronese-hilbert-s-non-archimedean-geometries-1899-grundlagen-restoration">
+        <h3>PC.08 — Veronese &amp; Hilbert’s Non-Archimedean Geometries (1899 Grundlagen Restoration)<a class="headerlink" href="#pc-08-veronese-hilbert-s-non-archimedean-geometries-1899-grundlagen-restoration" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III § 10 &amp; Ch. IV § 7 (FR pp. 63–64, 90) (<a class="reference internal" href="unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en.html#science-and-hypothesis-unit-2-en"><span class="std std-ref">Unit II (Ch. III)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/euclid</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_dedekind_continuum_cut</span></code></p></li>
+        </ul>
+        <p>Critical philological restoration: the Flammarion French text contains Poincaré’s explicit analysis of David Hilbert’s 1899 Grundlagen der Geometrie non-Archimedean field Ω(t) (omitted in 1905 English printings derived from Poincaré’s 1891 essay), linking Ch. II’s third-order continuum directly to geometor/hilbert.</p>
+        </section>
+        <section class="level-3" id="pc-09-poincare-s-heated-disk-world-conformal-optical-geodesics">
+        <h3>PC.09 — Poincaré’s Heated-Disk World &amp; Conformal Optical Geodesics<a class="headerlink" href="#pc-09-poincare-s-heated-disk-world-conformal-optical-geodesics" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. IV §§ 5–6 (FR pp. 82–88 / EN pp. 64–69) (<a class="reference internal" href="unit-3-space-and-geometry/unit-3-space-and-geometry-en.html#science-and-hypothesis-unit-3-en"><span class="std std-ref">Unit III (Ch. IV)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/klein</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/casey</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/walter-russell</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_heated_disk_optical_rays</span></code></p></li>
+        </ul>
+        <p>Models sentient observers inside a disk of radius R with temperature T ∝ R^2 - r^2, thermal dilation proportional to R^2 - r^2, and refractive index n ∝ (R^2 - r^2)^(-1): Fermat’s principle forces light rays along orthogonal circular geodesics, making the world intrinsically infinite and Lobachevskian.</p>
+        </section>
+        <section class="level-3" id="pc-10-lie-groups-erlanger-programm-the-beltramiklein-radial-bridge">
+        <h3>PC.10 — Lie Groups, Erlanger Programm &amp; the Beltrami–Klein Radial Bridge<a class="headerlink" href="#pc-10-lie-groups-erlanger-programm-the-beltramiklein-radial-bridge" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. III § 9 &amp; Ch. IV §§ 4, 7 (FR pp. 61–63, 77–91 / EN pp. 47–48, 59–71) (<a class="reference internal" href="unit-3-space-and-geometry/unit-3-space-and-geometry-en.html#science-and-hypothesis-unit-3-en"><span class="std std-ref">Unit III (Ch. IV)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/klein</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/pappus</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/wildberger</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/codes</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_beltrami_klein_bridge</span></code></p></li>
+        </ul>
+        <p>Bridges Felix Klein’s Erlanger Programm (geometor/klein) and interactive CindyJS Cayley–Klein models (geometor/codes) to Poincaré’s conformal disk via the exact straightedge radial theorem: ray OP meets straight Beltrami–Klein chord UV at K(P) = 2P / (1 + ||P||^2).</p>
+        </section>
+        <section class="level-3" id="pc-11-stellar-parallax-crucial-experiments-geometric-conventionalism">
+        <h3>PC.11 — Stellar Parallax, Crucial Experiments &amp; Geometric Conventionalism<a class="headerlink" href="#pc-11-stellar-parallax-crucial-experiments-geometric-conventionalism" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Ch. V (FR pp. 92–109 / EN pp. 72–88) (<a class="reference internal" href="unit-4-experience-and-geometry/unit-4-experience-and-geometry-en.html#science-and-hypothesis-unit-4-en"><span class="std std-ref">Unit IV (Ch. V)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/bertrand-russell</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hoenen</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hilbert</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_stellar_parallax_conventionalism</span></code></p></li>
+        </ul>
+        <p>Demonstrates why even an astronomical parallax measurement α + β + γ &lt; π could never empirically falsify Euclidean geometry, since physics always tests the joint bundle (Geometry + Optics), and Euclidean geometry remains privileged by group-theoretic simplicity.</p>
+        </section>
+        <section class="level-3" id="pc-12-the-poincarerussell-debate-18981900-hoenen-s-intelligible-matter-critique-1954">
+        <h3>PC.12 — The Poincaré–Russell Debate (1898–1900) &amp; Hoenen’s Intelligible Matter Critique (1954)<a class="headerlink" href="#pc-12-the-poincarerussell-debate-18981900-hoenen-s-intelligible-matter-critique-1954" title="Link to this heading">¶</a></h3>
+        <ul class="simple">
+        <li><p><strong>Locus in Poincaré:</strong> Part II, Chs. III–V &amp; Bridge to Parts III–IV (Chs. VI, VII, IX) (<a class="reference internal" href="unit-4-experience-and-geometry/unit-4-experience-and-geometry-notes.html#science-and-hypothesis-unit-4-notes"><span class="std std-ref">Unit IV (Notes)</span></a>)</p></li>
+        <li><p><strong>GEOMETOR Canon Links:</strong> <code class="docutils literal notranslate"><span class="pre">geometor/bertrand-russell</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/hoenen</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/aquinas</span></code>, <code class="docutils literal notranslate"><span class="pre">geometor/aristotle</span></code></p></li>
+        <li><p><strong>Exact Symbolic Construction:</strong> <code class="docutils literal notranslate"><span class="pre">construct_stellar_parallax_conventionalism</span></code></p></li>
+        </ul>
+        <p>Synthesizes the three-cornered epistemological dialogue across GEOMETOR: Poincaré’s conventionalism (‘disguised definitions’), Bertrand Russell’s defense of metric apriority and absolute relations (Mind 1898, RMM 1899–1900), and P. H. J. Hoenen’s Thomistic resolution via abstraction in materia intelligibilis (De Noetica Geometriae, 1954).</p>
+        </section>
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="unit-4-experience-and-geometry/unit-4-experience-and-geometry-en.html" title="Unit IV: Experience, Geometry &amp; Physical Hypotheses">&larr; <span class="nav-label">Unit IV: Experience, Geometry & Physical Hypotheses</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="index.html">LA SCIENCE ET L’HYPOTHÈSE</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="bibliography.html" title="Systematic Bibliography"><span class="nav-label">Systematic Bibliography</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../about/index.html"  >about</a></li>
+        <li><a href="../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script src="../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

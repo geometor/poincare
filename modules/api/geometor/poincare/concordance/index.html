@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../../../../../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>geometor.poincare.concordance &mdash; GEOMETOR • poincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../../../../../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../../../../../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../../../../../_static/favicon.ico" />
+</head>
+
+<body class="book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../../../../../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../../../../../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="../../../../../science_and_hypothesis/index.html"  >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="../../../../../demos/index.html"  >demos</a>
+        </li>
+        <li>
+          <a href="../../../../../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../../../../index.html" class="is-active" aria-selected="true" >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../../../../../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-header-breadcrumbs book-header-badges" role="navigation" aria-label="Breadcrumbs">
+            <a class="book-crumb-link" href="../../../../index.html">modules</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../cli/index.html" title="geometor.poincare.cli">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../disk/index.html" title="geometor.poincare.disk"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content" role="main">
+        <section class="level-1" id="module-geometor.poincare.concordance">
+        <span id="geometor-poincare-concordance"></span><h1>geometor.poincare.concordance<a class="headerlink" href="#module-geometor.poincare.concordance" title="Link to this heading">¶</a></h1>
+        <p>Scholarly concordance, archival witness verification, and RST apparatus compiler.</p>
+        <p>Manages the JSON registries in <code class="docutils literal notranslate"><span class="pre">resources/science_and_hypothesis/</span></code> (mirrored to
+        <code class="docutils literal notranslate"><span class="pre">resources/</span></code> for PHOTON Publish hover-card resolution), verifies SHA-256 digests of
+        the public-domain 1902 French and 1905 English primary witnesses, checks 4-track Book
+        Codex synchronization, and compiles <code class="docutils literal notranslate"><span class="pre">concordance.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">bibliography.rst</span></code>,
+        <code class="docutils literal notranslate"><span class="pre">persons.rst</span></code>, and <code class="docutils literal notranslate"><span class="pre">glossary.rst</span></code>.</p>
+        <section class="level-2" id="attributes">
+        <h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.CODEX_UNITS" title="geometor.poincare.concordance.CODEX_UNITS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CODEX_UNITS</span></code></a></p></td>
+        <td><p></p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="classes">
+        <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.CodexAuditReport" title="geometor.poincare.concordance.CodexAuditReport"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CodexAuditReport</span></code></a></p></td>
+        <td><p>Summary of verified codex witnesses, apparatus registries, figures, and 4-track units.</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="functions">
+        <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+        <table class="autosummary longtable docutils align-default">
+        <tbody>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.default_repo_root" title="geometor.poincare.concordance.default_repo_root"><code class="xref py py-obj docutils literal notranslate"><span class="pre">default_repo_root</span></code></a>() → pathlib.Path</p></td>
+        <td><p>Return the root directory of <code class="docutils literal notranslate"><span class="pre">geometor/poincare</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.concordance.load_sources_manifest" title="geometor.poincare.concordance.load_sources_manifest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_sources_manifest</span></code></a>([repo_root]) → dict[str, Any]</p></td>
+        <td><p>Load <code class="docutils literal notranslate"><span class="pre">resources/science_and_hypothesis/sources_manifest.json</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.load_concordance" title="geometor.poincare.concordance.load_concordance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_concordance</span></code></a>([repo_root]) → dict[str, Any]</p></td>
+        <td><p>Load <code class="docutils literal notranslate"><span class="pre">resources/science_and_hypothesis/concordance.json</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.concordance.verify_sources_manifest" title="geometor.poincare.concordance.verify_sources_manifest"><code class="xref py py-obj docutils literal notranslate"><span class="pre">verify_sources_manifest</span></code></a>([repo_root]) → list[dict[str, Any]]</p></td>
+        <td><p>Verify SHA-256 digests and byte counts of all archival witness files.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.sync_root_apparatus_json" title="geometor.poincare.concordance.sync_root_apparatus_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sync_root_apparatus_json</span></code></a>([repo_root]) → list[pathlib.Path]</p></td>
+        <td><p>Mirror <code class="docutils literal notranslate"><span class="pre">persons.json</span></code>, <code class="docutils literal notranslate"><span class="pre">citations.json</span></code>, and <code class="docutils literal notranslate"><span class="pre">glossary.json</span></code> into <code class="docutils literal notranslate"><span class="pre">resources/</span></code>.</p></td>
+        </tr>
+        <tr class="row-even"><td><p><a class="reference internal" href="#geometor.poincare.concordance.compile_apparatus_rst" title="geometor.poincare.concordance.compile_apparatus_rst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compile_apparatus_rst</span></code></a>([repo_root]) → list[pathlib.Path]</p></td>
+        <td><p>Compile <code class="docutils literal notranslate"><span class="pre">concordance.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">bibliography.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">persons.rst</span></code>, and <code class="docutils literal notranslate"><span class="pre">glossary.rst</span></code>.</p></td>
+        </tr>
+        <tr class="row-odd"><td><p><a class="reference internal" href="#geometor.poincare.concordance.audit_codex_repository" title="geometor.poincare.concordance.audit_codex_repository"><code class="xref py py-obj docutils literal notranslate"><span class="pre">audit_codex_repository</span></code></a>([repo_root]) → CodexAuditReport</p></td>
+        <td><p>Audit all primary witnesses, apparatus JSONs, 8 SVGs, and 16 4-track unit RST files.</p></td>
+        </tr>
+        </tbody>
+        </table>
+        </section>
+        <section class="level-2" id="module-contents">
+        <h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+        <dl class="py data">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CODEX_UNITS">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">CODEX_UNITS</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('unit-1-number-and-magnitude',</span> <span class="pre">'unit-2-non-euclidean-geometries',</span> <span class="pre">'unit-3-space-and-geometry',...</span></span><a class="headerlink" href="#geometor.poincare.concordance.CODEX_UNITS" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.default_repo_root">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">default_repo_root</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#geometor.poincare.concordance.default_repo_root" title="Link to this definition">¶</a></dt>
+        <dd><p>Return the root directory of <code class="docutils literal notranslate"><span class="pre">geometor/poincare</span></code>.</p>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.load_sources_manifest">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">load_sources_manifest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.concordance.load_sources_manifest" title="Link to this definition">¶</a></dt>
+        <dd><p>Load <code class="docutils literal notranslate"><span class="pre">resources/science_and_hypothesis/sources_manifest.json</span></code>.</p>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.load_concordance">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">load_concordance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.concordance.load_concordance" title="Link to this definition">¶</a></dt>
+        <dd><p>Load <code class="docutils literal notranslate"><span class="pre">resources/science_and_hypothesis/concordance.json</span></code>.</p>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.verify_sources_manifest">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">verify_sources_manifest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.concordance.verify_sources_manifest" title="Link to this definition">¶</a></dt>
+        <dd><p>Verify SHA-256 digests and byte counts of all archival witness files.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>repo_root</strong> – Optional repository root path.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>List of verified witness records.</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>FileNotFoundError</strong> – If any witness file is missing.</p></li>
+        <li><p><strong>ValueError</strong> – If a SHA-256 digest or byte count mismatches <code class="docutils literal notranslate"><span class="pre">sources_manifest.json</span></code>.</p></li>
+        </ul>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.sync_root_apparatus_json">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">sync_root_apparatus_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.concordance.sync_root_apparatus_json" title="Link to this definition">¶</a></dt>
+        <dd><p>Mirror <code class="docutils literal notranslate"><span class="pre">persons.json</span></code>, <code class="docutils literal notranslate"><span class="pre">citations.json</span></code>, and <code class="docutils literal notranslate"><span class="pre">glossary.json</span></code> into <code class="docutils literal notranslate"><span class="pre">resources/</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>repo_root</strong> – Optional repository root path.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>List of destination paths written in <code class="docutils literal notranslate"><span class="pre">resources/</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.compile_apparatus_rst">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">compile_apparatus_rst</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#geometor.poincare.concordance.compile_apparatus_rst" title="Link to this definition">¶</a></dt>
+        <dd><p>Compile <code class="docutils literal notranslate"><span class="pre">concordance.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">bibliography.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">persons.rst</span></code>, and <code class="docutils literal notranslate"><span class="pre">glossary.rst</span></code>.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>repo_root</strong> – Optional repository root path.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>List of generated <code class="docutils literal notranslate"><span class="pre">.rst</span></code> paths under <code class="docutils literal notranslate"><span class="pre">docsrc/science_and_hypothesis/</span></code>.</p>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        <dl class="py class">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport">
+        <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">CodexAuditReport</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport" title="Link to this definition">¶</a></dt>
+        <dd><p>Summary of verified codex witnesses, apparatus registries, figures, and 4-track units.</p>
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.witness_count">
+        <span class="sig-name descname"><span class="pre">witness_count</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.witness_count" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.concordance_entries">
+        <span class="sig-name descname"><span class="pre">concordance_entries</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.concordance_entries" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.dictionary_rows">
+        <span class="sig-name descname"><span class="pre">dictionary_rows</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.dictionary_rows" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.persons_count">
+        <span class="sig-name descname"><span class="pre">persons_count</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.persons_count" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.citations_count">
+        <span class="sig-name descname"><span class="pre">citations_count</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.citations_count" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.glossary_count">
+        <span class="sig-name descname"><span class="pre">glossary_count</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.glossary_count" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.figure_count">
+        <span class="sig-name descname"><span class="pre">figure_count</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.figure_count" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        <dl class="py attribute">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.CodexAuditReport.unit_track_files">
+        <span class="sig-name descname"><span class="pre">unit_track_files</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#geometor.poincare.concordance.CodexAuditReport.unit_track_files" title="Link to this definition">¶</a></dt>
+        <dd></dd></dl>
+
+        </dd></dl>
+
+        <dl class="py function">
+        <dt class="sig sig-object py" id="geometor.poincare.concordance.audit_codex_repository">
+        <span class="sig-prename descclassname"><span class="pre">geometor.poincare.concordance.</span></span><span class="sig-name descname"><span class="pre">audit_codex_repository</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo_root</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pathlib.Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#geometor.poincare.concordance.CodexAuditReport" title="geometor.poincare.concordance.CodexAuditReport"><span class="pre">CodexAuditReport</span></a></span></span><a class="headerlink" href="#geometor.poincare.concordance.audit_codex_repository" title="Link to this definition">¶</a></dt>
+        <dd><p>Audit all primary witnesses, apparatus JSONs, 8 SVGs, and 16 4-track unit RST files.</p>
+        <dl class="field-list simple">
+        <dt class="field-odd">Parameters<span class="colon">:</span></dt>
+        <dd class="field-odd"><p><strong>repo_root</strong> – Optional repository root path.</p>
+        </dd>
+        <dt class="field-even">Returns<span class="colon">:</span></dt>
+        <dd class="field-even"><p>Verified <a class="reference internal" href="#geometor.poincare.concordance.CodexAuditReport" title="geometor.poincare.concordance.CodexAuditReport"><code class="xref py py-class docutils literal notranslate"><span class="pre">CodexAuditReport</span></code></a>.</p>
+        </dd>
+        <dt class="field-odd">Raises<span class="colon">:</span></dt>
+        <dd class="field-odd"><ul class="simple">
+        <li><p><strong>FileNotFoundError</strong> – If any expected codex track or SVG figure is missing.</p></li>
+        <li><p><strong>ValueError</strong> – If any <code class="docutils literal notranslate"><span class="pre">:layout:</span> <span class="pre">book</span></code> file embeds a <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">py_file::</span></code> script.</p></li>
+        </ul>
+        </dd>
+        </dl>
+        </dd></dl>
+
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../cli/index.html" title="geometor.poincare.cli">&larr; <span class="nav-label">geometor.poincare.cli</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="../../../../../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../disk/index.html" title="geometor.poincare.disk"><span class="nav-label">geometor.poincare.disk</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../../../../../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../../../../../about/index.html"  >about</a></li>
+        <li><a href="../../../../../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../../../../../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../../../../../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../../../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../../../../../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../../../../../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script src="../../../../../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

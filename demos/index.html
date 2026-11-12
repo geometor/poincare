@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-content_root="../">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>demos &mdash; GEOMETOR • poincare</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Fira+Sans+Condensed:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=ea5fcf70" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/styles.css?v=66998e95" />
+  <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="../_static/css/print.css" type="text/css" media="print" />
+  <link rel="icon" href="../_static/favicon.ico" />
+</head>
+
+<body class="book-theme-classical-serif">
+  <header>
+    <div class="logo">
+      <a href="../index.html">
+        <h1>GEOMETOR • poincare</h1>
+      </a>
+      <div class="org-repo">
+        <span class="org">GEOMETOR</span>
+        •
+        <span class="repo">poincare</span>
+      </div>
+    </div>
+    <nav aria-label="Header">
+      <input type="checkbox" id="nav-Header-toggle" >
+      <label for="nav-Header-toggle" >Header</label>
+      <ul>
+        <li>
+          <a href="../mission/index.html"  >mission</a>
+        </li>
+        <li>
+          <a href="../science_and_hypothesis/index.html"  >LA SCIENCE ET L’HYPOTHÈSE</a>
+        </li>
+        <li>
+          <a href="#" class="is-active" aria-selected="true" aria-current="page">demos</a>
+        </li>
+        <li>
+          <a href="../log/index.html"  >log</a>
+        </li>
+        <li>
+          <a href="../modules/index.html"  >modules</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="motto"></div>
+  </header>
+  <main class="book-main">
+    <article class="book-layout book-reading-pane">
+      <header class="book-header">
+        <div class="book-header-bar">
+          <div class="book-header-identity">
+            <a class="book-portal-link" href="../index.html" title="Return to Project Portal">&larr; poincare</a>
+            <span class="book-header-sep">/</span>
+            <a class="book-title-link" href="../index.html">GEOMETOR • poincare</a>
+          </div>
+        </div>
+        <div class="book-header-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../science_and_hypothesis/glossary.html" title="Bilingual Technical Glossary">&larr; <span class="nav-label">Prev</span></a>
+          </div>
+          <div class="book-nav-center">
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../log/index.html" title="log"><span class="nav-label">Next</span> &rarr;</a>
+          </div>
+        </div>
+      </header>
+      <div class="content body book-content" role="main">
+        <section class="level-1" id="demos">
+        <span id="poincare-demos"></span><h1>demos<a class="headerlink" href="#demos" title="Link to this heading">¶</a></h1>
+        <p class="rubric">Exact Symbolic Poincaré Conformal Hyperbolic Disk Demonstrations (<code class="docutils literal notranslate"><span class="pre">SymPy</span></code> + <code class="docutils literal notranslate"><span class="pre">geometor.model</span></code>)</p>
+        <p>In strict accordance with <strong>GEOMETOR’s Content / Code Separation</strong>, executable Python constructions live outside the historical <code class="docutils literal notranslate"><span class="pre">:layout:</span> <span class="pre">book</span></code> pages of <em>La Science et l’Hypothèse</em> and operate in <code class="docutils literal notranslate"><span class="pre">geometor.poincare.disk</span></code> and <code class="docutils literal notranslate"><span class="pre">demos/</span></code> with <strong>zero ``float`` or ``sp.Float`` coordinates</strong>.</p>
+        <p>Because Poincaré’s conformal dictionary represents the hyperbolic plane inside the Euclidean unit disk $\mathbb{D} = \{(x, y) : x^2 + y^2 &lt; 1\}$ bounded by the ideal horizon $\Omega: x^2 + y^2 = 1$, every hyperbolic geodesic is either a Euclidean diameter through $O(0,0)$ or a Euclidean circle cutting $\Omega$ orthogonally ($|OC|^2 - r^2 = 1$). Straightedge-and-compass constructions in <code class="docutils literal notranslate"><span class="pre">geometor.model</span></code> therefore execute <strong>100% exact hyperbolic geometry</strong> over $\mathbb{Q}$ and quadratic radical extensions.</p>
+        <hr class="docutils" />
+        <section class="level-2" id="horizon-inversion-orthogonal-geodesic-circles-rational-quadrances">
+        <h2>1. Horizon Inversion, Orthogonal Geodesic Circles &amp; Rational Quadrances<a class="headerlink" href="#horizon-inversion-orthogonal-geodesic-circles-rational-quadrances" title="Link to this heading">¶</a></h2>
+        <p>Constructs Euclidean inversion $P \mapsto P^* = P / \|P\|^2$ in $\Omega$, circumscribes the unique orthogonal geodesic circle through $(P, Q, P^*)$, and verifies the exact polynomial bridge between Poincaré’s 4-point cross-ratio $\chi(P, Q; U, V)$ and Norman Wildberger’s Rational Hyperbolic Quadrance $q_{\mathrm{UHG}}(P, Q) \in \mathbb{Q}$:</p>
+        <div class="math notranslate nohighlight">
+        \[(1 - \tau)^2 (\chi^2 + 1)^2 = 4 (1 + \tau)^2 \chi^2,
+        \qquad
+        q_{\mathrm{UHG}}(P, Q) = -\frac{4\tau}{(1 - \tau)^2} = -\sinh^2 d_{\mathbb{H}}(P, Q).\]</div>
+        <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="sa">r</span><span class="sd">"""Demo 1: Horizon Inversion, Orthogonal Geodesic Circles, and Rational Quadrances.</span>
+        <span class="linenos">  2</span>
+        <span class="linenos">  3</span><span class="sd">Constructs Henri Poincaré's conformal disk dictionary (*La Science et l'Hypothèse*,</span>
+        <span class="linenos">  4</span><span class="sd">Part II, Ch. III, 1902) inside ``geometor.model`` with 100% exact SymPy algebra:</span>
+        <span class="linenos">  5</span>
+        <span class="linenos">  6</span><span class="sd">1. Horizon circle :math:`\Omega: x^2 + y^2 = 1` centered at :math:`O = (0, 0)`.</span>
+        <span class="linenos">  7</span><span class="sd">2. Pure straightedge-and-compass Euclidean inversion :math:`P \mapsto P^* = P / \|P\|^2`</span>
+        <span class="linenos">  8</span><span class="sd">   satisfying :math:`Q(O, P) \cdot Q(O, P^*) = 1` and involution :math:`(P^*)^* = P`.</span>
+        <span class="linenos">  9</span><span class="sd">3. Unique orthogonal hyperbolic geodesic circle through :math:`(P, Q, P^*)` cutting</span>
+        <span class="linenos"> 10</span><span class="sd">   :math:`\Omega` orthogonally (:math:`|OC|^2 - r^2 = 1`) at ideal boundary points :math:`U, V`.</span>
+        <span class="linenos"> 11</span><span class="sd">4. Exact equivalence between Poincaré's 4-point cross-ratio distance</span>
+        <span class="linenos"> 12</span><span class="sd">   :math:`d_{\mathbb{H}}(P, Q) = \ln \chi(P, Q; U, V)` and Norman Wildberger's</span>
+        <span class="linenos"> 13</span><span class="sd">   transcendental-free Rational Hyperbolic Quadrance :math:`q_{\text{UHG}}(P, Q) \in \mathbb{Q}`.</span>
+        <span class="linenos"> 14</span><span class="sd">"""</span>
+        <span class="linenos"> 15</span>
+        <span class="linenos"> 16</span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+        <span class="linenos"> 17</span>
+        <span class="linenos"> 18</span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+        <span class="linenos"> 19</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+        <span class="linenos"> 20</span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+        <span class="linenos"> 21</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
+        <span class="linenos"> 22</span>
+        <span class="linenos"> 23</span><span class="n">_REPO_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="linenos"> 24</span><span class="k">for</span> <span class="n">_candidate</span> <span class="ow">in</span> <span class="p">(</span><span class="n">_REPO_ROOT</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">,</span> <span class="n">_REPO_ROOT</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"model"</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">):</span>
+        <span class="linenos"> 25</span>    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+        <span class="linenos"> 26</span>        <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">))</span>
+        <span class="linenos"> 27</span>
+        <span class="linenos"> 28</span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 29</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Model</span><span class="p">,</span> <span class="n">quadrance</span><span class="p">,</span> <span class="n">zero_test</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 30</span>
+        <span class="linenos"> 31</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.poincare</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 32</span>    <span class="n">construct_hyperbolic_geodesic</span><span class="p">,</span>
+        <span class="linenos"> 33</span>    <span class="n">construct_inversion_in_horizon</span><span class="p">,</span>
+        <span class="linenos"> 34</span>    <span class="n">construct_unit_horizon</span><span class="p">,</span>
+        <span class="linenos"> 35</span>    <span class="n">hyperbolic_cross_ratio_and_quadrance</span><span class="p">,</span>
+        <span class="linenos"> 36</span>    <span class="n">render_figure_svg</span><span class="p">,</span>
+        <span class="linenos"> 37</span><span class="p">)</span>
+        <span class="linenos"> 38</span>
+        <span class="linenos"> 39</span>
+        <span class="linenos"> 40</span><span class="k">def</span><span class="w"> </span><span class="nf">assert_zero_floats</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">Model</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="linenos"> 41</span><span class="w">    </span><span class="sd">"""Verify that every element in ``model`` is 100% free of ``sp.Float``."""</span>
+        <span class="linenos"> 42</span>    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">model</span><span class="p">:</span>
+        <span class="linenos"> 43</span>        <span class="k">if</span> <span class="n">el</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Float</span><span class="p">):</span>
+        <span class="linenos"> 44</span>            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Floating-point contamination detected in </span><span class="si">{</span><span class="n">el</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 45</span>
+        <span class="linenos"> 46</span>
+        <span class="linenos"> 47</span><span class="k">def</span><span class="w"> </span><span class="nf">run_demo</span><span class="p">(</span><span class="n">svg_out</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">sp</span><span class="o">.</span><span class="n">Expr</span><span class="p">]:</span>
+        <span class="linenos"> 48</span><span class="w">    </span><span class="sd">"""Execute the exact horizon-inversion and geodesic construction."""</span>
+        <span class="linenos"> 49</span>    <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="s2">"demo_inversion_and_geodesics"</span><span class="p">,</span> <span class="n">logger</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">auto_intersect</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="linenos"> 50</span>    <span class="n">origin</span><span class="p">,</span> <span class="n">_ex</span><span class="p">,</span> <span class="n">_omega</span> <span class="o">=</span> <span class="n">construct_unit_horizon</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+        <span class="linenos"> 51</span>
+        <span class="linenos"> 52</span>    <span class="c1"># Interior rational points P and Q</span>
+        <span class="linenos"> 53</span>    <span class="n">p_pt</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">set_point</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="s2">"given"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">"P"</span><span class="p">)</span>
+        <span class="linenos"> 54</span>    <span class="n">q_pt</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">set_point</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="s2">"given"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Q"</span><span class="p">)</span>
+        <span class="linenos"> 55</span>
+        <span class="linenos"> 56</span>    <span class="c1"># 1. Exact compass-and-straightedge inversion in the unit horizon</span>
+        <span class="linenos"> 57</span>    <span class="n">p_star</span> <span class="o">=</span> <span class="n">construct_inversion_in_horizon</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">p_pt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"P*"</span><span class="p">)</span>
+        <span class="linenos"> 58</span>    <span class="n">p_roundtrip</span> <span class="o">=</span> <span class="n">construct_inversion_in_horizon</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">p_star</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"P**"</span><span class="p">)</span>
+        <span class="linenos"> 59</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">quadrance</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">p_pt</span><span class="p">)</span> <span class="o">*</span> <span class="n">quadrance</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">p_star</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="linenos"> 60</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">p_roundtrip</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">p_pt</span><span class="o">.</span><span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">p_roundtrip</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">p_pt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+        <span class="linenos"> 61</span>
+        <span class="linenos"> 62</span>    <span class="c1"># 2. Orthogonal hyperbolic geodesic circle through P and Q</span>
+        <span class="linenos"> 63</span>    <span class="n">geo</span> <span class="o">=</span> <span class="n">construct_hyperbolic_geodesic</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">p_pt</span><span class="p">,</span> <span class="n">q_pt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"g_PQ"</span><span class="p">)</span>
+        <span class="linenos"> 64</span>    <span class="n">carrier</span><span class="p">,</span> <span class="n">u_ideal</span><span class="p">,</span> <span class="n">v_ideal</span> <span class="o">=</span> <span class="n">geo</span>
+        <span class="linenos"> 65</span>    <span class="k">assert</span> <span class="ow">not</span> <span class="n">geo</span><span class="o">.</span><span class="n">is_diameter</span>
+        <span class="linenos"> 66</span>    <span class="k">assert</span> <span class="n">geo</span><span class="o">.</span><span class="n">center</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">geo</span><span class="o">.</span><span class="n">radius_squared</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="linenos"> 67</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">geo</span><span class="o">.</span><span class="n">orthogonality_residual</span><span class="p">)</span>
+        <span class="linenos"> 68</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">quadrance</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">u_ideal</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="linenos"> 69</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">quadrance</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span> <span class="n">v_ideal</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="linenos"> 70</span>
+        <span class="linenos"> 71</span>    <span class="c1"># 3. Diameter case when collinear with origin O</span>
+        <span class="linenos"> 72</span>    <span class="n">r_pt</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">set_point</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">classes</span><span class="o">=</span><span class="p">[</span><span class="s2">"given"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">"R"</span><span class="p">)</span>
+        <span class="linenos"> 73</span>    <span class="n">diam_geo</span> <span class="o">=</span> <span class="n">construct_hyperbolic_geodesic</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">p_pt</span><span class="p">,</span> <span class="n">r_pt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"diam_PR"</span><span class="p">)</span>
+        <span class="linenos"> 74</span>    <span class="k">assert</span> <span class="n">diam_geo</span><span class="o">.</span><span class="n">is_diameter</span>
+        <span class="linenos"> 75</span>
+        <span class="linenos"> 76</span>    <span class="c1"># 4. Cross-ratio and Rational Hyperbolic Quadrance invariants</span>
+        <span class="linenos"> 77</span>    <span class="n">metrics</span> <span class="o">=</span> <span class="n">hyperbolic_cross_ratio_and_quadrance</span><span class="p">(</span><span class="n">p_pt</span><span class="p">,</span> <span class="n">q_pt</span><span class="p">,</span> <span class="n">u_ideal</span><span class="p">,</span> <span class="n">v_ideal</span><span class="p">)</span>
+        <span class="linenos"> 78</span>    <span class="n">assert_zero_floats</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+        <span class="linenos"> 79</span>
+        <span class="linenos"> 80</span>    <span class="n">svg_markup</span> <span class="o">=</span> <span class="n">render_figure_svg</span><span class="p">(</span><span class="s2">"fig2_poincare_dictionary_inversion.svg"</span><span class="p">)</span>
+        <span class="linenos"> 81</span>    <span class="k">if</span> <span class="n">svg_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="linenos"> 82</span>        <span class="n">svg_out</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="linenos"> 83</span>        <span class="n">svg_out</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">svg_markup</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="linenos"> 84</span>
+        <span class="linenos"> 85</span>    <span class="n">_</span> <span class="o">=</span> <span class="n">carrier</span>
+        <span class="linenos"> 86</span>    <span class="k">return</span> <span class="p">{</span>
+        <span class="linenos"> 87</span>        <span class="s2">"P_star_x"</span><span class="p">:</span> <span class="n">p_star</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+        <span class="linenos"> 88</span>        <span class="s2">"P_star_y"</span><span class="p">:</span> <span class="n">p_star</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+        <span class="linenos"> 89</span>        <span class="s2">"center_x"</span><span class="p">:</span> <span class="n">geo</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+        <span class="linenos"> 90</span>        <span class="s2">"center_y"</span><span class="p">:</span> <span class="n">geo</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+        <span class="linenos"> 91</span>        <span class="s2">"radius_squared"</span><span class="p">:</span> <span class="n">geo</span><span class="o">.</span><span class="n">radius_squared</span><span class="p">,</span>
+        <span class="linenos"> 92</span>        <span class="s2">"conformal_quadrance"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">conformal_quadrance</span><span class="p">,</span>
+        <span class="linenos"> 93</span>        <span class="s2">"wildberger_uhg_quadrance"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">wildberger_uhg_quadrance</span><span class="p">,</span>
+        <span class="linenos"> 94</span>        <span class="s2">"cayley_klein_quadrance"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">cayley_klein_quadrance</span><span class="p">,</span>
+        <span class="linenos"> 95</span>        <span class="s2">"cross_ratio"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">cross_ratio</span><span class="p">,</span>
+        <span class="linenos"> 96</span>        <span class="s2">"poincare_distance"</span><span class="p">:</span> <span class="n">metrics</span><span class="o">.</span><span class="n">poincare_distance</span><span class="p">,</span>
+        <span class="linenos"> 97</span>    <span class="p">}</span>
+        <span class="linenos"> 98</span>
+        <span class="linenos"> 99</span>
+        <span class="linenos">100</span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="linenos">101</span><span class="w">    </span><span class="sd">"""CLI entry point for Demo 1."""</span>
+        <span class="linenos">102</span>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+        <span class="linenos">103</span>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">"--svg"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">"Optional output SVG path."</span><span class="p">)</span>
+        <span class="linenos">104</span>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+        <span class="linenos">105</span>
+        <span class="linenos">106</span>    <span class="n">summary</span> <span class="o">=</span> <span class="n">run_demo</span><span class="p">(</span><span class="n">svg_out</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">svg</span><span class="p">)</span>
+        <span class="linenos">107</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"=== Demo 1: Horizon Inversion &amp; Hyperbolic Geodesic Dictionary ==="</span><span class="p">)</span>
+        <span class="linenos">108</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"P         = (1/3, 1/4)  -&gt;  P* = (</span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'P_star_x'</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'P_star_y'</span><span class="p">]</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+        <span class="linenos">109</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos">110</span>        <span class="sa">f</span><span class="s2">"Geodesic  : center C = (</span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'center_x'</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'center_y'</span><span class="p">]</span><span class="si">}</span><span class="s2">), "</span>
+        <span class="linenos">111</span>        <span class="sa">f</span><span class="s2">"r^2 = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'radius_squared'</span><span class="p">]</span><span class="si">}</span><span class="s2"> (|OC|^2 - r^2 = 1)"</span>
+        <span class="linenos">112</span>    <span class="p">)</span>
+        <span class="linenos">113</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"tau(P, Q) = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'conformal_quadrance'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">114</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"q_UHG     = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'wildberger_uhg_quadrance'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">115</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"q_CK      = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'cayley_klein_quadrance'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">116</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"chi       = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'cross_ratio'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">117</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"d_H(P, Q) = </span><span class="si">{</span><span class="n">summary</span><span class="p">[</span><span class="s1">'poincare_distance'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">118</span>    <span class="k">return</span> <span class="mi">0</span>
+        <span class="linenos">119</span>
+        <span class="linenos">120</span>
+        <span class="linenos">121</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+        <span class="linenos">122</span>    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+        </pre></div>
+        </div>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="limiting-horoparallels-ultraparallels-independence-of-postulate-v">
+        <h2>2. Limiting Horoparallels, Ultraparallels &amp; Independence of Postulate V<a class="headerlink" href="#limiting-horoparallels-ultraparallels-independence-of-postulate-v" title="Link to this heading">¶</a></h2>
+        <p>Constructs two asymptotic horoparallels $\ell_1, \ell_2$ and two ultraparallels $m_1, m_2$ through $P(\frac{1}{6}, \frac{2}{5})$ relative to the rational geodesic $L_{\mathrm{hyp}}$ joining $(\frac{4}{5}, -\frac{3}{5})$ and $(-\frac{4}{5}, -\frac{3}{5})$, proving algebraically via <code class="docutils literal notranslate"><span class="pre">intersect_2d</span></code> that Euclid’s Fifth Postulate fails inside $\mathbb{D}$ while Postulates I–IV hold identically.</p>
+        <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="sa">r</span><span class="sd">"""Demo 2: Limiting Horoparallels, Ultraparallels, and Independence of Postulate V.</span>
+        <span class="linenos">  2</span>
+        <span class="linenos">  3</span><span class="sd">Constructs Henri Poincaré's relative consistency proof for Lobachevskian geometry</span>
+        <span class="linenos">  4</span><span class="sd">(*La Science et l'Hypothèse*, Part II, Ch. III, 1902):</span>
+        <span class="linenos">  5</span>
+        <span class="linenos">  6</span><span class="sd">Given a hyperbolic geodesic :math:`L_{\text{hyp}}` with rational ideal endpoints</span>
+        <span class="linenos">  7</span><span class="sd">:math:`U_L = (\frac{4}{5}, -\frac{3}{5})` and :math:`V_L = (-\frac{4}{5}, -\frac{3}{5})`</span>
+        <span class="linenos">  8</span><span class="sd">and an exterior point :math:`P = (\frac{1}{6}, \frac{2}{5}) \in \mathbb{D} \setminus L_{\text{hyp}}`:</span>
+        <span class="linenos">  9</span>
+        <span class="linenos"> 10</span><span class="sd">- Constructs the two limiting horoparallels :math:`\ell_1 = PU_L` and :math:`\ell_2 = PV_L`</span>
+        <span class="linenos"> 11</span><span class="sd">  sharing ideal boundary vertices with :math:`L_{\text{hyp}}` on :math:`\partial\Omega`</span>
+        <span class="linenos"> 12</span><span class="sd">  while remaining disjoint inside the open disk :math:`\mathbb{D}`.</span>
+        <span class="linenos"> 13</span><span class="sd">- Constructs two distinct ultraparallel geodesics :math:`m_1, m_2` through :math:`P`</span>
+        <span class="linenos"> 14</span><span class="sd">  whose closures in :math:`\overline{\mathbb{D}}` are 100% disjoint from :math:`L_{\text{hyp}}`.</span>
+        <span class="linenos"> 15</span><span class="sd">- Demonstrates that any contradiction in Lobachevsky's geometry would translate via</span>
+        <span class="linenos"> 16</span><span class="sd">  Poincaré's Dictionary into a contradiction in Euclidean circle geometry.</span>
+        <span class="linenos"> 17</span><span class="sd">"""</span>
+        <span class="linenos"> 18</span>
+        <span class="linenos"> 19</span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+        <span class="linenos"> 20</span>
+        <span class="linenos"> 21</span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+        <span class="linenos"> 22</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+        <span class="linenos"> 23</span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+        <span class="linenos"> 24</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
+        <span class="linenos"> 25</span>
+        <span class="linenos"> 26</span><span class="n">_REPO_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="linenos"> 27</span><span class="k">for</span> <span class="n">_candidate</span> <span class="ow">in</span> <span class="p">(</span><span class="n">_REPO_ROOT</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">,</span> <span class="n">_REPO_ROOT</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"model"</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">):</span>
+        <span class="linenos"> 28</span>    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+        <span class="linenos"> 29</span>        <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">))</span>
+        <span class="linenos"> 30</span>
+        <span class="linenos"> 31</span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 32</span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy.geometry</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">spg</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 33</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">exact_sign</span><span class="p">,</span> <span class="n">intersect_2d</span><span class="p">,</span> <span class="n">zero_test</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 34</span>
+        <span class="linenos"> 35</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.poincare</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 36</span>    <span class="n">UltraparallelPencil</span><span class="p">,</span>
+        <span class="linenos"> 37</span>    <span class="n">construct_ultraparallels_through_point</span><span class="p">,</span>
+        <span class="linenos"> 38</span>    <span class="n">render_figure_svg</span><span class="p">,</span>
+        <span class="linenos"> 39</span><span class="p">)</span>
+        <span class="linenos"> 40</span>
+        <span class="linenos"> 41</span>
+        <span class="linenos"> 42</span><span class="k">def</span><span class="w"> </span><span class="nf">run_demo</span><span class="p">(</span><span class="n">svg_out</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UltraparallelPencil</span><span class="p">:</span>
+        <span class="linenos"> 43</span><span class="w">    </span><span class="sd">"""Construct and verify the Lobachevskian parallel pencil through P."""</span>
+        <span class="linenos"> 44</span>    <span class="n">pencil</span> <span class="o">=</span> <span class="n">construct_ultraparallels_through_point</span><span class="p">()</span>
+        <span class="linenos"> 45</span>    <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">pencil</span><span class="o">.</span><span class="n">model</span><span class="p">:</span>
+        <span class="linenos"> 46</span>        <span class="k">if</span> <span class="n">el</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Float</span><span class="p">):</span>
+        <span class="linenos"> 47</span>            <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Floating-point atom found in </span><span class="si">{</span><span class="n">el</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 48</span>
+        <span class="linenos"> 49</span>    <span class="n">base_carrier</span> <span class="o">=</span> <span class="n">pencil</span><span class="o">.</span><span class="n">base_geodesic</span><span class="o">.</span><span class="n">carrier</span>
+        <span class="linenos"> 50</span>    <span class="c1"># Verify limiting horoparallels meet base_geodesic ONLY on the ideal horizon x^2 + y^2 == 1</span>
+        <span class="linenos"> 51</span>    <span class="k">for</span> <span class="n">lim</span> <span class="ow">in</span> <span class="n">pencil</span><span class="o">.</span><span class="n">limiting_parallels</span><span class="p">:</span>
+        <span class="linenos"> 52</span>        <span class="n">hits</span> <span class="o">=</span> <span class="n">intersect_2d</span><span class="p">(</span><span class="n">base_carrier</span><span class="p">,</span> <span class="n">lim</span><span class="o">.</span><span class="n">carrier</span><span class="p">)</span>
+        <span class="linenos"> 53</span>        <span class="n">interior_hits</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="linenos"> 54</span>            <span class="n">pt</span>
+        <span class="linenos"> 55</span>            <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">hits</span>
+        <span class="linenos"> 56</span>            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span> <span class="n">spg</span><span class="o">.</span><span class="n">Point2D</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exact_sign</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span>
+        <span class="linenos"> 57</span>        <span class="p">]</span>
+        <span class="linenos"> 58</span>        <span class="n">bdry_hits</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="linenos"> 59</span>            <span class="n">pt</span>
+        <span class="linenos"> 60</span>            <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">hits</span>
+        <span class="linenos"> 61</span>            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span> <span class="n">spg</span><span class="o">.</span><span class="n">Point2D</span><span class="p">)</span> <span class="ow">and</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="linenos"> 62</span>        <span class="p">]</span>
+        <span class="linenos"> 63</span>        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">interior_hits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="linenos"> 64</span>        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">bdry_hits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="linenos"> 65</span>
+        <span class="linenos"> 66</span>    <span class="c1"># Verify ultraparallels have ZERO intersections in the closed unit disk x^2 + y^2 &lt;= 1</span>
+        <span class="linenos"> 67</span>    <span class="k">for</span> <span class="n">ultra</span> <span class="ow">in</span> <span class="n">pencil</span><span class="o">.</span><span class="n">ultraparallels</span><span class="p">:</span>
+        <span class="linenos"> 68</span>        <span class="n">hits</span> <span class="o">=</span> <span class="n">intersect_2d</span><span class="p">(</span><span class="n">base_carrier</span><span class="p">,</span> <span class="n">ultra</span><span class="o">.</span><span class="n">carrier</span><span class="p">)</span>
+        <span class="linenos"> 69</span>        <span class="n">closed_disk_hits</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="linenos"> 70</span>            <span class="n">pt</span>
+        <span class="linenos"> 71</span>            <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="n">hits</span>
+        <span class="linenos"> 72</span>            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span> <span class="n">spg</span><span class="o">.</span><span class="n">Point2D</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exact_sign</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span>
+        <span class="linenos"> 73</span>        <span class="p">]</span>
+        <span class="linenos"> 74</span>        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">closed_disk_hits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="linenos"> 75</span>
+        <span class="linenos"> 76</span>    <span class="n">svg_markup</span> <span class="o">=</span> <span class="n">render_figure_svg</span><span class="p">(</span><span class="s2">"fig3_lobachevsky_parallels.svg"</span><span class="p">)</span>
+        <span class="linenos"> 77</span>    <span class="k">if</span> <span class="n">svg_out</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="linenos"> 78</span>        <span class="n">svg_out</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="linenos"> 79</span>        <span class="n">svg_out</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">svg_markup</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="linenos"> 80</span>
+        <span class="linenos"> 81</span>    <span class="k">return</span> <span class="n">pencil</span>
+        <span class="linenos"> 82</span>
+        <span class="linenos"> 83</span>
+        <span class="linenos"> 84</span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="linenos"> 85</span><span class="w">    </span><span class="sd">"""CLI entry point for Demo 2."""</span>
+        <span class="linenos"> 86</span>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+        <span class="linenos"> 87</span>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">"--svg"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">"Optional output SVG path."</span><span class="p">)</span>
+        <span class="linenos"> 88</span>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+        <span class="linenos"> 89</span>
+        <span class="linenos"> 90</span>    <span class="n">pencil</span> <span class="o">=</span> <span class="n">run_demo</span><span class="p">(</span><span class="n">svg_out</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">svg</span><span class="p">)</span>
+        <span class="linenos"> 91</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"=== Demo 2: Lobachevskian Horoparallels &amp; Ultraparallels (Postulate V) ==="</span><span class="p">)</span>
+        <span class="linenos"> 92</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Base geodesic L_hyp ideal endpoints : </span><span class="si">{</span><span class="n">pencil</span><span class="o">.</span><span class="n">base_geodesic</span><span class="o">.</span><span class="n">ideal_points</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 93</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Exterior point P                    : (</span><span class="si">{</span><span class="n">pencil</span><span class="o">.</span><span class="n">point</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">pencil</span><span class="o">.</span><span class="n">point</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+        <span class="linenos"> 94</span>    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">lim</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pencil</span><span class="o">.</span><span class="n">limiting_parallels</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="linenos"> 95</span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Horoparallel l_</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> center &amp; r^2       : </span><span class="si">{</span><span class="n">lim</span><span class="o">.</span><span class="n">center</span><span class="si">}</span><span class="s2">, r^2 = </span><span class="si">{</span><span class="n">lim</span><span class="o">.</span><span class="n">radius_squared</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 96</span>    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ultra</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pencil</span><span class="o">.</span><span class="n">ultraparallels</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="linenos"> 97</span>        <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos"> 98</span>            <span class="sa">f</span><span class="s2">"Ultraparallel m_</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s2"> center &amp; r^2      : </span><span class="si">{</span><span class="n">ultra</span><span class="o">.</span><span class="n">center</span><span class="si">}</span><span class="s2">, r^2 = </span><span class="si">{</span><span class="n">ultra</span><span class="o">.</span><span class="n">radius_squared</span><span class="si">}</span><span class="s2"> "</span>
+        <span class="linenos"> 99</span>            <span class="s2">"(0 intersections in closed disk)"</span>
+        <span class="linenos">100</span>        <span class="p">)</span>
+        <span class="linenos">101</span>    <span class="k">return</span> <span class="mi">0</span>
+        <span class="linenos">102</span>
+        <span class="linenos">103</span>
+        <span class="linenos">104</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+        <span class="linenos">105</span>    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+        </pre></div>
+        </div>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="pythagorean-ideal-triangle-saccheri-quadrilateral-angular-defect">
+        <h2>3. Pythagorean Ideal Triangle &amp; Saccheri Quadrilateral Angular Defect<a class="headerlink" href="#pythagorean-ideal-triangle-saccheri-quadrilateral-angular-defect" title="Link to this heading">¶</a></h2>
+        <p>Constructs the ideal triangle $\triangle U_1 U_2 U_3$ on $U_1(1,0), U_2(-\frac{3}{5},\frac{4}{5}), U_3(-\frac{3}{5},-\frac{4}{5})$ with rational side centers $(1,2), (1,-2), (-\frac{5}{3},0)$, rational radii $2, 2, \frac{4}{3}$, and interior spreads $(0, 0, 0)$, alongside the rational Saccheri quadrilateral $A_1 A_2 B_2 B_1$ with equal leg UHG quadrances $-\frac{225}{64}$ and strictly acute summit spreads $\frac{64}{145} &lt; 1$.</p>
+        <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="sa">r</span><span class="sd">"""Demo 3: Ideal Hyperbolic Triangle &amp; Saccheri Quadrilateral Angular Defect.</span>
+        <span class="linenos">  2</span>
+        <span class="linenos">  3</span><span class="sd">Proves two celebrated theorems of Bolyai–Lobachevsky–Saccheri geometry using 100%</span>
+        <span class="linenos">  4</span><span class="sd">rational points, rational circle centers, and Rational Trigonometry spreads inside</span>
+        <span class="linenos">  5</span><span class="sd">``geometor.model``:</span>
+        <span class="linenos">  6</span>
+        <span class="linenos">  7</span><span class="sd">1. **Pythagorean Ideal Triangle** :math:`\triangle U_1 U_2 U_3` on</span>
+        <span class="linenos">  8</span><span class="sd">   :math:`U_1 = (1, 0),\; U_2 = (-\frac{3}{5}, \frac{4}{5}),\; U_3 = (-\frac{3}{5}, -\frac{4}{5})`:</span>
+        <span class="linenos">  9</span><span class="sd">   - Orthogonal side circles centered at :math:`(1, 2),\; (1, -2),\; (-\frac{5}{3}, 0)`</span>
+        <span class="linenos"> 10</span><span class="sd">     with exact rational radii :math:`2,\; 2,\; \frac{4}{3}`.</span>
+        <span class="linenos"> 11</span><span class="sd">   - Interior tangent spreads :math:`(0, 0, 0)` and maximal Gauss–Bonnet defect :math:`\pi`.</span>
+        <span class="linenos"> 12</span><span class="sd">2. **Hyperbolic Right Triangle** :math:`\triangle OAB` &amp; **Saccheri Quadrilateral**</span>
+        <span class="linenos"> 13</span><span class="sd">   :math:`A_1 A_2 B_2 B_1`:</span>
+        <span class="linenos"> 14</span><span class="sd">   - Right triangle on :math:`O(0,0),\; A(\frac{1}{2},0),\; B(0,\frac{1}{2})` has base spread</span>
+        <span class="linenos"> 15</span><span class="sd">     :math:`1` and acute vertex spreads :math:`\frac{9}{34} &lt; \frac{1}{2}`.</span>
+        <span class="linenos"> 16</span><span class="sd">   - Saccheri quadrilateral with base :math:`A_1(-\frac{1}{3}, 0),\; A_2(\frac{1}{3}, 0)` and</span>
+        <span class="linenos"> 17</span><span class="sd">     summit :math:`B_1(-\frac{17}{39}, \frac{20}{39}),\; B_2(\frac{17}{39}, \frac{20}{39})` has</span>
+        <span class="linenos"> 18</span><span class="sd">     equal leg UHG quadrances :math:`-\frac{225}{64}`, right base spreads :math:`(1, 1)`,</span>
+        <span class="linenos"> 19</span><span class="sd">     and strictly acute summit spreads :math:`\frac{64}{145} &lt; 1` (refuting Saccheri's</span>
+        <span class="linenos"> 20</span><span class="sd">     Euclidean right-angle hypothesis).</span>
+        <span class="linenos"> 21</span><span class="sd">"""</span>
+        <span class="linenos"> 22</span>
+        <span class="linenos"> 23</span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+        <span class="linenos"> 24</span>
+        <span class="linenos"> 25</span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+        <span class="linenos"> 26</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+        <span class="linenos"> 27</span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+        <span class="linenos"> 28</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
+        <span class="linenos"> 29</span>
+        <span class="linenos"> 30</span><span class="n">_REPO_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="linenos"> 31</span><span class="k">for</span> <span class="n">_candidate</span> <span class="ow">in</span> <span class="p">(</span><span class="n">_REPO_ROOT</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">,</span> <span class="n">_REPO_ROOT</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"model"</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">):</span>
+        <span class="linenos"> 32</span>    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+        <span class="linenos"> 33</span>        <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">))</span>
+        <span class="linenos"> 34</span>
+        <span class="linenos"> 35</span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 36</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">zero_test</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 37</span>
+        <span class="linenos"> 38</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.poincare</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 39</span>    <span class="n">IdealTriangleResult</span><span class="p">,</span>
+        <span class="linenos"> 40</span>    <span class="n">SaccheriDefectResult</span><span class="p">,</span>
+        <span class="linenos"> 41</span>    <span class="n">construct_ideal_hyperbolic_triangle</span><span class="p">,</span>
+        <span class="linenos"> 42</span>    <span class="n">construct_saccheri_triangleDefect</span><span class="p">,</span>
+        <span class="linenos"> 43</span>    <span class="n">render_figure_svg</span><span class="p">,</span>
+        <span class="linenos"> 44</span><span class="p">)</span>
+        <span class="linenos"> 45</span>
+        <span class="linenos"> 46</span>
+        <span class="linenos"> 47</span><span class="k">def</span><span class="w"> </span><span class="nf">run_demo</span><span class="p">(</span><span class="n">svg_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">IdealTriangleResult</span><span class="p">,</span> <span class="n">SaccheriDefectResult</span><span class="p">]:</span>
+        <span class="linenos"> 48</span><span class="w">    </span><span class="sd">"""Construct and verify the ideal hyperbolic triangle and Saccheri quadrilateral."""</span>
+        <span class="linenos"> 49</span>    <span class="n">ideal</span> <span class="o">=</span> <span class="n">construct_ideal_hyperbolic_triangle</span><span class="p">()</span>
+        <span class="linenos"> 50</span>    <span class="n">sac</span> <span class="o">=</span> <span class="n">construct_saccheri_triangleDefect</span><span class="p">()</span>
+        <span class="linenos"> 51</span>
+        <span class="linenos"> 52</span>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">(</span><span class="n">ideal</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">sac</span><span class="o">.</span><span class="n">model</span><span class="p">):</span>
+        <span class="linenos"> 53</span>        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+        <span class="linenos"> 54</span>            <span class="k">if</span> <span class="n">el</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Float</span><span class="p">):</span>
+        <span class="linenos"> 55</span>                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Floating-point atom detected in </span><span class="si">{</span><span class="n">el</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 56</span>
+        <span class="linenos"> 57</span>    <span class="k">assert</span> <span class="n">ideal</span><span class="o">.</span><span class="n">radii</span> <span class="o">==</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+        <span class="linenos"> 58</span>    <span class="k">assert</span> <span class="nb">all</span><span class="p">(</span><span class="n">zero_test</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">ideal</span><span class="o">.</span><span class="n">vertex_spreads</span><span class="p">)</span>
+        <span class="linenos"> 59</span>
+        <span class="linenos"> 60</span>    <span class="k">assert</span> <span class="n">sac</span><span class="o">.</span><span class="n">triangle_spreads</span> <span class="o">==</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">34</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">34</span><span class="p">))</span>
+        <span class="linenos"> 61</span>    <span class="k">assert</span> <span class="n">sac</span><span class="o">.</span><span class="n">saccheri_base_spreads</span> <span class="o">==</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="linenos"> 62</span>    <span class="k">assert</span> <span class="n">sac</span><span class="o">.</span><span class="n">saccheri_summit_spreads</span> <span class="o">==</span> <span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">145</span><span class="p">),</span> <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">145</span><span class="p">))</span>
+        <span class="linenos"> 63</span>    <span class="k">assert</span> <span class="n">sac</span><span class="o">.</span><span class="n">saccheri_leg_uhg_quadrances</span> <span class="o">==</span> <span class="p">(</span>
+        <span class="linenos"> 64</span>        <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="o">-</span><span class="mi">225</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+        <span class="linenos"> 65</span>        <span class="n">sp</span><span class="o">.</span><span class="n">Rational</span><span class="p">(</span><span class="o">-</span><span class="mi">225</span><span class="p">,</span> <span class="mi">64</span><span class="p">),</span>
+        <span class="linenos"> 66</span>    <span class="p">)</span>
+        <span class="linenos"> 67</span>
+        <span class="linenos"> 68</span>    <span class="k">if</span> <span class="n">svg_dir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="linenos"> 69</span>        <span class="n">svg_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="linenos"> 70</span>        <span class="p">(</span><span class="n">svg_dir</span> <span class="o">/</span> <span class="s2">"fig4_ideal_hyperbolic_triangle.svg"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span>
+        <span class="linenos"> 71</span>            <span class="n">render_figure_svg</span><span class="p">(</span><span class="s2">"fig4_ideal_hyperbolic_triangle.svg"</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>
+        <span class="linenos"> 72</span>        <span class="p">)</span>
+        <span class="linenos"> 73</span>        <span class="p">(</span><span class="n">svg_dir</span> <span class="o">/</span> <span class="s2">"fig5_saccheri_angular_defect.svg"</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span>
+        <span class="linenos"> 74</span>            <span class="n">render_figure_svg</span><span class="p">(</span><span class="s2">"fig5_saccheri_angular_defect.svg"</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span>
+        <span class="linenos"> 75</span>        <span class="p">)</span>
+        <span class="linenos"> 76</span>
+        <span class="linenos"> 77</span>    <span class="k">return</span> <span class="n">ideal</span><span class="p">,</span> <span class="n">sac</span>
+        <span class="linenos"> 78</span>
+        <span class="linenos"> 79</span>
+        <span class="linenos"> 80</span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="linenos"> 81</span><span class="w">    </span><span class="sd">"""CLI entry point for Demo 3."""</span>
+        <span class="linenos"> 82</span>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+        <span class="linenos"> 83</span>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="linenos"> 84</span>        <span class="s2">"--svg-dir"</span><span class="p">,</span>
+        <span class="linenos"> 85</span>        <span class="nb">type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span>
+        <span class="linenos"> 86</span>        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="linenos"> 87</span>        <span class="n">help</span><span class="o">=</span><span class="s2">"Optional directory to write fig4 and fig5 SVGs."</span><span class="p">,</span>
+        <span class="linenos"> 88</span>    <span class="p">)</span>
+        <span class="linenos"> 89</span>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+        <span class="linenos"> 90</span>
+        <span class="linenos"> 91</span>    <span class="n">ideal</span><span class="p">,</span> <span class="n">sac</span> <span class="o">=</span> <span class="n">run_demo</span><span class="p">(</span><span class="n">svg_dir</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">svg_dir</span><span class="p">)</span>
+        <span class="linenos"> 92</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"=== Demo 3: Ideal Hyperbolic Triangle &amp; Saccheri Angular Defect ==="</span><span class="p">)</span>
+        <span class="linenos"> 93</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ideal vertices       : </span><span class="si">{</span><span class="n">ideal</span><span class="o">.</span><span class="n">vertices</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 94</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ideal circle centers : </span><span class="si">{</span><span class="n">ideal</span><span class="o">.</span><span class="n">centers</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 95</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ideal circle radii   : </span><span class="si">{</span><span class="n">ideal</span><span class="o">.</span><span class="n">radii</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 96</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Ideal vertex spreads : </span><span class="si">{</span><span class="n">ideal</span><span class="o">.</span><span class="n">vertex_spreads</span><span class="si">}</span><span class="s2">  -&gt;  defect = </span><span class="si">{</span><span class="n">ideal</span><span class="o">.</span><span class="n">angular_defect</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 97</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"-"</span> <span class="o">*</span> <span class="mi">68</span><span class="p">)</span>
+        <span class="linenos"> 98</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos"> 99</span>        <span class="sa">f</span><span class="s2">"Right triangle OAB   : spreads = </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">triangle_spreads</span><span class="si">}</span><span class="s2"> (&lt; (1, 1/2, 1/2)), "</span>
+        <span class="linenos">100</span>        <span class="sa">f</span><span class="s2">"defect = </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">triangle_defect</span><span class="si">}</span><span class="s2">"</span>
+        <span class="linenos">101</span>    <span class="p">)</span>
+        <span class="linenos">102</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saccheri leg q_UHG   : </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">saccheri_leg_uhg_quadrances</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">103</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Saccheri base spreads: </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">saccheri_base_spreads</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos">104</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos">105</span>        <span class="sa">f</span><span class="s2">"Saccheri summit      : spreads = </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">saccheri_summit_spreads</span><span class="si">}</span><span class="s2"> (&lt; 1), "</span>
+        <span class="linenos">106</span>        <span class="sa">f</span><span class="s2">"defect = </span><span class="si">{</span><span class="n">sac</span><span class="o">.</span><span class="n">saccheri_defect</span><span class="si">}</span><span class="s2">"</span>
+        <span class="linenos">107</span>    <span class="p">)</span>
+        <span class="linenos">108</span>    <span class="k">return</span> <span class="mi">0</span>
+        <span class="linenos">109</span>
+        <span class="linenos">110</span>
+        <span class="linenos">111</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+        <span class="linenos">112</span>    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+        </pre></div>
+        </div>
+        </section>
+        <hr class="docutils" />
+        <section class="level-2" id="heated-disk-optical-rays-beltramiklein-bridge-stellar-parallax">
+        <h2>4. Heated-Disk Optical Rays, Beltrami–Klein Bridge &amp; Stellar Parallax<a class="headerlink" href="#heated-disk-optical-rays-beltramiklein-bridge-stellar-parallax" title="Link to this heading">¶</a></h2>
+        <p>Realizes Poincaré’s physical thermal parable ($T \propto 1 - r^2$, $n \propto (1 - r^2)^{-1}$), proves by pure straightedge radial projection $K(P) = \frac{2P}{1 + \|P\|^2}$ that Poincaré conformal arcs map onto Beltrami–Klein straight chords with identical Cayley–Klein quadrance $q_{\mathrm{CK}}$, and models Poincaré’s astronomical parallax argument for geometric conventionalism.</p>
+        <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="sa">r</span><span class="sd">"""Demo 4: Poincaré's Heated Disk, Beltrami–Klein Projection, &amp; Stellar Parallax.</span>
+        <span class="linenos">  2</span>
+        <span class="linenos">  3</span><span class="sd">Synthesizes the physical and projective models of *La Science et l'Hypothèse*</span>
+        <span class="linenos">  4</span><span class="sd">(Part II, Chs. IV–V, 1902):</span>
+        <span class="linenos">  5</span>
+        <span class="linenos">  6</span><span class="sd">1. **Poincaré's Heated-Disk Parable (Ch. IV)**:</span>
+        <span class="linenos">  7</span><span class="sd">   - Temperature :math:`T(r) \propto R^2 - r^2` and refractive index :math:`n(r) \propto (R^2 - r^2)^{-1}`</span>
+        <span class="linenos">  8</span><span class="sd">     bend optical Fermat geodesics and thermally contracted rulers along orthogonal circles,</span>
+        <span class="linenos">  9</span><span class="sd">     making the finite disk physically indistinguishable from an infinite Lobachevskian plane.</span>
+        <span class="linenos"> 10</span><span class="sd">2. **Beltrami–Klein Projective Chord Bridge**:</span>
+        <span class="linenos"> 11</span><span class="sd">   - Radial straightedge projection from :math:`O` onto the straight chord :math:`UV`</span>
+        <span class="linenos"> 12</span><span class="sd">     realizes the exact Weierstrass map :math:`K(P) = \frac{2P}{1 + \|P\|^2}`, turning</span>
+        <span class="linenos"> 13</span><span class="sd">     Poincaré's conformal arcs into Beltrami–Klein projective segments while preserving</span>
+        <span class="linenos"> 14</span><span class="sd">     :math:`q_{\text{CK}}(P_1, P_2) = \tanh^2 d_{\mathbb{H}}(P_1, P_2)`.</span>
+        <span class="linenos"> 15</span><span class="sd">3. **Stellar Parallax &amp; Geometric Conventionalism (Ch. V § 3)**:</span>
+        <span class="linenos"> 16</span><span class="sd">   - Any astronomical triangle :math:`\triangle S_1 S_2 S_3` with angular sum differing</span>
+        <span class="linenos"> 17</span><span class="sd">     from :math:`\pi` admits two empirically equivalent descriptions: Lobachevskian space</span>
+        <span class="linenos"> 18</span><span class="sd">     with straight rays vs. Euclidean space with refracted rays.</span>
+        <span class="linenos"> 19</span><span class="sd">"""</span>
+        <span class="linenos"> 20</span>
+        <span class="linenos"> 21</span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">annotations</span>
+        <span class="linenos"> 22</span>
+        <span class="linenos"> 23</span><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+        <span class="linenos"> 24</span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+        <span class="linenos"> 25</span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+        <span class="linenos"> 26</span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sequence</span>
+        <span class="linenos"> 27</span>
+        <span class="linenos"> 28</span><span class="n">_REPO_ROOT</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span><span class="o">.</span><span class="n">parents</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="linenos"> 29</span><span class="k">for</span> <span class="n">_candidate</span> <span class="ow">in</span> <span class="p">(</span><span class="n">_REPO_ROOT</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">,</span> <span class="n">_REPO_ROOT</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s2">"model"</span> <span class="o">/</span> <span class="s2">"src"</span><span class="p">):</span>
+        <span class="linenos"> 30</span>    <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+        <span class="linenos"> 31</span>        <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">_candidate</span><span class="p">))</span>
+        <span class="linenos"> 32</span>
+        <span class="linenos"> 33</span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 34</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">zero_test</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 35</span>
+        <span class="linenos"> 36</span><span class="kn">from</span><span class="w"> </span><span class="nn">geometor.poincare</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: E402</span>
+        <span class="linenos"> 37</span>    <span class="n">BeltramiKleinBridgeResult</span><span class="p">,</span>
+        <span class="linenos"> 38</span>    <span class="n">HeatedDiskResult</span><span class="p">,</span>
+        <span class="linenos"> 39</span>    <span class="n">StellarParallaxResult</span><span class="p">,</span>
+        <span class="linenos"> 40</span>    <span class="n">construct_beltrami_klein_bridge</span><span class="p">,</span>
+        <span class="linenos"> 41</span>    <span class="n">construct_heated_disk_optical_rays</span><span class="p">,</span>
+        <span class="linenos"> 42</span>    <span class="n">construct_stellar_parallax_conventionalism</span><span class="p">,</span>
+        <span class="linenos"> 43</span>    <span class="n">hyperbolic_cross_ratio_and_quadrance</span><span class="p">,</span>
+        <span class="linenos"> 44</span>    <span class="n">render_figure_svg</span><span class="p">,</span>
+        <span class="linenos"> 45</span><span class="p">)</span>
+        <span class="linenos"> 46</span>
+        <span class="linenos"> 47</span>
+        <span class="linenos"> 48</span><span class="k">def</span><span class="w"> </span><span class="nf">_klein_hilbert_quadrance</span><span class="p">(</span>
+        <span class="linenos"> 49</span>    <span class="n">k1</span><span class="p">:</span> <span class="n">sp</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">Point2D</span><span class="p">,</span>
+        <span class="linenos"> 50</span>    <span class="n">k2</span><span class="p">:</span> <span class="n">sp</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">Point2D</span><span class="p">,</span>
+        <span class="linenos"> 51</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">sp</span><span class="o">.</span><span class="n">Expr</span><span class="p">:</span>
+        <span class="linenos"> 52</span><span class="w">    </span><span class="sa">r</span><span class="sd">"""Compute the Beltrami–Klein metric invariant directly from Klein coordinates.</span>
+        <span class="linenos"> 53</span>
+        <span class="linenos"> 54</span><span class="sd">    For interior Klein points :math:`K_1, K_2`, the Cayley–Klein quadrance satisfies</span>
+        <span class="linenos"> 55</span><span class="sd">    :math:`1 - q_{\text{CK}}(K_1, K_2) = \frac{(1 - \|K_1\|^2)(1 - \|K_2\|^2)}{(1 - K_1 \cdot K_2)^2}`.</span>
+        <span class="linenos"> 56</span><span class="sd">    """</span>
+        <span class="linenos"> 57</span>    <span class="n">n1</span> <span class="o">=</span> <span class="n">k1</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">k1</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+        <span class="linenos"> 58</span>    <span class="n">n2</span> <span class="o">=</span> <span class="n">k2</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">k2</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+        <span class="linenos"> 59</span>    <span class="n">dot</span> <span class="o">=</span> <span class="n">k1</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">k2</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">k1</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">k2</span><span class="o">.</span><span class="n">y</span>
+        <span class="linenos"> 60</span>    <span class="k">return</span> <span class="n">sp</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">n1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">n2</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dot</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="linenos"> 61</span>
+        <span class="linenos"> 62</span>
+        <span class="linenos"> 63</span><span class="k">def</span><span class="w"> </span><span class="nf">run_demo</span><span class="p">(</span>
+        <span class="linenos"> 64</span>    <span class="n">svg_dir</span><span class="p">:</span> <span class="n">Path</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="linenos"> 65</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">HeatedDiskResult</span><span class="p">,</span> <span class="n">BeltramiKleinBridgeResult</span><span class="p">,</span> <span class="n">StellarParallaxResult</span><span class="p">]:</span>
+        <span class="linenos"> 66</span><span class="w">    </span><span class="sd">"""Construct and verify the Heated Disk, Beltrami–Klein bridge, and Parallax models."""</span>
+        <span class="linenos"> 67</span>    <span class="n">heated</span> <span class="o">=</span> <span class="n">construct_heated_disk_optical_rays</span><span class="p">()</span>
+        <span class="linenos"> 68</span>    <span class="n">bridge</span> <span class="o">=</span> <span class="n">construct_beltrami_klein_bridge</span><span class="p">()</span>
+        <span class="linenos"> 69</span>    <span class="n">parallax</span> <span class="o">=</span> <span class="n">construct_stellar_parallax_conventionalism</span><span class="p">()</span>
+        <span class="linenos"> 70</span>
+        <span class="linenos"> 71</span>    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">(</span><span class="n">heated</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">bridge</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="n">parallax</span><span class="o">.</span><span class="n">model</span><span class="p">):</span>
+        <span class="linenos"> 72</span>        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
+        <span class="linenos"> 73</span>            <span class="k">if</span> <span class="n">el</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">sp</span><span class="o">.</span><span class="n">Float</span><span class="p">):</span>
+        <span class="linenos"> 74</span>                <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Floating-point atom detected in </span><span class="si">{</span><span class="n">el</span><span class="si">!r}</span><span class="s2">"</span><span class="p">)</span>
+        <span class="linenos"> 75</span>
+        <span class="linenos"> 76</span>    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_points</span>
+        <span class="linenos"> 77</span>    <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span> <span class="o">=</span> <span class="n">bridge</span><span class="o">.</span><span class="n">klein_points</span>
+        <span class="linenos"> 78</span>    <span class="n">poincare_metrics</span> <span class="o">=</span> <span class="n">hyperbolic_cross_ratio_and_quadrance</span><span class="p">(</span>
+        <span class="linenos"> 79</span>        <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_geodesic</span><span class="o">.</span><span class="n">U</span><span class="p">,</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_geodesic</span><span class="o">.</span><span class="n">V</span>
+        <span class="linenos"> 80</span>    <span class="p">)</span>
+        <span class="linenos"> 81</span>    <span class="n">q_ck_from_klein</span> <span class="o">=</span> <span class="n">_klein_hilbert_quadrance</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span> <span class="n">k2</span><span class="p">)</span>
+        <span class="linenos"> 82</span>    <span class="k">assert</span> <span class="n">zero_test</span><span class="p">(</span><span class="n">poincare_metrics</span><span class="o">.</span><span class="n">cayley_klein_quadrance</span> <span class="o">-</span> <span class="n">q_ck_from_klein</span><span class="p">)</span>
+        <span class="linenos"> 83</span>
+        <span class="linenos"> 84</span>    <span class="k">if</span> <span class="n">svg_dir</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="linenos"> 85</span>        <span class="n">svg_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="linenos"> 86</span>        <span class="k">for</span> <span class="n">fname</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="linenos"> 87</span>            <span class="s2">"fig6_heated_disk_refraction.svg"</span><span class="p">,</span>
+        <span class="linenos"> 88</span>            <span class="s2">"fig7_cayley_klein_beltrami_bridge.svg"</span><span class="p">,</span>
+        <span class="linenos"> 89</span>            <span class="s2">"fig8_stellar_parallax_conventionalism.svg"</span><span class="p">,</span>
+        <span class="linenos"> 90</span>        <span class="p">):</span>
+        <span class="linenos"> 91</span>            <span class="p">(</span><span class="n">svg_dir</span> <span class="o">/</span> <span class="n">fname</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="n">render_figure_svg</span><span class="p">(</span><span class="n">fname</span><span class="p">),</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+        <span class="linenos"> 92</span>
+        <span class="linenos"> 93</span>    <span class="k">return</span> <span class="n">heated</span><span class="p">,</span> <span class="n">bridge</span><span class="p">,</span> <span class="n">parallax</span>
+        <span class="linenos"> 94</span>
+        <span class="linenos"> 95</span>
+        <span class="linenos"> 96</span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">argv</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="linenos"> 97</span><span class="w">    </span><span class="sd">"""CLI entry point for Demo 4."""</span>
+        <span class="linenos"> 98</span>    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+        <span class="linenos"> 99</span>    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+        <span class="linenos">100</span>        <span class="s2">"--svg-dir"</span><span class="p">,</span>
+        <span class="linenos">101</span>        <span class="nb">type</span><span class="o">=</span><span class="n">Path</span><span class="p">,</span>
+        <span class="linenos">102</span>        <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="linenos">103</span>        <span class="n">help</span><span class="o">=</span><span class="s2">"Optional directory to write fig6, fig7, and fig8 SVGs."</span><span class="p">,</span>
+        <span class="linenos">104</span>    <span class="p">)</span>
+        <span class="linenos">105</span>    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span>
+        <span class="linenos">106</span>
+        <span class="linenos">107</span>    <span class="n">heated</span><span class="p">,</span> <span class="n">bridge</span><span class="p">,</span> <span class="n">parallax</span> <span class="o">=</span> <span class="n">run_demo</span><span class="p">(</span><span class="n">svg_dir</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">svg_dir</span><span class="p">)</span>
+        <span class="linenos">108</span>    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_points</span>
+        <span class="linenos">109</span>    <span class="n">k1</span><span class="p">,</span> <span class="n">k2</span> <span class="o">=</span> <span class="n">bridge</span><span class="o">.</span><span class="n">klein_points</span>
+        <span class="linenos">110</span>    <span class="n">metrics</span> <span class="o">=</span> <span class="n">hyperbolic_cross_ratio_and_quadrance</span><span class="p">(</span>
+        <span class="linenos">111</span>        <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_geodesic</span><span class="o">.</span><span class="n">U</span><span class="p">,</span> <span class="n">bridge</span><span class="o">.</span><span class="n">poincare_geodesic</span><span class="o">.</span><span class="n">V</span>
+        <span class="linenos">112</span>    <span class="p">)</span>
+        <span class="linenos">113</span>
+        <span class="linenos">114</span>    <span class="nb">print</span><span class="p">(</span><span class="s2">"=== Demo 4: Heated Disk, Beltrami–Klein Bridge, &amp; Stellar Parallax ==="</span><span class="p">)</span>
+        <span class="linenos">115</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos">116</span>        <span class="sa">f</span><span class="s2">"Heated disk source S = (</span><span class="si">{</span><span class="n">heated</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">heated</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">) with "</span>
+        <span class="linenos">117</span>        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">heated</span><span class="o">.</span><span class="n">isothermals</span><span class="p">)</span><span class="si">}</span><span class="s2"> isothermals and </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">heated</span><span class="o">.</span><span class="n">light_rays</span><span class="p">)</span><span class="si">}</span><span class="s2"> Fermat rays"</span>
+        <span class="linenos">118</span>    <span class="p">)</span>
+        <span class="linenos">119</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Poincaré points      : P1 = (</span><span class="si">{</span><span class="n">p1</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">p1</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">), P2 = (</span><span class="si">{</span><span class="n">p2</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">p2</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+        <span class="linenos">120</span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Klein chord images   : K1 = (</span><span class="si">{</span><span class="n">k1</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">k1</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">), K2 = (</span><span class="si">{</span><span class="n">k2</span><span class="o">.</span><span class="n">x</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">k2</span><span class="o">.</span><span class="n">y</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+        <span class="linenos">121</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos">122</span>        <span class="sa">f</span><span class="s2">"Invariant match      : q_CK(Poincaré) = </span><span class="si">{</span><span class="n">metrics</span><span class="o">.</span><span class="n">cayley_klein_quadrance</span><span class="si">}</span><span class="s2"> == "</span>
+        <span class="linenos">123</span>        <span class="sa">f</span><span class="s2">"q_CK(Beltrami–Klein) = </span><span class="si">{</span><span class="n">_klein_hilbert_quadrance</span><span class="p">(</span><span class="n">k1</span><span class="p">,</span><span class="w"> </span><span class="n">k2</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+        <span class="linenos">124</span>    <span class="p">)</span>
+        <span class="linenos">125</span>    <span class="nb">print</span><span class="p">(</span>
+        <span class="linenos">126</span>        <span class="sa">f</span><span class="s2">"Parallax triangle    : </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">parallax</span><span class="o">.</span><span class="n">stars</span><span class="p">)</span><span class="si">}</span><span class="s2"> stars, "</span>
+        <span class="linenos">127</span>        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">parallax</span><span class="o">.</span><span class="n">lobachevsky_rays</span><span class="p">)</span><span class="si">}</span><span class="s2"> hyperbolic arcs vs. "</span>
+        <span class="linenos">128</span>        <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">parallax</span><span class="o">.</span><span class="n">euclidean_chords</span><span class="p">)</span><span class="si">}</span><span class="s2"> Euclidean refracted chords"</span>
+        <span class="linenos">129</span>    <span class="p">)</span>
+        <span class="linenos">130</span>    <span class="k">return</span> <span class="mi">0</span>
+        <span class="linenos">131</span>
+        <span class="linenos">132</span>
+        <span class="linenos">133</span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+        <span class="linenos">134</span>    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+        </pre></div>
+        </div>
+        </section>
+        </section>
+
+      </div>
+      <footer class="book-footer">
+        <div class="book-footer-ornament">&#10086;</div>
+        <div class="book-footer-nav">
+          <div class="book-nav-prev">
+            <a class="book-nav-btn" href="../science_and_hypothesis/glossary.html" title="Bilingual Technical Glossary">&larr; <span class="nav-label">Bilingual Technical Glossary</span></a>
+          </div>
+          <div class="book-nav-center">
+            <a class="book-toc-link" href="../index.html">GEOMETOR • poincare</a>
+          </div>
+          <div class="book-nav-next">
+            <a class="book-nav-btn" href="../log/index.html" title="log"><span class="nav-label">log</span> &rarr;</a>
+          </div>
+        </div>
+      </footer>
+    </article>
+  </main>
+  <div class="asides">
+    <aside class="aside-search">
+      <h3>Search</h3>
+      <div id="searchbox" role="search">
+        <form id="rtd-search-form" class="wy-form search-form" action="../search.html" method="get">
+          <div class="search-field">
+            <input type="search" name="q" placeholder="Search docs..." aria-label="Search docs" autocomplete="off" />
+            <button type="submit" class="search-submit" aria-label="Search" title="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-nav">
+      <ul>
+        <li><a href="../about/index.html"  >about</a></li>
+        <li><a href="../changelog.html"  >changelog</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div role="contentinfo">
+      <p>
+        &copy; Copyright 1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../_static/jquery.js?v=5d32c60e"></script>
+  <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+  <script src="../_static/documentation_options.js?v=01f34227"></script>
+  <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+  <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+  <script src="../_static/js/collection_controls.js?v=b6b5297a"></script>
+  <script src="../_static/js/geometor_interactive.js?v=b2892320"></script>
+  <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+  <script src="../_static/js/search_highlight.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+geometor.poincare.__main__
+==========================
+
+.. py:module:: geometor.poincare.__main__
+
+.. autoapi-nested-parse::
+
+   Module execution entry point (`python -m geometor.poincare`).
+
+
+
