@@ -1,0 +1,186 @@
+{
+  "poincare-1902": {
+    "author": "Henri Poincaré",
+    "work": "La Science et l'Hypothèse",
+    "locus": "Bibliothèque de Philosophie scientifique, pp. 1–284 (Introduction & Parts I–IV, Chs. I–XIII)",
+    "year": "1902",
+    "publisher": "Ernest Flammarion, Éditeur, Paris",
+    "note": "Primary French public-domain witness. Synthesizes Poincaré's foundational essays from 1891–1901 into a unified treatise on arithmetic induction, the continuum, non-Euclidean geometries, conventionalism, classical mechanics, and electrodynamics; later Flammarion printings include the section 'Les Géométries de Hilbert' (pp. 63–64)."
+  },
+  "poincare-1905-greenstreet": {
+    "author": "Henri Poincaré (trans. W. J. Greenstreet, preface by J. Larmor)",
+    "work": "Science and Hypothesis",
+    "locus": "xxvii + 244 pp.",
+    "year": "1905",
+    "publisher": "Walter Scott Publishing Co., Ltd., London and Newcastle-on-Tyne",
+    "note": "Authorized British public-domain English translation, collated in this codex against the 1902 Flammarion French edition and Halsted's 1905 American translation."
+  },
+  "poincare-1905-halsted": {
+    "author": "Henri Poincaré (trans. George Bruce Halsted, special preface by H. Poincaré, intro. by Josiah Royce)",
+    "work": "Science and Hypothesis (reprinted in The Foundations of Science, 1913)",
+    "locus": "xxxii + 196 pp.",
+    "year": "1905 / 1913",
+    "publisher": "The Science Press, New York and Garrison, N.Y.",
+    "note": "Authorized American public-domain translation preserving strict non-Euclidean terminology ('Bolyai and Lobachevski', 'reasoning by recurrence') and Poincaré's special English preface clarifying the limits of convention in science."
+  },
+  "poincare-1882": {
+    "author": "Henri Poincaré",
+    "work": "Théorie des groupes fuchsiens",
+    "locus": "Acta Mathematica, Vol. 1, pp. 1–62",
+    "year": "1882",
+    "publisher": "Beijer / F. & G. Beijer, Stockholm",
+    "note": "Memoir introducing the conformal hyperbolic disk and upper half-plane models, orthogonal-circle geodesics, and Fuchsian automorphic tessellations."
+  },
+  "poincare-1891": {
+    "author": "Henri Poincaré",
+    "work": "Les géométries non euclidiennes",
+    "locus": "Revue générale des sciences pures et appliquées, Vol. 2, pp. 769–774",
+    "year": "1891",
+    "publisher": "Georges Carré, Paris",
+    "note": "Original essay introducing the Lobachevsky–Euclidean Translation Dictionary and the conventionalism thesis ('Les axiomes géométriques ne sont donc ni des jugements synthétiques a priori ni des faits expérimentaux. Ce sont des conventions')."
+  },
+  "poincare-1894": {
+    "author": "Henri Poincaré",
+    "work": "Sur la nature du raisonnement mathématique",
+    "locus": "Revue de Métaphysique et de Morale, Vol. 2, pp. 371–384",
+    "year": "1894",
+    "publisher": "Armand Colin, Paris",
+    "note": "Foundational paper defending complete mathematical induction (reasoning by recurrence) as the paradigmatic synthetic a priori judgment of pure mathematics (expanded into Ch. I of La Science et l'Hypothèse)."
+  },
+  "poincare-1895-espace": {
+    "author": "Henri Poincaré",
+    "work": "L'espace et la géométrie",
+    "locus": "Revue de Métaphysique et de Morale, Vol. 3, pp. 631–646",
+    "year": "1895",
+    "publisher": "Armand Colin, Paris",
+    "note": "Introduces the distinction between perceptual/motor space and geometric space along with the Heated-Disk optical world (expanded into Ch. IV of La Science et l'Hypothèse)."
+  },
+  "poincare-1899-russell": {
+    "author": "Henri Poincaré",
+    "work": "Des fondements de la géométrie : à propos d'un livre de M. Russell",
+    "locus": "Revue de Métaphysique et de Morale, Vol. 7, pp. 251–279",
+    "year": "1899",
+    "publisher": "Armand Colin, Paris",
+    "note": "Poincaré's incisive review of Bertrand Russell's 1897 Essay on the Foundations of Geometry, challenging Russell's claim that projective geometry is wholly a priori and demanding an operational criterion of spatial congruence."
+  },
+  "russell-1897": {
+    "author": "Bertrand Russell",
+    "work": "An Essay on the Foundations of Geometry",
+    "locus": "xvi + 201 pp.",
+    "year": "1897",
+    "publisher": "Cambridge University Press, Cambridge",
+    "note": "Russell's neo-Kantian treatise arguing that projective geometry expresses the a priori form of externality while constant-curvature metrical axioms encompass empirical elements (digitized in geometor/bertrand-russell)."
+  },
+  "russell-1899-reponse": {
+    "author": "Bertrand Russell",
+    "work": "Sur les axiomes de la géométrie",
+    "locus": "Revue de Métaphysique et de Morale, Vol. 7, pp. 684–707",
+    "year": "1899",
+    "publisher": "Armand Colin, Paris",
+    "note": "Russell's French reply to Poincaré defending the irreducibility of absolute distance and spatial relations against Poincaré's group-theoretic conventionalism."
+  },
+  "poincare-1900-replique": {
+    "author": "Henri Poincaré",
+    "work": "Sur les principes de la géométrie : réponse à M. Russell",
+    "locus": "Revue de Métaphysique et de Morale, Vol. 8, pp. 73–86",
+    "year": "1900",
+    "publisher": "Armand Colin, Paris",
+    "note": "Poincaré's rejoinder to Russell on disguised definitions, solid-body displacements, and the meaninglessness of absolute spatial scale."
+  },
+  "poincare-1902-hilbert": {
+    "author": "Henri Poincaré",
+    "work": "Les fondements de la géométrie (Review of D. Hilbert, Grundlagen der Geometrie)",
+    "locus": "Bulletin des Sciences Mathématiques, 2e série, Vol. 26, pp. 249–272",
+    "year": "1902",
+    "publisher": "Gauthier-Villars, Paris",
+    "note": "Detailed technical review of Hilbert's 1899 Grundlagen, directly informing the 'Les Géométries de Hilbert' section in Flammarion printings of La Science et l'Hypothèse."
+  },
+  "hilbert-1899": {
+    "author": "David Hilbert",
+    "work": "Grundlagen der Geometrie (Festschrift zur Feier der Enthüllung des Gauss-Weber-Denkmals in Göttingen)",
+    "locus": "Chs. I–VII, 92 pp.",
+    "year": "1899",
+    "publisher": "B. G. Teubner, Leipzig",
+    "note": "Formal axiomatization of Euclidean geometry and construction of non-Archimedean and non-Pascalian geometries (bilingual codex in geometor/hilbert)."
+  },
+  "hoenen-1954": {
+    "author": "Petrus Hoenen, S.J.",
+    "work": "De Noetica Geometriae: Origine Theoriae Cognitionis",
+    "locus": "Analecta Gregoriana, Vol. 63, 293 pp.",
+    "year": "1954",
+    "publisher": "Pontificia Università Gregoriana, Rome",
+    "note": "Systematic epistemological critique of Poincaré's conventionalism and Hilbert's formalism grounded in Aristotelian–Thomistic intelligible matter and intellectual nexus judgment (bilingual codex in geometor/hoenen)."
+  },
+  "lobachevsky-1840": {
+    "author": "Nikolai Ivanovich Lobachevsky",
+    "work": "Geometrische Untersuchungen zur Theorie der Parallellinien",
+    "locus": "61 pp., 2 plates",
+    "year": "1840",
+    "publisher": "G. Fincke, Berlin",
+    "note": "Concise German exposition of hyperbolic geometry (translated into English by G. B. Halsted, 1891)."
+  },
+  "bolyai-1832": {
+    "author": "János Bolyai",
+    "work": "Appendix scientiam spatii absolute veram exhibens",
+    "locus": "Supplement to Farkas Bolyai, Tentamen juventutem studiosam in elementa matheseos purae introducendi, 26 pp.",
+    "year": "1832",
+    "publisher": "Typis Collegii Reformatorum, Maros-Vásárhely",
+    "note": "Independent creation of absolute and hyperbolic geometry."
+  },
+  "riemann-1867": {
+    "author": "Bernhard Riemann",
+    "work": "Über die Hypothesen, welche der Geometrie zu Grunde liegen",
+    "locus": "Abhandlungen der Königlichen Gesellschaft der Wissenschaften zu Göttingen, Vol. 13, pp. 133–152",
+    "year": "1854 / 1867",
+    "publisher": "Dieterichsche Buchhandlung, Göttingen",
+    "note": "Establishes Riemannian manifolds, metric tensors, and constant-positive-curvature geometry."
+  },
+  "beltrami-1868": {
+    "author": "Eugenio Beltrami",
+    "work": "Saggio di interpretazione della geometria non-euclidea",
+    "locus": "Giornale di Matematiche, Vol. 6, pp. 284–312",
+    "year": "1868",
+    "publisher": "Pellerano, Naples",
+    "note": "First projective disk and pseudospherical models demonstrating the relative consistency of Lobachevsky's plane geometry."
+  },
+  "klein-1872": {
+    "author": "Felix Klein",
+    "work": "Vergleichende Betrachtungen über neuere geometrische Forschungen (Erlanger Programm)",
+    "locus": "48 pp.",
+    "year": "1872",
+    "publisher": "Andreas Deichert, Erlangen",
+    "note": "Unifies Euclidean, projective, and non-Euclidean geometries as invariant theories of transformation groups (codex in geometor/klein)."
+  },
+  "casey-1888": {
+    "author": "John Casey",
+    "work": "A Sequel to the First Six Books of the Elements of Euclid",
+    "locus": "5th ed., Books I–VI & Supplementary Chapter",
+    "year": "1888 / 1892",
+    "publisher": "Hodges, Figgis, & Co., Dublin / Longmans, Green, & Co., London",
+    "note": "Synthetic theory of coaxial circles, inversion, and orthogonal circles underpinning Euclidean constructions in the Poincaré disk (codex in geometor/casey)."
+  },
+  "lemoine-1902": {
+    "author": "Émile Lemoine",
+    "work": "Géométrographie, ou Art des constructions géométriques",
+    "locus": "Collection Scientia, Phys.-Math. n° 18, 88 pp.",
+    "year": "1902",
+    "publisher": "C. Naud, Paris",
+    "note": "Quantitative complexity calculus of ruler-and-compass and circle-inversion constructions (codex in geometor/lemoine)."
+  },
+  "euclid-heath-1908": {
+    "author": "Euclid (trans. Sir Thomas Little Heath)",
+    "work": "The Thirteen Books of Euclid's Elements",
+    "locus": "3 vols. (esp. Vol. I, Postulate 5 & Props. I.1–I.32)",
+    "year": "1908",
+    "publisher": "Cambridge University Press, Cambridge",
+    "note": "Definitive commentary on the parallel postulate and Book VI circle-similarity theorems (folio codex in geometor/euclid and constructive DAG in geometor/elements)."
+  },
+  "wildberger-2005": {
+    "author": "Norman J. Wildberger",
+    "work": "Divine Proportions: Rational Trigonometry to Universal Geometry (and Universal Hyperbolic Geometry I–IV, Geometriae Dedicata, 2010–2013)",
+    "locus": "300 pp. / Geometriae Dedicata Vol. 163, pp. 215–274",
+    "year": "2005 / 2013",
+    "publisher": "Wild Egg Books, Sydney / Springer",
+    "note": "Algebraic formulation of Euclidean and hyperbolic geometry via rational quadrance and spread without transcendental functions (formalized in geometor/wildberger)."
+  }
+}

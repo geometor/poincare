@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geometor-poincare"
+dynamic = ["version"]
+authors = [
+  { name = "phi ARCHITECT", email = "phi@geometor.com" },
+]
+description = "Scholarly 4-track Bilingual Digital Scriptorium Book Codex for Henri Poincaré's La Science et l'Hypothèse (1902 / 1905) paired with 100% exact SymPy + geometor.model constructions of the Poincaré Conformal Hyperbolic Disk Model."
+readme = "README.rst"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "sympy",
+  "geometor-model",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+
+[project.scripts]
+geometor-poincare = "geometor.poincare.cli:main"
+poincare = "geometor.poincare.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["geometor*"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+version = { attr = "geometor.poincare.__version__" }
+
+[project.urls]
+"Website" = "https://geometor.github.io/poincare"
+"Repository" = "https://github.com/geometor/poincare"
+"Issues" = "https://github.com/geometor/poincare/issues"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+lint.select = ["E", "F", "I", "ANN", "D"]
+lint.ignore = ["E501"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "../model/src"]
+testpaths = ["tests"]
