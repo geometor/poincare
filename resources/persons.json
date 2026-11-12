@@ -1,0 +1,170 @@
+{
+  "poincare": {
+    "name": "Jules Henri Poincaré",
+    "dates": "1854–1912",
+    "role": "French mathematician, theoretical physicist, celestial mechanician, and philosopher of science; creator of the conformal hyperbolic disk/half-plane models and geometric conventionalism",
+    "bio": "Educated at the École Polytechnique and École des Mines, Poincaré discovered Fuchsian and Kleinian automorphic functions in 1880–1882 by identifying the unit disk and upper half-plane with Lobachevsky's hyperbolic plane, inaugurated Analysis Situs (algebraic topology, 1895), debated metric apriority and logicism with Bertrand Russell (1898–1900), and synthesized his philosophy of arithmetic, geometry, mechanics, and physics in La Science et l'Hypothèse (Paris: Flammarion, 1902)."
+  },
+  "lobachevsky": {
+    "name": "Nikolai Ivanovich Lobachevsky",
+    "dates": "1792–1856",
+    "role": "Russian geometer and rector of Kazan University; co-discoverer of hyperbolic geometry",
+    "bio": "Replacing Euclid's Fifth Postulate with the axiom that through a point outside a line pass at least two parallels, Lobachevsky developed a complete, self-consistent 'Imaginary Geometry' (1829–1840) in which the angle sum of every triangle is strictly less than two right angles and angular defect is proportional to area."
+  },
+  "bolyai": {
+    "name": "János Bolyai",
+    "dates": "1802–1860",
+    "role": "Hungarian mathematician and military engineer; independent co-discoverer of absolute and hyperbolic geometry",
+    "bio": "Published the Appendix scientiam spatii absolute veram exhibens (1832) in his father Farkas Bolyai's Tentamen, distinguishing theorems valid independently of Postulate V ('absolute science of space') from hyperbolic theorems depending on an undetermined curvature parameter."
+  },
+  "riemann": {
+    "name": "Georg Friedrich Bernhard Riemann",
+    "dates": "1826–1866",
+    "role": "German mathematician; founder of Riemannian differential geometry and spherical/elliptic non-Euclidean geometry",
+    "bio": "In his 1854 Göttingen Habilitationsvortrag ('Über die Hypothesen, welche der Geometrie zu Grunde liegen', published 1867), Riemann distinguished unboundedness from infinitude, introduced n-dimensional manifolds with quadratic metric ds², and showed that abandoning the infinitude of the straight line yields constant-positive-curvature geometry where triangle angle sums exceed π."
+  },
+  "beltrami": {
+    "name": "Eugenio Beltrami",
+    "dates": "1835–1900",
+    "role": "Italian mathematician; pioneer of Euclidean models and relative-consistency proofs for non-Euclidean geometry",
+    "bio": "In Saggio di interpretazione della geometria non-euclidea (1868) and Teoria fondamentale degli spazii di curvatura costante (1868), Beltrami modeled fragments of the Lobachevskian plane on the pseudosphere and mapped the entire hyperbolic plane onto the interior of a Euclidean disk via straight projective chords."
+  },
+  "klein": {
+    "name": "Felix Christian Klein",
+    "dates": "1849–1925",
+    "role": "German mathematician; author of the Erlanger Programm (1872) and architect of Cayley–Klein projective metrics",
+    "bio": "Showed in Über die sogenannte Nicht-Euklidische Geometrie (1871–1873) that elliptic, parabolic (Euclidean), and hyperbolic geometries all arise inside projective geometry relative to an absolute conic via Arthur Cayley's cross-ratio metric, and defined geometry as the invariant theory of a transformation group."
+  },
+  "lie": {
+    "name": "Marius Sophus Lie",
+    "dates": "1842–1899",
+    "role": "Norwegian mathematician; creator of the theory of continuous transformation groups (Lie groups)",
+    "bio": "Collaborating closely with Felix Klein in Paris and Berlin, Lie classified all finite-dimensional continuous groups of transformations preserving free mobility in 3-space (1886–1893), proving that only constant-curvature Riemann–Helmholtz–Lie geometries satisfy the axioms of rigid displacement."
+  },
+  "helmholtz": {
+    "name": "Hermann von Helmholtz",
+    "dates": "1821–1894",
+    "role": "German physicist, physiologist, and philosopher of geometry and perception",
+    "bio": "In Über die Thatsachen, die der Geometrie zum Grunde liegen (1868), derived Riemannian quadratic metrics from physical axioms of free mobility of rigid bodies (freie Beweglichkeit starrer Körper) and analyzed visual and motor space—a program critically refined by Lie and Poincaré."
+  },
+  "hilbert": {
+    "name": "David Hilbert",
+    "dates": "1862–1943",
+    "role": "German mathematician; author of Grundlagen der Geometrie (1899)",
+    "bio": "Axiomatized Euclidean geometry into five rigorous axiom groups (incidence, order, congruence, parallels, continuity) and constructed algebraic non-Archimedean models over ordered rational-function fields Ω(t)—explicitly praised and analyzed by Poincaré in Chapter III ('Les Géométries de Hilbert', pp. 63–64) and Chapter IV (p. 90)."
+  },
+  "veronese": {
+    "name": "Giuseppe Veronese",
+    "dates": "1854–1917",
+    "role": "Italian projective geometer; pioneer of synthetic non-Archimedean geometry",
+    "bio": "In Fondamenti di geometria a più dimensioni (1891), constructed synthetic continua containing actual infinitesimals and infinite segments violating Archimedes' axiom—cited alongside Hilbert by Poincaré in Chapter II (continuum of the third order) and Chapter III."
+  },
+  "russell": {
+    "name": "Bertrand Arthur William Russell",
+    "dates": "1872–1970",
+    "role": "British philosopher, logician, and mathematician; author of An Essay on the Foundations of Geometry (1897) and Principles of Mathematics (1903)",
+    "bio": "Engaged Poincaré in a celebrated philosophical exchange across Mind (1898) and the Revue de Métaphysique et de Morale (1899–1900) over geometric conventionalism, distance vs. projective order, the definition of straight lines, and logicism versus synthetic a priori induction."
+  },
+  "hoenen": {
+    "name": "Petrus Hubertus Jacobus Hoenen, S.J.",
+    "dates": "1880–1961",
+    "role": "Dutch Jesuit mathematical physicist and philosopher at the Pontifical Gregorian University; author of De Noetica Geometriae (1954)",
+    "bio": "Critiqued Poincaré's geometric conventionalism and Hilbert's pure formalism by rehabilitating Aristotelian–Thomistic abstraction in materia intelligibilis, arguing that intellectual judgment (judicium) grasps genuine nexus necessities in imagined spatial extension prior to arbitrary linguistic conventions."
+  },
+  "euclid": {
+    "name": "Euclid of Alexandria",
+    "dates": "fl. c. 300 BCE",
+    "role": "Alexandrian mathematician; author of the Elements",
+    "bio": "Separated his Fifth Postulate (on lines meeting when interior angles sum to less than two right angles) from Postulates I–IV and proved the first 28 propositions of Book I without invoking it, anticipating Bolyai's 'absolute geometry'."
+  },
+  "saccheri": {
+    "name": "Giovanni Girolamo Saccheri, S.J.",
+    "dates": "1667–1733",
+    "role": "Italian Jesuit logician and geometer; author of Euclides ab omni naevo vindicatus (1733)",
+    "bio": "Investigated birectangular isosceles quadrilaterals (Saccheri quadrilaterals) under the Hypotheses of the Obtuse, Right, and Acute Angle, inadvertently deriving a vast body of hyperbolic geometry while attempting to refute the Acute Angle Hypothesis."
+  },
+  "legendre": {
+    "name": "Adrien-Marie Legendre",
+    "dates": "1752–1833",
+    "role": "French mathematician; author of Éléments de géométrie (1794)",
+    "bio": "Proved via Archimedean continuity that in neutral geometry the angle sum of a triangle cannot exceed two right angles (first Saccheri–Legendre theorem) and that if a single triangle has angle sum π, every triangle has angle sum π."
+  },
+  "dedekind": {
+    "name": "Julius Wilhelm Richard Dedekind",
+    "dates": "1831–1916",
+    "role": "German mathematician; creator of Dedekind cuts for the real continuum",
+    "bio": "In Stetigkeit und irrationale Zahlen (1872), rigorously defined irrational numbers as partitions (Schnitte) of the ordered field of rational numbers Q—adopted and analyzed by Poincaré in Chapter II as the creative act generating the mathematical continuum."
+  },
+  "kronecker": {
+    "name": "Leopold Kronecker",
+    "dates": "1823–1891",
+    "role": "German algebraist and number theorist; proponent of arithmetization",
+    "bio": "Cited by Poincaré in Chapter II for arithmetizing incommensurable magnitudes such as √2 via modular congruence classes Q[x]/(x^2 - 2) without appealing to geometric intuition."
+  },
+  "fechner": {
+    "name": "Gustav Theodor Fechner",
+    "dates": "1801–1887",
+    "role": "German experimental physicist and founder of psychophysics",
+    "bio": "Formulated Weber–Fechner differential threshold experiments (Elemente der Psychophysik, 1860) showing that weights of 10 g and 11 g, and 11 g and 12 g, can be perceptually indistinguishable while 10 g and 12 g are clearly distinguished—Poincaré's canonical signature of the physical continuum (A = B, B = C, A < C)."
+  },
+  "kant": {
+    "name": "Immanuel Kant",
+    "dates": "1724–1804",
+    "role": "German philosopher; author of Kritik der reinen Vernunft (1781 / 1787)",
+    "bio": "Held that both arithmetic and Euclidean geometry consist of synthetic a priori judgments grounded in pure intuitions of time and space. Poincaré famously split Kant's thesis in two: affirming synthetic a priori intuition for mathematical induction in arithmetic while rejecting it for Euclidean geometry in favor of conventions."
+  },
+  "leibniz": {
+    "name": "Gottfried Wilhelm Leibniz",
+    "dates": "1646–1716",
+    "role": "German polymath, logician, and co-creator of the calculus",
+    "bio": "Discussed in Chapter I for attempting to prove '2 + 2 = 4' purely analytically from definitions and the identity principle—a proof Poincaré shows achieves verification on particular numbers rather than genuine universal mathematical reasoning."
+  },
+  "mill": {
+    "name": "John Stuart Mill",
+    "dates": "1806–1873",
+    "role": "British empiricist philosopher; author of A System of Logic (1843)",
+    "bio": "Critiqued by Poincaré in Chapter III for claiming that geometric definitions (such as 'through two points passes only one straight line') rest on empirical generalizations about observed physical objects."
+  },
+  "casey": {
+    "name": "John Casey",
+    "dates": "1820–1891",
+    "role": "Irish geometer; author of A Sequel to the First Six Books of the Elements of Euclid (1881–1892)",
+    "bio": "Codified the synthetic geometry of coaxial pencils, radical axes, circle inversion, and orthogonal circles that provides the exact Euclidean toolkit underlying Poincaré's conformal disk dictionary."
+  },
+  "lemoine": {
+    "name": "Émile Michel Hyacinthe Lemoine",
+    "dates": "1840–1912",
+    "role": "French geometer; creator of Géométrographie (1902)",
+    "bio": "Published Géométrographie in Paris in 1902—the exact year of Poincaré's La Science et l'Hypothèse—quantifying the ruler-and-compass simplicity of circle inversion and orthogonal-circle constructions."
+  },
+  "pappus": {
+    "name": "Pappus of Alexandria",
+    "dates": "c. 290–c. 350 CE",
+    "role": "Alexandrian geometer; author of the Synagoge (Mathematical Collection)",
+    "bio": "Established projective cross-ratio invariance in Book VII of the Synagoge—the exact anharmonic invariant whose logarithm defines hyperbolic distance in Cayley–Klein and Poincaré geometry."
+  },
+  "wildberger": {
+    "name": "Norman John Wildberger",
+    "dates": "b. 1956",
+    "role": "Canadian-Australian mathematician; creator of Rational Trigonometry, Chromogeometry, and Universal Hyperbolic Geometry",
+    "bio": "Replaced transcendental angles and hyperbolic logarithms with purely algebraic quadrance and spread over Q and arbitrary fields—realized directly in geometor.poincare via Wildberger's rational hyperbolic quadrance q_UHG(P, Q) = -4τ/(1-τ)^2."
+  },
+  "greenstreet": {
+    "name": "William John Greenstreet",
+    "dates": "1861–1930",
+    "role": "British mathematician, editor of The Mathematical Gazette, and translator of Science and Hypothesis (1905)",
+    "bio": "Longtime editor of The Mathematical Gazette (1897–1930) who produced the 1905 British English translation of Poincaré's Science and Hypothesis published by Walter Scott with a preface by Joseph Larmor."
+  },
+  "halsted": {
+    "name": "George Bruce Halsted",
+    "dates": "1853–1922",
+    "role": "American mathematician and historian of non-Euclidean geometry; translator of Bolyai, Lobachevsky, Saccheri, and Poincaré",
+    "bio": "Student of J. J. Sylvester at Johns Hopkins who translated Bolyai's Science Absolute of Space (1891), Lobachevsky's Geometrical Researches on the Theory of Parallels (1891), and the authorized 1905 American edition of Poincaré's Science and Hypothesis (with a special preface written for him by Poincaré)."
+  },
+  "larmor": {
+    "name": "Sir Joseph Larmor",
+    "dates": "1857–1942",
+    "role": "Irish physicist and Lucasian Professor of Mathematics at Cambridge",
+    "bio": "Author of Aether and Matter (1900) and contributor of the philosophical preface to the 1905 London edition of Poincaré's Science and Hypothesis."
+  }
+}

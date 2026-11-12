@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig4_ideal_hyperbolic_triangle" data-graphic-id="fig4_ideal_hyperbolic_triangle" viewBox="0 0 680 520" role="img" aria-label="Rational Pythagorean ideal hyperbolic triangle with zero interior angles and defect pi">
+  <style>
+.euclid-graphic { font-family: "Inter", "Fira Sans", "Segoe UI", sans-serif; }
+  .euclid-graphic .svg-bg { fill: #fafaf9; }
+  .euclid-graphic .disk-interior { fill: #0ea5e9; fill-opacity: 0.055; stroke: none; }
+  .euclid-graphic .horizon-circle { fill: none; stroke: #0f172a; stroke-width: 2.35; }
+  .euclid-graphic .carrier-ghost { fill: none; stroke: #64748b; stroke-width: 1.15; stroke-dasharray: 4 3.5; opacity: 0.55; }
+  .euclid-graphic .isothermal-circle { fill: none; stroke: #0284c7; stroke-width: 1.25; stroke-dasharray: 3 3; opacity: 0.62; }
+  .euclid-graphic .guide-line { fill: none; stroke: #64748b; stroke-width: 1.35; stroke-dasharray: 5 3.5; opacity: 0.78; }
+  .euclid-graphic .geodesic-arc { fill: none; stroke: #0369a1; stroke-width: 2.35; stroke-linecap: round; }
+  .euclid-graphic .featured-arc { fill: none; stroke: #b45309; stroke-width: 2.75; stroke-linecap: round; }
+  .euclid-graphic .horoparallel-arc { fill: none; stroke: #059669; stroke-width: 2.3; stroke-linecap: round; }
+  .euclid-graphic .ultraparallel-arc { fill: none; stroke: #7c3aed; stroke-width: 2.25; stroke-dasharray: 7 3.5; stroke-linecap: round; }
+  .euclid-graphic .klein-chord { fill: none; stroke: #dc2626; stroke-width: 2.25; stroke-dasharray: 6 3; stroke-linecap: round; }
+  .euclid-graphic .region-fill { fill: #b45309; fill-opacity: 0.09; stroke: none; }
+  .euclid-graphic .ideal-region { fill: #7c3aed; fill-opacity: 0.08; stroke: none; }
+  .euclid-graphic .pt-interior { fill: #0369a1; stroke: #fafaf9; stroke-width: 1.6; }
+  .euclid-graphic .pt-featured { fill: #b45309; stroke: #fafaf9; stroke-width: 1.75; }
+  .euclid-graphic .pt-ideal { fill: #fafaf9; stroke: #0f172a; stroke-width: 2.0; }
+  .euclid-graphic .pt-inverse { fill: #7c3aed; stroke: #fafaf9; stroke-width: 1.7; }
+  .euclid-graphic .pt-klein { fill: #dc2626; stroke: #fafaf9; stroke-width: 1.7; }
+  .euclid-graphic .geom-label { fill: #1c1917; font-size: 13px; font-weight: 600; }
+  .euclid-graphic .geom-caption { fill: #64748b; font-size: 11.5px; font-weight: 500; }
+  </style>
+  <style>
+.euclid-graphic {
+    --svg-bg: #fafaf9;
+    --disk-fill: rgba(14, 165, 233, 0.055);
+    --ink: #1c1917;
+    --muted: #64748b;
+    --label-halo: rgba(250, 250, 249, 0.94);
+    --horizon: #0f172a;
+    --geodesic: #0369a1;
+    --featured: #b45309;
+    --horoparallel: #059669;
+    --ultraparallel: #7c3aed;
+    --klein: #dc2626;
+    --isothermal: #0284c7;
+    --guide: #64748b;
+    --poly-fill: rgba(180, 83, 9, 0.09);
+    --ideal-fill: rgba(124, 58, 237, 0.08);
+    --geom-assert: #16a34a;
+  }
+  @media (prefers-color-scheme: dark) {
+    .euclid-graphic {
+      --svg-bg: #141417;
+      --disk-fill: rgba(56, 189, 248, 0.075);
+      --ink: #f4f4f5;
+      --muted: #94a3b8;
+      --label-halo: rgba(20, 20, 23, 0.94);
+      --horizon: #e2e8f0;
+      --geodesic: #38bdf8;
+      --featured: #fbbf24;
+      --horoparallel: #34d399;
+      --ultraparallel: #c084fc;
+      --klein: #f87171;
+      --isothermal: #38bdf8;
+      --guide: #94a3b8;
+      --poly-fill: rgba(251, 191, 36, 0.11);
+      --ideal-fill: rgba(192, 132, 252, 0.11);
+      --geom-assert: #4ade80;
+    }
+  }
+  .euclid-graphic .svg-bg { fill: var(--svg-bg); }
+  .euclid-graphic .disk-interior { fill: var(--disk-fill); fill-opacity: 1; }
+  .euclid-graphic .horizon-circle { stroke: var(--horizon); }
+  .euclid-graphic .carrier-ghost { stroke: var(--guide); }
+  .euclid-graphic .isothermal-circle { stroke: var(--isothermal); }
+  .euclid-graphic .guide-line { stroke: var(--guide); }
+  .euclid-graphic .geodesic-arc { stroke: var(--geodesic); }
+  .euclid-graphic .featured-arc { stroke: var(--featured); }
+  .euclid-graphic .horoparallel-arc { stroke: var(--horoparallel); }
+  .euclid-graphic .ultraparallel-arc { stroke: var(--ultraparallel); }
+  .euclid-graphic .klein-chord { stroke: var(--klein); }
+  .euclid-graphic .region-fill { fill: var(--poly-fill); fill-opacity: 1; }
+  .euclid-graphic .ideal-region { fill: var(--ideal-fill); fill-opacity: 1; }
+  .euclid-graphic .pt-interior { fill: var(--geodesic); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-featured { fill: var(--featured); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-ideal { fill: var(--svg-bg); stroke: var(--horizon); }
+  .euclid-graphic .pt-inverse { fill: var(--ultraparallel); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-klein { fill: var(--klein); stroke: var(--svg-bg); }
+  .euclid-graphic .geom-label {
+    fill: var(--ink);
+    paint-order: stroke fill;
+    stroke: var(--label-halo);
+    stroke-width: 3.6px;
+    stroke-linejoin: round;
+    user-select: none;
+  }
+  .euclid-graphic .geom-caption { fill: var(--muted); user-select: none; }
+  </style>
+  <defs>
+    <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+      <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+      <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+      <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+  </defs>
+  <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="680" height="520" rx="8"/>
+  <g class="geometry-layer" fill="none">
+    <circle class="disk-interior" cx="340" cy="260" r="136.97"/>
+    <path class="ideal-region" data-ref="&lt; U1 U2 U3 &gt;" d="M 476.97 260 A 273.94 273.94 0 0 1 257.82 150.42 A 182.63 182.63 0 0 1 257.82 369.58 A 273.94 273.94 0 0 1 476.97 260 Z"/>
+    <circle class="carrier-ghost" data-ref="C12_circle" cx="476.97" cy="-13.94" r="273.94"/>
+    <circle class="carrier-ghost" data-ref="C13_circle" cx="476.97" cy="533.94" r="273.94"/>
+    <circle class="carrier-ghost" data-ref="C23_circle" cx="111.72" cy="260" r="182.63"/>
+    <circle class="horizon-circle" data-ref="Omega" cx="340" cy="260" r="136.97"/>
+    <path class="guide-line" data-ref="/ O U1 /" d="M 340 260 L 408.48 260 L 476.97 260"/>
+    <path class="guide-line" data-ref="/ O U2 /" d="M 340 260 L 298.91 205.21 L 257.82 150.42"/>
+    <path class="guide-line" data-ref="/ O U3 /" d="M 340 260 L 298.91 314.79 L 257.82 369.58"/>
+    <path class="featured-arc" data-ref="( U1 U2 )" d="M 476.97 260 A 273.94 273.94 0 0 1 354.46 231.08 A 273.94 273.94 0 0 1 257.82 150.42"><title>Side U1U2: center (1, 2), r = 2</title></path>
+    <path class="featured-arc" data-ref="( U2 U3 )" d="M 257.82 150.42 A 182.63 182.63 0 0 1 294.34 260 A 182.63 182.63 0 0 1 257.82 369.58"><title>Side U2U3: center (-5/3, 0), r = 4/3</title></path>
+    <path class="featured-arc" data-ref="( U1 U3 )" d="M 476.97 260 A 273.94 273.94 0 0 0 354.46 288.92 A 273.94 273.94 0 0 0 257.82 369.58"><title>Side U1U3: center (1, -2), r = 2</title></path>
+  </g>
+  <g id="highlights"></g>
+  <g class="points-layer">
+    <circle class="pt-interior" data-ref="O" cx="340" cy="260" r="4.3"><title>O = (0, 0)</title></circle>
+    <circle class="pt-ideal" data-ref="U1" cx="476.97" cy="260" r="4.3"><title>U₁ (1, 0) = (1, 0)</title></circle>
+    <circle class="pt-ideal" data-ref="U2" cx="257.82" cy="150.42" r="4.3"><title>U₂ (-3/5, 4/5) = (-3/5, 4/5)</title></circle>
+    <circle class="pt-ideal" data-ref="U3" cx="257.82" cy="369.58" r="4.3"><title>U₃ (-3/5, -4/5) = (-3/5, -4/5)</title></circle>
+    <circle class="pt-inverse" data-ref="C23" cx="111.72" cy="260" r="4.3"><title>C₂₃ (-5/3, 0) = (-5/3, 0)</title></circle>
+  </g>
+  <g class="labels-layer">
+    <text class="geom-label" data-ref="O" x="330" y="275" text-anchor="end">O</text>
+    <text class="geom-label" data-ref="U1" x="486.97" y="250" text-anchor="start">U₁ (1, 0)</text>
+    <text class="geom-label" data-ref="U2" x="245.82" y="140.42" text-anchor="end">U₂ (-3/5, 4/5)</text>
+    <text class="geom-label" data-ref="U3" x="245.82" y="387.58" text-anchor="end">U₃ (-3/5, -4/5)</text>
+    <text class="geom-label" data-ref="C23" x="111.72" y="248" text-anchor="middle">C₂₃ (-5/3, 0)</text>
+    <text class="geom-caption" x="340" y="510" text-anchor="middle">Fig. 4 — Ch. III: Rational Ideal Triangle U₁U₂U₃ — Orthogonal Circles C₁₂=(1,2), C₁₃=(1,-2), C₂₃=(-5/3,0), Angle Sum 0°</text>
+  </g>
+</svg>

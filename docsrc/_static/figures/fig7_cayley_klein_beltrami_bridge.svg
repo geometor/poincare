@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="euclid-graphic" id="fig7_cayley_klein_beltrami_bridge" data-graphic-id="fig7_cayley_klein_beltrami_bridge" viewBox="0 0 660 520" role="img" aria-label="Exact radial projection K(P) = 2P/(1+|P|^2) mapping Poincaré arcs to Beltrami-Klein chords">
+  <style>
+.euclid-graphic { font-family: "Inter", "Fira Sans", "Segoe UI", sans-serif; }
+  .euclid-graphic .svg-bg { fill: #fafaf9; }
+  .euclid-graphic .disk-interior { fill: #0ea5e9; fill-opacity: 0.055; stroke: none; }
+  .euclid-graphic .horizon-circle { fill: none; stroke: #0f172a; stroke-width: 2.35; }
+  .euclid-graphic .carrier-ghost { fill: none; stroke: #64748b; stroke-width: 1.15; stroke-dasharray: 4 3.5; opacity: 0.55; }
+  .euclid-graphic .isothermal-circle { fill: none; stroke: #0284c7; stroke-width: 1.25; stroke-dasharray: 3 3; opacity: 0.62; }
+  .euclid-graphic .guide-line { fill: none; stroke: #64748b; stroke-width: 1.35; stroke-dasharray: 5 3.5; opacity: 0.78; }
+  .euclid-graphic .geodesic-arc { fill: none; stroke: #0369a1; stroke-width: 2.35; stroke-linecap: round; }
+  .euclid-graphic .featured-arc { fill: none; stroke: #b45309; stroke-width: 2.75; stroke-linecap: round; }
+  .euclid-graphic .horoparallel-arc { fill: none; stroke: #059669; stroke-width: 2.3; stroke-linecap: round; }
+  .euclid-graphic .ultraparallel-arc { fill: none; stroke: #7c3aed; stroke-width: 2.25; stroke-dasharray: 7 3.5; stroke-linecap: round; }
+  .euclid-graphic .klein-chord { fill: none; stroke: #dc2626; stroke-width: 2.25; stroke-dasharray: 6 3; stroke-linecap: round; }
+  .euclid-graphic .region-fill { fill: #b45309; fill-opacity: 0.09; stroke: none; }
+  .euclid-graphic .ideal-region { fill: #7c3aed; fill-opacity: 0.08; stroke: none; }
+  .euclid-graphic .pt-interior { fill: #0369a1; stroke: #fafaf9; stroke-width: 1.6; }
+  .euclid-graphic .pt-featured { fill: #b45309; stroke: #fafaf9; stroke-width: 1.75; }
+  .euclid-graphic .pt-ideal { fill: #fafaf9; stroke: #0f172a; stroke-width: 2.0; }
+  .euclid-graphic .pt-inverse { fill: #7c3aed; stroke: #fafaf9; stroke-width: 1.7; }
+  .euclid-graphic .pt-klein { fill: #dc2626; stroke: #fafaf9; stroke-width: 1.7; }
+  .euclid-graphic .geom-label { fill: #1c1917; font-size: 13px; font-weight: 600; }
+  .euclid-graphic .geom-caption { fill: #64748b; font-size: 11.5px; font-weight: 500; }
+  </style>
+  <style>
+.euclid-graphic {
+    --svg-bg: #fafaf9;
+    --disk-fill: rgba(14, 165, 233, 0.055);
+    --ink: #1c1917;
+    --muted: #64748b;
+    --label-halo: rgba(250, 250, 249, 0.94);
+    --horizon: #0f172a;
+    --geodesic: #0369a1;
+    --featured: #b45309;
+    --horoparallel: #059669;
+    --ultraparallel: #7c3aed;
+    --klein: #dc2626;
+    --isothermal: #0284c7;
+    --guide: #64748b;
+    --poly-fill: rgba(180, 83, 9, 0.09);
+    --ideal-fill: rgba(124, 58, 237, 0.08);
+    --geom-assert: #16a34a;
+  }
+  @media (prefers-color-scheme: dark) {
+    .euclid-graphic {
+      --svg-bg: #141417;
+      --disk-fill: rgba(56, 189, 248, 0.075);
+      --ink: #f4f4f5;
+      --muted: #94a3b8;
+      --label-halo: rgba(20, 20, 23, 0.94);
+      --horizon: #e2e8f0;
+      --geodesic: #38bdf8;
+      --featured: #fbbf24;
+      --horoparallel: #34d399;
+      --ultraparallel: #c084fc;
+      --klein: #f87171;
+      --isothermal: #38bdf8;
+      --guide: #94a3b8;
+      --poly-fill: rgba(251, 191, 36, 0.11);
+      --ideal-fill: rgba(192, 132, 252, 0.11);
+      --geom-assert: #4ade80;
+    }
+  }
+  .euclid-graphic .svg-bg { fill: var(--svg-bg); }
+  .euclid-graphic .disk-interior { fill: var(--disk-fill); fill-opacity: 1; }
+  .euclid-graphic .horizon-circle { stroke: var(--horizon); }
+  .euclid-graphic .carrier-ghost { stroke: var(--guide); }
+  .euclid-graphic .isothermal-circle { stroke: var(--isothermal); }
+  .euclid-graphic .guide-line { stroke: var(--guide); }
+  .euclid-graphic .geodesic-arc { stroke: var(--geodesic); }
+  .euclid-graphic .featured-arc { stroke: var(--featured); }
+  .euclid-graphic .horoparallel-arc { stroke: var(--horoparallel); }
+  .euclid-graphic .ultraparallel-arc { stroke: var(--ultraparallel); }
+  .euclid-graphic .klein-chord { stroke: var(--klein); }
+  .euclid-graphic .region-fill { fill: var(--poly-fill); fill-opacity: 1; }
+  .euclid-graphic .ideal-region { fill: var(--ideal-fill); fill-opacity: 1; }
+  .euclid-graphic .pt-interior { fill: var(--geodesic); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-featured { fill: var(--featured); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-ideal { fill: var(--svg-bg); stroke: var(--horizon); }
+  .euclid-graphic .pt-inverse { fill: var(--ultraparallel); stroke: var(--svg-bg); }
+  .euclid-graphic .pt-klein { fill: var(--klein); stroke: var(--svg-bg); }
+  .euclid-graphic .geom-label {
+    fill: var(--ink);
+    paint-order: stroke fill;
+    stroke: var(--label-halo);
+    stroke-width: 3.6px;
+    stroke-linejoin: round;
+    user-select: none;
+  }
+  .euclid-graphic .geom-caption { fill: var(--muted); user-select: none; }
+  </style>
+  <defs>
+    <marker id="geom-tick-1" viewBox="-4 -7 8 14" refX="0" refY="0" markerWidth="8" markerHeight="14" orient="auto">
+      <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="geom-tick-2" viewBox="-6 -7 12 14" refX="0" refY="0" markerWidth="12" markerHeight="14" orient="auto">
+      <line x1="-2.2" y1="-5.5" x2="-2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="2.2" y1="-5.5" x2="2.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+    <marker id="geom-tick-3" viewBox="-8 -7 16 14" refX="0" refY="0" markerWidth="16" markerHeight="14" orient="auto">
+      <line x1="-4.2" y1="-5.5" x2="-4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="0" y1="-5.5" x2="0" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="4.2" y1="-5.5" x2="4.2" y2="5.5" stroke="#16a34a" stroke-width="1.8" stroke-linecap="round"/>
+    </marker>
+  </defs>
+  <rect class="svg-bg" fill="#fafaf9" x="0" y="0" width="660" height="520" rx="8"/>
+  <g class="geometry-layer" fill="none">
+    <circle class="disk-interior" cx="320.62" cy="270.32" r="187.55"/>
+    <circle class="horizon-circle" data-ref="Omega" cx="320.62" cy="270.32" r="187.55"/>
+    <path class="guide-line" data-ref="/ O K1 /" d="M 320.62 270.32 L 383.14 239.06 L 445.66 207.8"><title>Radial Weierstrass ray OP1 -&gt; K1</title></path>
+    <path class="guide-line" data-ref="/ O K2 /" d="M 320.62 270.32 L 351.88 207.8 L 383.14 145.28"><title>Radial Weierstrass ray OP2 -&gt; K2</title></path>
+    <path class="klein-chord" data-ref="/ U V /" d="M 508.17 270.32 L 414.4 176.54 L 320.62 82.76"><title>Beltrami–Klein projective chord UV (X + Y = 1)</title></path>
+    <path class="featured-arc" data-ref="( U V )" d="M 508.17 270.32 A 187.55 187.55 0 0 1 375.56 215.38 A 187.55 187.55 0 0 1 320.62 82.76"><title>Poincaré conformal orthogonal arc UV</title></path>
+  </g>
+  <g id="highlights"></g>
+  <g class="points-layer">
+    <circle class="pt-interior" data-ref="O" cx="320.62" cy="270.32" r="4.3"><title>O (0, 0) = (0, 0)</title></circle>
+    <circle class="pt-ideal" data-ref="U" cx="508.17" cy="270.32" r="4.3"><title>U (1, 0) = (1, 0)</title></circle>
+    <circle class="pt-ideal" data-ref="V" cx="320.62" cy="82.76" r="4.3"><title>V (0, 1) = (0, 1)</title></circle>
+    <circle class="pt-featured" data-ref="P1" cx="395.64" cy="232.8" r="4.3"><title>P₁ (2/5, 1/5) = (2/5, 1/5)</title></circle>
+    <circle class="pt-featured" data-ref="P2" cx="358.13" cy="195.29" r="4.3"><title>P₂ (1/5, 2/5) = (1/5, 2/5)</title></circle>
+    <circle class="pt-klein" data-ref="K1" cx="445.66" cy="207.8" r="4.3"><title>K₁ (2/3, 1/3) = (2/3, 1/3)</title></circle>
+    <circle class="pt-klein" data-ref="K2" cx="383.14" cy="145.28" r="4.3"><title>K₂ (1/3, 2/3) = (1/3, 2/3)</title></circle>
+  </g>
+  <g class="labels-layer">
+    <text class="geom-label" data-ref="O" x="310.62" y="286.32" text-anchor="end">O (0, 0)</text>
+    <text class="geom-label" data-ref="U" x="518.17" y="286.32" text-anchor="start">U (1, 0)</text>
+    <text class="geom-label" data-ref="V" x="310.62" y="72.76" text-anchor="end">V (0, 1)</text>
+    <text class="geom-label" data-ref="P1" x="395.64" y="252.8" text-anchor="middle">P₁ (2/5, 1/5)</text>
+    <text class="geom-label" data-ref="P2" x="344.13" y="189.29" text-anchor="end">P₂ (1/5, 2/5)</text>
+    <text class="geom-label" data-ref="K1" x="453.66" y="203.8" text-anchor="start">K₁ (2/3, 1/3)</text>
+    <text class="geom-label" data-ref="K2" x="391.14" y="137.28" text-anchor="start">K₂ (1/3, 2/3)</text>
+    <text class="geom-caption" x="330" y="510" text-anchor="middle">Fig. 7 — Cayley–Klein / Poincaré Bridge: Radial Ray OP Meets Straight Chord UV at Exact K(P) = 2P / (1 + ‖P‖²)</text>
+  </g>
+</svg>

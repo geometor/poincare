@@ -1,0 +1,40 @@
+{
+  "work": "La Science et l'Hypothèse / Science and Hypothesis",
+  "author": "Jules Henri Poincaré (1854–1912)",
+  "copyright_status": "100% Public Domain Worldwide (original French published Paris 1902, author died 1912; English translations published London & New York 1905)",
+  "witnesses": [
+    {
+      "id": "flammarion-1902-fr",
+      "language": "fr",
+      "title": "La Science et l'Hypothèse",
+      "edition": "Paris: Ernest Flammarion, Bibliothèque de Philosophie scientifique, 1902 (collated with definitive Flammarion printing containing 'Les Géométries de Hilbert', pp. 63–64)",
+      "provenance": "French Wikisource validated transcription (fr.wikisource.org/wiki/La_Science_et_l'Hypothèse)",
+      "path": "resources/science_and_hypothesis/sources/poincare_1902_science_et_hypothese_fr.txt",
+      "bytes": 237503,
+      "sha256": "b9a7dbd1d55a4515e5060f1e95795bf94238522d38071dba24765869f7eabbb9",
+      "coverage": "Introduction (pp. 1–7), Part I Chs. I–II (pp. 9–48), Part II Chs. III–V (pp. 49–109), Part III Chs. VI–VII, Part IV Ch. IX"
+    },
+    {
+      "id": "greenstreet-1905-en",
+      "language": "en",
+      "title": "Science and Hypothesis (trans. William John Greenstreet, Preface by Joseph Larmor)",
+      "edition": "London & Newcastle-on-Tyne: Walter Scott Publishing Co., Ltd., 1905",
+      "provenance": "English Wikisource validated page-scan transcription (en.wikisource.org/wiki/Science_and_Hypothesis)",
+      "path": "resources/science_and_hypothesis/sources/poincare_1905_greenstreet_en.txt",
+      "bytes": 223125,
+      "sha256": "e34cc7731db8d14cfb6e424104292df8695e3eeecf768f5e5e3e832bb0158675",
+      "coverage": "Larmor Preface (pp. ix–xx), Author's Preface (pp. xxi–xxvii), Part I Chs. I–II (pp. 1–34), Part II Chs. III–V (pp. 35–88), Part III Chs. VI–VII, Part IV Ch. IX"
+    },
+    {
+      "id": "halsted-1905-en",
+      "language": "en",
+      "title": "Science and Hypothesis (trans. George Bruce Halsted, with Special Preface by Henri Poincaré and Introduction by Josiah Royce)",
+      "edition": "New York: The Science Press, 1905 (reprinted in The Foundations of Science, 1913)",
+      "provenance": "Project Gutenberg #39713 (gutenberg.org/ebooks/39713)",
+      "path": "resources/science_and_hypothesis/sources/poincare_1905_halsted_en.txt",
+      "bytes": 403092,
+      "sha256": "f0e1b88d396d13edeb3507b51bd248535b88fc1de7da2c9ce8421151ae2f6376",
+      "coverage": "Complete American edition including Poincaré's Author's Preface to the Translation and Parts I–IV (Chs. I–XIII)"
+    }
+  ]
+}
