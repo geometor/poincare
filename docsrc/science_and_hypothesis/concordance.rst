@@ -1,3 +1,6 @@
+:navigation: footer
+:order: 90
+:nav_title: Concordance
 :layout: book
 
 .. _concordance:

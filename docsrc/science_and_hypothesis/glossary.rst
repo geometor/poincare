@@ -1,9 +1,13 @@
+:navigation: footer
+:order: 93
+:nav_title: Glossary
 :layout: book
 
 .. _glossary:
 
-Bilingual Technical Glossary
-============================
+========
+Glossary
+========
 
 .. rubric:: French (1902), German, Latin, and English Terminology of Conventionalism & Non-Euclidean Geometry
 

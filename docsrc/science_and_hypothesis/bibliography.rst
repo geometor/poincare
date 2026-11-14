@@ -1,9 +1,13 @@
+:navigation: header
+:order: 6
+:nav_title: Bibliography
 :layout: book
 
 .. _bibliography:
 
-Systematic Bibliography
-=======================
+============
+Bibliography
+============
 
 .. rubric:: Primary Public-Domain Editions, Historical Treatises, and Philosophical Debates
 

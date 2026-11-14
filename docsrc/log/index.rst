@@ -1,8 +1,9 @@
 :navigation: header
 :order: 30
+:nav_title: Log
 
 ===
-log
+Log
 ===
 
 Chronological curation, bilingual transcription, and symbolic verification log for ``geometor.poincare``.
