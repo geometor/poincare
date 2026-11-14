@@ -29,9 +29,8 @@ Context & Architecture
 ----------------------
 
 * :doc:`Using This Edition (Reader's Guide) <usage/index>`
-* :doc:`Mission & Epistemological Vision <mission/index>`
+* :doc:`About This Edition, Epistemology & Provenance <about/index>`
 * :doc:`Exact Symbolic Demonstrations (demos/) <demos/index>`
-* :doc:`About This Critical Edition & Archival Provenance <about/index>`
 * :doc:`Python Package & Hyperbolic Disk API <modules/index>`
 * :doc:`Development & Curation Log <log/index>`
 * :doc:`Changelog <changelog>`
@@ -42,7 +41,6 @@ Context & Architecture
 
    science_and_hypothesis/index
    usage/index
-   mission/index
    demos/index
    log/index
    modules/index
