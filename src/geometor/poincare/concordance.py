@@ -141,6 +141,9 @@ def compile_apparatus_rst(repo_root: Path | None = None) -> list[Path]:
 
     # 1. concordance.rst
     conc_lines = [
+        ":navigation: footer",
+        ":order: 90",
+        ":nav_title: Concordance",
         ":layout: book",
         "",
         ".. _concordance:",
@@ -206,12 +209,16 @@ def compile_apparatus_rst(repo_root: Path | None = None) -> list[Path]:
 
     # 2. bibliography.rst
     bib_lines = [
+        ":navigation: header",
+        ":order: 6",
+        ":nav_title: Bibliography",
         ":layout: book",
         "",
         ".. _bibliography:",
         "",
-        "Systematic Bibliography",
-        "=======================",
+        "============",
+        "Bibliography",
+        "============",
         "",
         ".. rubric:: Primary Public-Domain Editions, Historical Treatises, and Philosophical Debates",
         "",
@@ -235,12 +242,16 @@ def compile_apparatus_rst(repo_root: Path | None = None) -> list[Path]:
 
     # 3. persons.rst
     pers_lines = [
+        ":navigation: header",
+        ":order: 5",
+        ":nav_title: People",
         ":layout: book",
         "",
         ".. _persons:",
         "",
-        "Index of Persons",
-        "================",
+        "======",
+        "People",
+        "======",
         "",
         ".. rubric:: Prosopographical Registry of Geometers, Physicists, and Philosophers",
         "",
@@ -266,12 +277,16 @@ def compile_apparatus_rst(repo_root: Path | None = None) -> list[Path]:
 
     # 4. glossary.rst
     gloss_lines = [
+        ":navigation: footer",
+        ":order: 93",
+        ":nav_title: Glossary",
         ":layout: book",
         "",
         ".. _glossary:",
         "",
-        "Bilingual Technical Glossary",
-        "============================",
+        "========",
+        "Glossary",
+        "========",
         "",
         ".. rubric:: French (1902), German, Latin, and English Terminology of Conventionalism & Non-Euclidean Geometry",
         "",

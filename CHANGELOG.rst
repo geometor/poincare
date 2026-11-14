@@ -2,6 +2,14 @@
 changelog
 =========
 
+0.1.1 (2026-11-14)
+------------------
+
+* Standardized Book Title Page with publication metadata, reading instructions, and structured navigation.
+* Added top-level Header Navigation (``Book``, ``People``, ``Bibliography``, ``Usage``) and dedicated Reader's Guide (``docsrc/usage/``).
+* Enhanced ``People`` directory with featured Author and Translator biographical profiles.
+* Standardized structural section headings and terminology in English across codex indices.
+
 0.1.0 (2026-11-12)
 ------------------
 

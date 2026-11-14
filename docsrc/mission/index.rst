@@ -1,8 +1,9 @@
 :navigation: header
 :order: 10
+:nav_title: Mission
 
 =======
-mission
+Mission
 =======
 
 ``geometor.poincare`` unites a verbatim, philologically verified bilingual **Book Codex** of **Henri Poincaré's** *La Science et l'Hypothèse* (*Science and Hypothesis*, 1902 / 1905) with **100% exact symbolic constructions** of the Poincaré Conformal Hyperbolic Disk inside ``geometor.model``.

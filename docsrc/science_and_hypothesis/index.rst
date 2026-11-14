@@ -1,17 +1,28 @@
-:layout: book
 :navigation: header
-:order: 20
+:order: 1
+:nav_title: Science and Hypothesis
+:layout: book
+:book_title: Science and Hypothesis
+:book_subtitle: La Science et l'Hypothèse — Henri Poincaré (1902 / English 1905)
+:author: Henri Poincaré
+:year: 1902 / 1905
 
 .. _science-and-hypothesis-index:
 
-LA SCIENCE ET L'HYPOTHÈSE
-=========================
+======================
+Science and Hypothesis
+======================
 
-.. rubric:: *Science and Hypothesis* — Henri Poincaré (1902 / 1905)
+.. rubric:: *La Science et l'Hypothèse* — Henri Poincaré (1902 / 1905)
 
-| **Édition originale française (1902):** *La Science et l'Hypothèse*, Bibliothèque de Philosophie scientifique, Ernest Flammarion, Éditeur, Paris, 1902 (avec la section *Les Géométries de Hilbert*, pp. 63–64).
-| **Authorized English Editions (1905):** Translated by *William John Greenstreet* with a Preface by *Sir Joseph Larmor* (London: Walter Scott, 1905), collated with the authorized American edition translated by *George Bruce Halsted* with *Henri Poincaré's* Special Preface (New York: The Science Press, 1905).
-| **Digital Critical Codex:** Synchronized 4-track bilingual edition (*English · French (1902) · Summary · Notes*) paired with exact symbolic ``geometor.poincare`` constructions of the conformal hyperbolic disk.
+.. container:: title-page
+
+   | **LA SCIENCE ET L'HYPOTHÈSE**
+   |
+   | **Author**: :person:`Henri Poincaré <poincare>` (1854–1912)
+   | **First French Edition (1902)**: *La Science et l'Hypothèse*, Bibliothèque de Philosophie scientifique (Paris: Ernest Flammarion, 1902)
+   | **Authorized English Translations (1905)**: Translated by :person:`W. J. Greenstreet <greenstreet>` with Preface by :person:`Sir Joseph Larmor <larmor>` (London: Walter Scott, 1905), collated with the authorized American edition translated by :person:`George Bruce Halsted <halsted>` with :person:`Henri Poincaré's <poincare>` Special Preface (New York: The Science Press, 1905)
+   | **GEOMETOR Digital Edition**: Synchronized English, French (1902), Summary & Notes Tracks with Exact Symbolic Conformal Disk Models
 
 .. epigraph::
 
@@ -23,8 +34,8 @@ LA SCIENCE ET L'HYPOTHÈSE
 
 ----
 
-Conspectus Totius Operis
-------------------------
+Table of Contents
+-----------------
 
 **Unit I: Number and Magnitude** (*Première Partie : Le Nombre et la Grandeur* — Prefaces, Introduction, Ch. I *On the Nature of Mathematical Reasoning* & Ch. II *Mathematical Magnitude and Experiment*)
    :ref:`English (1905) <science-and-hypothesis-unit-1-en>` · :ref:`French (1902) <science-and-hypothesis-unit-1-fr>` · :ref:`Summary <science-and-hypothesis-unit-1-summary>` · :ref:`Notes <science-and-hypothesis-unit-1-notes>`
@@ -40,13 +51,13 @@ Conspectus Totius Operis
 
 ----
 
-Apparatus Criticus & Cross-Repository Indices
----------------------------------------------
+Scholarly Apparatus
+-------------------
 
 * :ref:`Poincaré Translation Dictionary & Cross-Corpus Concordance <concordance>` — Two-column Euclidean-to-Lobachevskian dictionary and ``PC.01``–``PC.12`` cross-mappings across ``geometor/euclid``, ``geometor/elements``, ``geometor/hilbert``, ``geometor/bertrand-russell``, ``geometor/hoenen``, ``geometor/klein``, ``geometor/pappus``, ``geometor/casey``, ``geometor/lemoine``, and ``geometor/wildberger``.
-* :ref:`Systematic Bibliography <bibliography>` — Primary 1902/1905 public-domain editions, Poincaré's 1882–1902 memoirs, the 1898–1900 Russell–Poincaré debate, and Hoenen's 1954 critique.
-* :ref:`Prosopographical Index of Persons <persons>` — Twenty-eight geometers, physicists, and philosophers cited across treatise and commentary.
-* :ref:`Bilingual Technical Glossary <glossary>` — French (1902), German, Latin, and English terminology of geometric conventionalism, conformal disk inversion, and Rational Trigonometry.
+* :ref:`Bibliography <bibliography>` — Primary 1902/1905 public-domain editions, Poincaré's 1882–1902 memoirs, the 1898–1900 Russell–Poincaré debate, and Hoenen's 1954 critique.
+* :ref:`People <persons>` — Twenty-eight geometers, physicists, and philosophers cited across treatise and commentary.
+* :ref:`Technical Glossary <glossary>` — French (1902), German, Latin, and English terminology of geometric conventionalism, conformal disk inversion, and Rational Trigonometry.
 
 .. toctree::
    :maxdepth: 1
@@ -85,7 +96,7 @@ Apparatus Criticus & Cross-Repository Indices
 .. toctree::
    :maxdepth: 1
    :hidden:
-   :caption: Critical Apparatus
+   :caption: Scholarly Apparatus
 
    concordance
    bibliography
