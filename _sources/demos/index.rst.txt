@@ -1,9 +1,11 @@
 :navigation: header
 :order: 25
+:nav_title: Demos
 
 .. _poincare-demos:
 
-demos
+=====
+Demos
 =====
 
 .. rubric:: Exact Symbolic Poincaré Conformal Hyperbolic Disk Demonstrations (``SymPy`` + ``geometor.model``)
