@@ -2,6 +2,11 @@
 changelog
 =========
 
+0.1.4 (2026-11-15)
+------------------
+
+- Rebuilt codex documentation with ``photon-platform/publish`` ``v0.4.6`` so every inline ``.euclid-graphic`` SVG carries explicit ``viewBox`` pixel dimensions, per-diagram scoped ``<style>`` rules, and Nocturnal Codex dark/light theme parity.
+
 0.1.3 (2026-11-15)
 ------------------
 
