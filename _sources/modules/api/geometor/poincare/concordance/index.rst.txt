@@ -50,7 +50,7 @@ Module Contents
 
 .. py:data:: CODEX_UNITS
    :type:  tuple[str, ...]
-   :value: ('unit-1-number-and-magnitude', 'unit-2-non-euclidean-geometries', 'unit-3-space-and-geometry',...
+   :value: ('part_01/ch_01', 'part_01/ch_02', 'part_02/ch_03', 'part_02/ch_04', 'part_02/ch_05')
 
 
 .. py:function:: default_repo_root() -> pathlib.Path

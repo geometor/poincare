@@ -57,7 +57,7 @@ II. Cross-Repository Philosophical & Geometric Concordance
 PC.01 — Reasoning by Recurrence vs. Logicism and Formalism
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Introduction & Part I, Ch. I (FR pp. 9–28 / EN pp. 1–17) (:ref:`Unit I (Ch. I) <science-and-hypothesis-unit-1-en>`)
+* **Locus in Poincaré:** Introduction & Part I, Ch. I (FR pp. 9–28 / EN pp. 1–17) (:ref:`Ch. I <science-and-hypothesis-ch-01-en>`)
 * **GEOMETOR Canon Links:** ``geometor/bertrand-russell``, ``geometor/hilbert``, ``geometor/aquinas``, ``geometor/hoenen``
 * **Exact Symbolic Construction:** ``construct_dedekind_continuum_cut``
 
@@ -66,7 +66,7 @@ Poincaré defends complete mathematical induction (raisonnement par récurrence)
 PC.02 — Dedekind's Irrational Cuts vs. Fechner's Perceptual Continuum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part I, Ch. II (FR pp. 29–48 / EN pp. 18–34) (:ref:`Unit I (Ch. II) <science-and-hypothesis-unit-1-en>`)
+* **Locus in Poincaré:** Part I, Ch. II (FR pp. 29–48 / EN pp. 18–34) (:ref:`Ch. II <science-and-hypothesis-ch-02-en>`)
 * **GEOMETOR Canon Links:** ``geometor/euclid``, ``geometor/elements``, ``geometor/aristotle``, ``geometor/hilbert``
 * **Exact Symbolic Construction:** ``construct_dedekind_continuum_cut``
 
@@ -75,7 +75,7 @@ Contrasts the physical continuum governed by Fechner's threshold paradox (A = B,
 PC.03 — Independence of Euclid's Fifth Postulate: Lobachevsky Horoparallels & Ultraparallels
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III §§ 1–2 (FR pp. 49–53 / EN pp. 35–39) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III §§ 1–2 (FR pp. 49–53 / EN pp. 35–39) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/euclid``, ``geometor/elements``, ``geometor/proclus``, ``geometor/hilbert``
 * **Exact Symbolic Construction:** ``construct_ultraparallels_through_point``
 
@@ -84,7 +84,7 @@ Resolves two millennia of attempts (from Posidonius and Proclus to Saccheri and 
 PC.04 — Poincaré's Translation Dictionary & Relative Consistency via Circle Inversion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III §§ 5–6 (FR pp. 55–58 / EN pp. 41–43) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III §§ 5–6 (FR pp. 55–58 / EN pp. 41–43) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/casey``, ``geometor/lemoine``, ``geometor/pappus``, ``geometor/hilbert``
 * **Exact Symbolic Construction:** ``construct_inversion_in_horizon / construct_hyperbolic_geodesic``
 
@@ -93,7 +93,7 @@ Applies Casey's theory of orthogonal circles and Lemoine/Adler horizon inversion
 PC.05 — Cross-Ratio Logarithmic Metric & Wildberger's Rational Hyperbolic Quadrance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III § 5 (FR p. 57 / EN p. 42) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III § 5 (FR p. 57 / EN p. 42) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/pappus``, ``geometor/wildberger``, ``geometor/klein``, ``geometor/codes``
 * **Exact Symbolic Construction:** ``hyperbolic_cross_ratio_and_quadrance``
 
@@ -102,7 +102,7 @@ Unites Pappus's projective cross-ratio χ(P, Q; U, V) and Poincaré's logarithmi
 PC.06 — Ideal Hyperbolic Triangles & Saccheri's Acute Angle Hypothesis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III §§ 1, 5 (FR pp. 50, 57 / EN pp. 36, 42) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III §§ 1, 5 (FR pp. 50, 57 / EN pp. 36, 42) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/euclid``, ``geometor/elements``, ``geometor/wildberger``
 * **Exact Symbolic Construction:** ``construct_ideal_hyperbolic_triangle / construct_saccheri_triangleDefect``
 
@@ -111,7 +111,7 @@ Demonstrates over pure Q that Pythagorean ideal vertices U_1=(1,0), U_2=(-3/5,4/
 PC.07 — The Fourth Indefinite Geometry & Chromogeometric Red Metric
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III § 8 (FR pp. 60–61 / EN pp. 46–47) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III § 8 (FR pp. 60–61 / EN pp. 46–47) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/wildberger``, ``geometor/klein``, ``geometor/hilbert``
 * **Exact Symbolic Construction:** ``hyperbolic_cross_ratio_and_quadrance``
 
@@ -120,7 +120,7 @@ Poincaré's little-noticed 'Fourth Geometry'—generated by reflections across t
 PC.08 — Veronese & Hilbert's Non-Archimedean Geometries (1899 Grundlagen Restoration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III § 10 & Ch. IV § 7 (FR pp. 63–64, 90) (:ref:`Unit II (Ch. III) <science-and-hypothesis-unit-2-en>`)
+* **Locus in Poincaré:** Part II, Ch. III § 10 & Ch. IV § 7 (FR pp. 63–64, 90) (:ref:`Ch. III <science-and-hypothesis-ch-03-en>`)
 * **GEOMETOR Canon Links:** ``geometor/hilbert``, ``geometor/euclid``
 * **Exact Symbolic Construction:** ``construct_dedekind_continuum_cut``
 
@@ -129,7 +129,7 @@ Critical philological restoration: the Flammarion French text contains Poincaré
 PC.09 — Poincaré's Heated-Disk World & Conformal Optical Geodesics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. IV §§ 5–6 (FR pp. 82–88 / EN pp. 64–69) (:ref:`Unit III (Ch. IV) <science-and-hypothesis-unit-3-en>`)
+* **Locus in Poincaré:** Part II, Ch. IV §§ 5–6 (FR pp. 82–88 / EN pp. 64–69) (:ref:`Ch. IV <science-and-hypothesis-ch-04-en>`)
 * **GEOMETOR Canon Links:** ``geometor/klein``, ``geometor/casey``, ``geometor/walter-russell``
 * **Exact Symbolic Construction:** ``construct_heated_disk_optical_rays``
 
@@ -138,7 +138,7 @@ Models sentient observers inside a disk of radius R with temperature T ∝ R^2 -
 PC.10 — Lie Groups, Erlanger Programm & the Beltrami–Klein Radial Bridge
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. III § 9 & Ch. IV §§ 4, 7 (FR pp. 61–63, 77–91 / EN pp. 47–48, 59–71) (:ref:`Unit III (Ch. IV) <science-and-hypothesis-unit-3-en>`)
+* **Locus in Poincaré:** Part II, Ch. III § 9 & Ch. IV §§ 4, 7 (FR pp. 61–63, 77–91 / EN pp. 47–48, 59–71) (:ref:`Ch. IV <science-and-hypothesis-ch-04-en>`)
 * **GEOMETOR Canon Links:** ``geometor/klein``, ``geometor/pappus``, ``geometor/wildberger``, ``geometor/codes``
 * **Exact Symbolic Construction:** ``construct_beltrami_klein_bridge``
 
@@ -147,7 +147,7 @@ Bridges Felix Klein's Erlanger Programm (geometor/klein) and interactive CindyJS
 PC.11 — Stellar Parallax, Crucial Experiments & Geometric Conventionalism
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Ch. V (FR pp. 92–109 / EN pp. 72–88) (:ref:`Unit IV (Ch. V) <science-and-hypothesis-unit-4-en>`)
+* **Locus in Poincaré:** Part II, Ch. V (FR pp. 92–109 / EN pp. 72–88) (:ref:`Ch. V <science-and-hypothesis-ch-05-en>`)
 * **GEOMETOR Canon Links:** ``geometor/bertrand-russell``, ``geometor/hoenen``, ``geometor/hilbert``
 * **Exact Symbolic Construction:** ``construct_stellar_parallax_conventionalism``
 
@@ -156,7 +156,7 @@ Demonstrates why even an astronomical parallax measurement α + β + γ < π cou
 PC.12 — The Poincaré–Russell Debate (1898–1900) & Hoenen's Intelligible Matter Critique (1954)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* **Locus in Poincaré:** Part II, Chs. III–V & Bridge to Parts III–IV (Chs. VI, VII, IX) (:ref:`Unit IV (Notes) <science-and-hypothesis-unit-4-notes>`)
+* **Locus in Poincaré:** Part II, Chs. III–V & Bridge to Parts III–IV (Chs. VI, VII, IX) (:ref:`Ch. V (Notes) <science-and-hypothesis-ch-05-notes>`)
 * **GEOMETOR Canon Links:** ``geometor/bertrand-russell``, ``geometor/hoenen``, ``geometor/aquinas``, ``geometor/aristotle``
 * **Exact Symbolic Construction:** ``construct_stellar_parallax_conventionalism``
 

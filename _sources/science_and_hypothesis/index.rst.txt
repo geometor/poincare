@@ -1,11 +1,14 @@
 :navigation: header
 :order: 1
+:type: book
 :nav_title: Science and Hypothesis
+:breadcrumb_title: Science and Hypothesis
 :layout: book
 :book_title: Science and Hypothesis
 :book_subtitle: La Science et l'Hypothèse — Henri Poincaré (1902 / English 1905)
 :author: Henri Poincaré
 :year: 1902 / 1905
+:excerpt: Poincaré's foundational 1902 treatise on non-Euclidean geometry, the continuum, translation dictionaries, the heated-disk world, and geometric conventionalism.
 
 .. _science-and-hypothesis-index:
 
@@ -37,17 +40,15 @@ Science and Hypothesis
 Table of Contents
 -----------------
 
-**Unit I: Number and Magnitude** (*Première Partie : Le Nombre et la Grandeur* — Prefaces, Introduction, Ch. I *On the Nature of Mathematical Reasoning* & Ch. II *Mathematical Magnitude and Experiment*)
-   :ref:`English (1905) <science-and-hypothesis-unit-1-en>` · :ref:`French (1902) <science-and-hypothesis-unit-1-fr>` · :ref:`Summary <science-and-hypothesis-unit-1-summary>` · :ref:`Notes <science-and-hypothesis-unit-1-notes>`
+.. collection::
+   :sort: order
 
-**Unit II: Non-Euclidean Geometries** (*Deuxième Partie, Chapitre III : Les Géométries non euclidiennes* — Lobachevsky, Riemann, Beltrami, Poincaré's Translation Dictionary, Fourth Geometry, Lie's Theorem, Hilbert's Geometries & Conventionalism)
-   :ref:`English (1905) <science-and-hypothesis-unit-2-en>` · :ref:`French (1902) <science-and-hypothesis-unit-2-fr>` · :ref:`Summary <science-and-hypothesis-unit-2-summary>` · :ref:`Notes <science-and-hypothesis-unit-2-notes>`
+.. toctree::
+   :hidden:
+   :maxdepth: 1
 
-**Unit III: Space and Geometry** (*Deuxième Partie, Chapitre IV : L'Espace et la Géométrie* — Visual, Tactile & Motor Space, Compensated Displacements, the Heated-Disk Non-Euclidean World, Four-Dimensional Perspectives & Transformation Groups)
-   :ref:`English (1905) <science-and-hypothesis-unit-3-en>` · :ref:`French (1902) <science-and-hypothesis-unit-3-fr>` · :ref:`Summary <science-and-hypothesis-unit-3-summary>` · :ref:`Notes <science-and-hypothesis-unit-3-notes>`
-
-**Unit IV: Experience, Geometry & Physical Hypotheses** (*Deuxième Partie, Chapitre V : L'Expérience et la Géométrie & Pont vers les Parties III–IV* — Stellar Parallax, Crucial Experiments, Ancestral Experience, Classical Mechanics, Relative Motion & Hypotheses in Physics)
-   :ref:`English (1905) <science-and-hypothesis-unit-4-en>` · :ref:`French (1902) <science-and-hypothesis-unit-4-fr>` · :ref:`Summary <science-and-hypothesis-unit-4-summary>` · :ref:`Notes <science-and-hypothesis-unit-4-notes>`
+   part_01/index
+   part_02/index
 
 ----
 
@@ -58,40 +59,6 @@ Scholarly Apparatus
 * :ref:`Bibliography <bibliography>` — Primary 1902/1905 public-domain editions, Poincaré's 1882–1902 memoirs, the 1898–1900 Russell–Poincaré debate, and Hoenen's 1954 critique.
 * :ref:`People <persons>` — Twenty-eight geometers, physicists, and philosophers cited across treatise and commentary.
 * :ref:`Technical Glossary <glossary>` — French (1902), German, Latin, and English terminology of geometric conventionalism, conformal disk inversion, and Rational Trigonometry.
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: English Edition (1905)
-
-   unit-1-number-and-magnitude/unit-1-number-and-magnitude-en
-   unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-en
-   unit-3-space-and-geometry/unit-3-space-and-geometry-en
-   unit-4-experience-and-geometry/unit-4-experience-and-geometry-en
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: French (1902)
-
-   unit-1-number-and-magnitude/unit-1-number-and-magnitude-fr
-   unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-fr
-   unit-3-space-and-geometry/unit-3-space-and-geometry-fr
-   unit-4-experience-and-geometry/unit-4-experience-and-geometry-fr
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-   :caption: Summaries & Commentary
-
-   unit-1-number-and-magnitude/unit-1-number-and-magnitude-summary
-   unit-1-number-and-magnitude/unit-1-number-and-magnitude-notes
-   unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-summary
-   unit-2-non-euclidean-geometries/unit-2-non-euclidean-geometries-notes
-   unit-3-space-and-geometry/unit-3-space-and-geometry-summary
-   unit-3-space-and-geometry/unit-3-space-and-geometry-notes
-   unit-4-experience-and-geometry/unit-4-experience-and-geometry-summary
-   unit-4-experience-and-geometry/unit-4-experience-and-geometry-notes
 
 .. toctree::
    :maxdepth: 1
