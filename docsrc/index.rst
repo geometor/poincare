@@ -2,13 +2,13 @@
 
 .. container:: author-overline
 
-   the works of
+   semantic digital archive • the works of
 
 ==============
 Henri Poincaré
 ==============
 
-The mission of this project is to capture a semantic digital library of the works of :person:`Henri Poincaré <poincare>` (1854–1912), the French mathematician and polymath whose *La Science et l'Hypothèse* revolutionized geometric epistemology through non-Euclidean spaces, transformation groups, and the conformal hyperbolic disk.
+The works of :person:`Henri Poincaré <poincare>` (1854–1912), French mathematician and theoretical polymath, revolutionized geometric epistemology through non-Euclidean spaces, continuous transformation groups, and the conformal hyperbolic disk. Within the interconnected `GEOMETOR <https://geometor.com/books/>`_ semantic digital archive, these foundational treatises are liberated from static print bounds—decomposed into addressable semantic units, synchronized bilingual codices, calibrated vector diagrams, and cross-corpus citations speaking one shared geometric language.
 
 .. collection::
    :type: book
