@@ -1,13 +1,20 @@
 :layout: book
+:canonical_id: Chapitre IV
+:order: 2
+:title: Chapitre IV : L'espace et la géométrie
+:breadcrumb_title: Chapitre IV
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-04-fr:
+.. _science-and-hypothesis-ch-04-fr:
 .. _science-and-hypothesis-unit-3-fr:
 
-Unité III : L'Espace et la Géométrie
-====================================
+Chapitre IV : L'espace et la géométrie
+======================================
 
-.. rubric:: Henri Poincaré — *La Science et l'Hypothèse*, Deuxième Partie (*L'Espace*), Chapitre IV (Flammarion 1902)
+.. rubric:: Henri Poincaré — *La Science et l'Hypothèse*, Deuxième Partie (*L'Espace*), Chapitre IV
 
-.. contents:: Dans cette unité
+.. contents:: Dans ce chapitre
    :local:
    :depth: 2
    :backlinks: none

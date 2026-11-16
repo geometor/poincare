@@ -1,13 +1,21 @@
 :layout: book
+:canonical_id: Chapter V
+:order: 3
+:title: Chapter V: Experience and Geometry
+:breadcrumb_title: Chapter V
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-05:
+.. _science-and-hypothesis-ch-05:
+.. _science-and-hypothesis-ch-05-en:
 .. _science-and-hypothesis-unit-4-en:
 
-Unit IV: Experience, Geometry & Physical Hypotheses
-===================================================
+Chapter V: Experience and Geometry
+==================================
 
-.. rubric:: Henri Poincaré — *Science and Hypothesis*, Part II Chapter V & Bridge to Parts III–IV (Chapters VI, VII, IX)
+.. rubric:: Henri Poincaré — *Science and Hypothesis*, Part II (*Space*), Chapter V & Bridge to Mechanics & Physics
 
-.. contents:: In This Unit
+.. contents:: In This Chapter
    :local:
    :depth: 2
    :backlinks: none
@@ -230,3 +238,10 @@ Here then we should be led astray by proceeding to the limit. The mind has to ru
 .. rubric:: Witness Footnotes
 
 .. [#u4p1] V. *Past and Present*, end of Chapter I., Book II.—[TR.]
+
+.. toctree::
+   :hidden:
+
+   fr
+   summary
+   notes

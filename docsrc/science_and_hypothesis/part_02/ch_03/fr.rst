@@ -1,13 +1,20 @@
 :layout: book
+:canonical_id: Chapitre III
+:order: 1
+:title: Chapitre III : Les géométries non euclidiennes
+:breadcrumb_title: Chapitre III
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-03-fr:
+.. _science-and-hypothesis-ch-03-fr:
 .. _science-and-hypothesis-unit-2-fr:
 
-Unité II : Les Géométries non euclidiennes
-==========================================
+Chapitre III : Les géométries non euclidiennes
+==============================================
 
-.. rubric:: Henri Poincaré — *La Science et l'Hypothèse*, Deuxième Partie (*L'Espace*), Chapitre III (Flammarion 1902)
+.. rubric:: Henri Poincaré — *La Science et l'Hypothèse*, Deuxième Partie (*L'Espace*), Chapitre III
 
-.. contents:: Dans cette unité
+.. contents:: Dans ce chapitre
    :local:
    :depth: 2
    :backlinks: none

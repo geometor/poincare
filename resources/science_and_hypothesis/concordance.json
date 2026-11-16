@@ -56,9 +56,14 @@
       "id": "PC.01",
       "title": "Reasoning by Recurrence vs. Logicism and Formalism",
       "poincare_locus": "Introduction & Part I, Ch. I (FR pp. 9–28 / EN pp. 1–17)",
-      "unit_ref": "science-and-hypothesis-unit-1-en",
-      "unit_ref_label": "Unit I (Ch. I)",
-      "sister_repos": ["bertrand-russell", "hilbert", "aquinas", "hoenen"],
+      "unit_ref": "science-and-hypothesis-ch-01-en",
+      "unit_ref_label": "Ch. I",
+      "sister_repos": [
+        "bertrand-russell",
+        "hilbert",
+        "aquinas",
+        "hoenen"
+      ],
       "symbolic_function": "construct_dedekind_continuum_cut",
       "synthesis": "Poincaré defends complete mathematical induction (raisonnement par récurrence) as an irreducible synthetic a priori intuition condensing an infinite cascade of syllogisms into a single formula—challenging both Bertrand Russell's logicist reduction in Principles of Mathematics (1903) and David Hilbert's purely formal consistency program."
     },
@@ -66,9 +71,14 @@
       "id": "PC.02",
       "title": "Dedekind's Irrational Cuts vs. Fechner's Perceptual Continuum",
       "poincare_locus": "Part I, Ch. II (FR pp. 29–48 / EN pp. 18–34)",
-      "unit_ref": "science-and-hypothesis-unit-1-en",
-      "unit_ref_label": "Unit I (Ch. II)",
-      "sister_repos": ["euclid", "elements", "aristotle", "hilbert"],
+      "unit_ref": "science-and-hypothesis-ch-02-en",
+      "unit_ref_label": "Ch. II",
+      "sister_repos": [
+        "euclid",
+        "elements",
+        "aristotle",
+        "hilbert"
+      ],
       "symbolic_function": "construct_dedekind_continuum_cut",
       "synthesis": "Contrasts the physical continuum governed by Fechner's threshold paradox (A = B, B = C, A < C) against the mathematical continuum created via Dedekind cuts (such as √2/2 bisecting the unit square diagonal on x^2 + y^2 = 1), culminating in multidimensional cuts and Analysis Situs."
     },
@@ -76,9 +86,14 @@
       "id": "PC.03",
       "title": "Independence of Euclid's Fifth Postulate: Lobachevsky Horoparallels & Ultraparallels",
       "poincare_locus": "Part II, Ch. III §§ 1–2 (FR pp. 49–53 / EN pp. 35–39)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["euclid", "elements", "proclus", "hilbert"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "euclid",
+        "elements",
+        "proclus",
+        "hilbert"
+      ],
       "symbolic_function": "construct_ultraparallels_through_point",
       "synthesis": "Resolves two millennia of attempts (from Posidonius and Proclus to Saccheri and Legendre) to deduce Euclid's Postulate V from Postulates I–IV: in the Poincaré disk, through P ∉ L_hyp pass two asymptotic horoparallels and infinitely many disjoint ultraparallels."
     },
@@ -86,9 +101,14 @@
       "id": "PC.04",
       "title": "Poincaré's Translation Dictionary & Relative Consistency via Circle Inversion",
       "poincare_locus": "Part II, Ch. III §§ 5–6 (FR pp. 55–58 / EN pp. 41–43)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["casey", "lemoine", "pappus", "hilbert"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "casey",
+        "lemoine",
+        "pappus",
+        "hilbert"
+      ],
       "symbolic_function": "construct_inversion_in_horizon / construct_hyperbolic_geodesic",
       "synthesis": "Applies Casey's theory of orthogonal circles and Lemoine/Adler horizon inversion (OP · OP* = 1) to translate every theorem of Lobachevsky into an ordinary Euclidean theorem about circles orthogonal to Ω—establishing the model-theoretic proof of relative consistency alongside Hilbert (1899)."
     },
@@ -96,9 +116,14 @@
       "id": "PC.05",
       "title": "Cross-Ratio Logarithmic Metric & Wildberger's Rational Hyperbolic Quadrance",
       "poincare_locus": "Part II, Ch. III § 5 (FR p. 57 / EN p. 42)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["pappus", "wildberger", "klein", "codes"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "pappus",
+        "wildberger",
+        "klein",
+        "codes"
+      ],
       "symbolic_function": "hyperbolic_cross_ratio_and_quadrance",
       "synthesis": "Unites Pappus's projective cross-ratio χ(P, Q; U, V) and Poincaré's logarithmic metric d_H = ln(χ) with Norman Wildberger's transcendental-free Universal Hyperbolic Quadrance q_UHG(P, Q) = -4τ/(1-τ)^2 over Q, proven algebraically equivalent via (1-τ)^2(χ^2+1)^2 = 4(1+τ)^2 χ^2."
     },
@@ -106,9 +131,13 @@
       "id": "PC.06",
       "title": "Ideal Hyperbolic Triangles & Saccheri's Acute Angle Hypothesis",
       "poincare_locus": "Part II, Ch. III §§ 1, 5 (FR pp. 50, 57 / EN pp. 36, 42)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["euclid", "elements", "wildberger"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "euclid",
+        "elements",
+        "wildberger"
+      ],
       "symbolic_function": "construct_ideal_hyperbolic_triangle / construct_saccheri_triangleDefect",
       "synthesis": "Demonstrates over pure Q that Pythagorean ideal vertices U_1=(1,0), U_2=(-3/5,4/5), U_3=(-3/5,-4/5) bound an orthogonal-circle triangle with rational centers (1,2), (1,-2), (-5/3,0) and 0° interior spreads (defect π), while Saccheri quadrilateral A_1 A_2 B_2 B_1 exhibits acute summit spread 64/145 < 1."
     },
@@ -116,9 +145,13 @@
       "id": "PC.07",
       "title": "The Fourth Indefinite Geometry & Chromogeometric Red Metric",
       "poincare_locus": "Part II, Ch. III § 8 (FR pp. 60–61 / EN pp. 46–47)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["wildberger", "klein", "hilbert"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "wildberger",
+        "klein",
+        "hilbert"
+      ],
       "symbolic_function": "hyperbolic_cross_ratio_and_quadrance",
       "synthesis": "Poincaré's little-noticed 'Fourth Geometry'—generated by reflections across the exterior of the fundamental circle where a real line can be perpendicular to itself (isotropic null line)—anticipates both Minkowski spacetime (1905–1908) and Wildberger's Red relativistic metric in Chromogeometry."
     },
@@ -126,9 +159,12 @@
       "id": "PC.08",
       "title": "Veronese & Hilbert's Non-Archimedean Geometries (1899 Grundlagen Restoration)",
       "poincare_locus": "Part II, Ch. III § 10 & Ch. IV § 7 (FR pp. 63–64, 90)",
-      "unit_ref": "science-and-hypothesis-unit-2-en",
-      "unit_ref_label": "Unit II (Ch. III)",
-      "sister_repos": ["hilbert", "euclid"],
+      "unit_ref": "science-and-hypothesis-ch-03-en",
+      "unit_ref_label": "Ch. III",
+      "sister_repos": [
+        "hilbert",
+        "euclid"
+      ],
       "symbolic_function": "construct_dedekind_continuum_cut",
       "synthesis": "Critical philological restoration: the Flammarion French text contains Poincaré's explicit analysis of David Hilbert's 1899 Grundlagen der Geometrie non-Archimedean field Ω(t) (omitted in 1905 English printings derived from Poincaré's 1891 essay), linking Ch. II's third-order continuum directly to geometor/hilbert."
     },
@@ -136,9 +172,13 @@
       "id": "PC.09",
       "title": "Poincaré's Heated-Disk World & Conformal Optical Geodesics",
       "poincare_locus": "Part II, Ch. IV §§ 5–6 (FR pp. 82–88 / EN pp. 64–69)",
-      "unit_ref": "science-and-hypothesis-unit-3-en",
-      "unit_ref_label": "Unit III (Ch. IV)",
-      "sister_repos": ["klein", "casey", "walter-russell"],
+      "unit_ref": "science-and-hypothesis-ch-04-en",
+      "unit_ref_label": "Ch. IV",
+      "sister_repos": [
+        "klein",
+        "casey",
+        "walter-russell"
+      ],
       "symbolic_function": "construct_heated_disk_optical_rays",
       "synthesis": "Models sentient observers inside a disk of radius R with temperature T ∝ R^2 - r^2, thermal dilation proportional to R^2 - r^2, and refractive index n ∝ (R^2 - r^2)^(-1): Fermat's principle forces light rays along orthogonal circular geodesics, making the world intrinsically infinite and Lobachevskian."
     },
@@ -146,9 +186,14 @@
       "id": "PC.10",
       "title": "Lie Groups, Erlanger Programm & the Beltrami–Klein Radial Bridge",
       "poincare_locus": "Part II, Ch. III § 9 & Ch. IV §§ 4, 7 (FR pp. 61–63, 77–91 / EN pp. 47–48, 59–71)",
-      "unit_ref": "science-and-hypothesis-unit-3-en",
-      "unit_ref_label": "Unit III (Ch. IV)",
-      "sister_repos": ["klein", "pappus", "wildberger", "codes"],
+      "unit_ref": "science-and-hypothesis-ch-04-en",
+      "unit_ref_label": "Ch. IV",
+      "sister_repos": [
+        "klein",
+        "pappus",
+        "wildberger",
+        "codes"
+      ],
       "symbolic_function": "construct_beltrami_klein_bridge",
       "synthesis": "Bridges Felix Klein's Erlanger Programm (geometor/klein) and interactive CindyJS Cayley–Klein models (geometor/codes) to Poincaré's conformal disk via the exact straightedge radial theorem: ray OP meets straight Beltrami–Klein chord UV at K(P) = 2P / (1 + ||P||^2)."
     },
@@ -156,9 +201,13 @@
       "id": "PC.11",
       "title": "Stellar Parallax, Crucial Experiments & Geometric Conventionalism",
       "poincare_locus": "Part II, Ch. V (FR pp. 92–109 / EN pp. 72–88)",
-      "unit_ref": "science-and-hypothesis-unit-4-en",
-      "unit_ref_label": "Unit IV (Ch. V)",
-      "sister_repos": ["bertrand-russell", "hoenen", "hilbert"],
+      "unit_ref": "science-and-hypothesis-ch-05-en",
+      "unit_ref_label": "Ch. V",
+      "sister_repos": [
+        "bertrand-russell",
+        "hoenen",
+        "hilbert"
+      ],
       "symbolic_function": "construct_stellar_parallax_conventionalism",
       "synthesis": "Demonstrates why even an astronomical parallax measurement α + β + γ < π could never empirically falsify Euclidean geometry, since physics always tests the joint bundle (Geometry + Optics), and Euclidean geometry remains privileged by group-theoretic simplicity."
     },
@@ -166,9 +215,14 @@
       "id": "PC.12",
       "title": "The Poincaré–Russell Debate (1898–1900) & Hoenen's Intelligible Matter Critique (1954)",
       "poincare_locus": "Part II, Chs. III–V & Bridge to Parts III–IV (Chs. VI, VII, IX)",
-      "unit_ref": "science-and-hypothesis-unit-4-notes",
-      "unit_ref_label": "Unit IV (Notes)",
-      "sister_repos": ["bertrand-russell", "hoenen", "aquinas", "aristotle"],
+      "unit_ref": "science-and-hypothesis-ch-05-notes",
+      "unit_ref_label": "Ch. V (Notes)",
+      "sister_repos": [
+        "bertrand-russell",
+        "hoenen",
+        "aquinas",
+        "aristotle"
+      ],
       "symbolic_function": "construct_stellar_parallax_conventionalism",
       "synthesis": "Synthesizes the three-cornered epistemological dialogue across GEOMETOR: Poincaré's conventionalism ('disguised definitions'), Bertrand Russell's defense of metric apriority and absolute relations (Mind 1898, RMM 1899–1900), and P. H. J. Hoenen's Thomistic resolution via abstraction in materia intelligibilis (De Noetica Geometriae, 1954)."
     }

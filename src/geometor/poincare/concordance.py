@@ -28,13 +28,15 @@ __all__ = [
     "verify_sources_manifest",
 ]
 
-CODEX_UNITS: tuple[str, ...] = (
-    "unit-1-number-and-magnitude",
-    "unit-2-non-euclidean-geometries",
-    "unit-3-space-and-geometry",
-    "unit-4-experience-and-geometry",
+CODEX_CHAPTERS: tuple[str, ...] = (
+    "part_01/ch_01",
+    "part_01/ch_02",
+    "part_02/ch_03",
+    "part_02/ch_04",
+    "part_02/ch_05",
 )
-
+CODEX_UNITS: tuple[str, ...] = CODEX_CHAPTERS
+TRACK_FILES: tuple[str, ...] = ("index.rst", "fr.rst", "summary.rst", "notes.rst")
 TRACK_SUFFIXES: tuple[str, ...] = ("en", "fr", "summary", "notes")
 
 
@@ -353,9 +355,9 @@ def audit_codex_repository(repo_root: Path | None = None) -> CodexAuditReport:
 
     codex_dir = root / "docsrc" / "science_and_hypothesis"
     track_count = 0
-    for unit in CODEX_UNITS:
-        for suf in TRACK_SUFFIXES:
-            rst_file = codex_dir / unit / f"{unit}-{suf}.rst"
+    for chapter in CODEX_CHAPTERS:
+        for tfile in TRACK_FILES:
+            rst_file = codex_dir / chapter / tfile
             if not rst_file.is_file():
                 raise FileNotFoundError(f"Missing synchronized track file: {rst_file}")
             txt = rst_file.read_text(encoding="utf-8")

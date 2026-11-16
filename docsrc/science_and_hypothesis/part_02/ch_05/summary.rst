@@ -1,11 +1,18 @@
 :layout: book
+:canonical_id: Chapter V
+:order: 3
+:title: Chapter V: Experience and Geometry — Summary
+:breadcrumb_title: Chapter V Summary
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-05-summary:
+.. _science-and-hypothesis-ch-05-summary:
 .. _science-and-hypothesis-unit-4-summary:
 
-Unit IV: Experience, Geometry & Physical Hypotheses — Summary
-=============================================================
+Chapter V: Experience and Geometry — Summary
+============================================
 
-.. rubric:: Analytical Digest of Chapter V & the Epistemological Bridge to Mechanics and Physics (Chs. VI, VII, IX)
+.. rubric:: Analytical Digest of Chapter V & Epistemological Bridge to Mechanics and Physics
 
 .. contents:: In This Summary
    :local:

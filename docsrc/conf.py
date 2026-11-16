@@ -33,7 +33,9 @@ repo_name = "poincare"
 
 setup_globals(org, org_name, repo, repo_name)  # noqa: F405
 
-project = "GEOMETOR • poincare"
+site_title = "Henri Poincaré"
+project = site_title
+html_title = f"{site_title} • {org_name}"
 author = "Henri Poincaré"
 copyright = (
     "1902 Ernest Flammarion · 1905 Walter Scott / Science Press · Digital Codex GEOMETOR"
@@ -46,6 +48,8 @@ autoapi_dirs = [str(_REPO_ROOT / "src" / "geometor")]
 autoapi_add_toctree_entry = False
 if "modules/api/geometor/poincare/index.rst" not in exclude_patterns:  # noqa: F405
     exclude_patterns.append("modules/api/geometor/poincare/index.rst")  # noqa: F405
+
+suppress_warnings = ["autoapi.python_import_resolution", "toc.not_included"]
 
 # Bind offline-first local intersphinx inventories across the GEOMETOR canon
 configure_local_intersphinx(intersphinx_mapping, _REPO_ROOT)  # noqa: F405

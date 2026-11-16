@@ -1,11 +1,18 @@
 :layout: book
+:canonical_id: Chapter V
+:order: 3
+:title: Chapter V: Experience and Geometry — Scholarly Notes
+:breadcrumb_title: Chapter V Notes
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-05-notes:
+.. _science-and-hypothesis-ch-05-notes:
 .. _science-and-hypothesis-unit-4-notes:
 
-Unit IV: Experience, Geometry & Physical Hypotheses — Scholarly Notes
-=====================================================================
+Chapter V: Experience and Geometry — Scholarly Notes
+====================================================
 
-.. rubric:: Stellar Parallax Holism, the Poincaré–Russell Debate (1898–1900) & Hoenen's Critique (1954)
+.. rubric:: Stellar Parallax Holism, the Poincaré–Russell Debate & Hoenen's Critique
 
 .. contents:: In These Notes
    :local:

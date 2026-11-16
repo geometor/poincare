@@ -1,11 +1,18 @@
 :layout: book
+:canonical_id: Chapter III
+:order: 1
+:title: Chapter III: Non-Euclidean Geometries — Summary
+:breadcrumb_title: Chapter III Summary
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-03-summary:
+.. _science-and-hypothesis-ch-03-summary:
 .. _science-and-hypothesis-unit-2-summary:
 
-Unit II: Non-Euclidean Geometries — Summary
-===========================================
+Chapter III: Non-Euclidean Geometries — Summary
+===============================================
 
-.. rubric:: Analytical Digest of Part II, Chapter III (*Les géométries non euclidiennes*)
+.. rubric:: Analytical Digest of Chapter III: Lobachevsky, Riemann, Beltrami & Conventionalism
 
 .. contents:: In This Summary
    :local:

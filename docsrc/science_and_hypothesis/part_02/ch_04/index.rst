@@ -1,13 +1,21 @@
 :layout: book
+:canonical_id: Chapter IV
+:order: 2
+:title: Chapter IV: Space and Geometry
+:breadcrumb_title: Chapter IV
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-04:
+.. _science-and-hypothesis-ch-04:
+.. _science-and-hypothesis-ch-04-en:
 .. _science-and-hypothesis-unit-3-en:
 
-Unit III: Space and Geometry
-============================
+Chapter IV: Space and Geometry
+==============================
 
 .. rubric:: Henri Poincaré — *Science and Hypothesis*, Part II (*Space*), Chapter IV
 
-.. contents:: In This Unit
+.. contents:: In This Chapter
    :local:
    :depth: 2
    :backlinks: none
@@ -102,3 +110,10 @@ Experiment guides us in this choice, which it does not impose on us. It tells us
 .. picture:: /_static/figures/fig7_cayley_klein_beltrami_bridge.svg
    :alt: Exact radial projection K(P) = 2P/(1 + ||P||^2) connecting the Poincaré conformal arc UV to the straight Beltrami-Klein chord UV.
    :caption: **Fig. 7 — The Beltrami–Klein / Poincaré Radial Bridge.** For ideal endpoints :g:`U (1, 0) <fig7_cayley_klein_beltrami_bridge:U>` and :g:`V (0, 1) <fig7_cayley_klein_beltrami_bridge:V>` on :g:`Ω <fig7_cayley_klein_beltrami_bridge:Omega>`, Euclidean straightedge rays :g:`/ O K1 / <fig7_cayley_klein_beltrami_bridge:/ O K1 />` and :g:`/ O K2 / <fig7_cayley_klein_beltrami_bridge:/ O K2 />` from :g:`O <fig7_cayley_klein_beltrami_bridge:O>` through Poincaré points :g:`P₁ (2/5, 1/5) <fig7_cayley_klein_beltrami_bridge:P1>` and :g:`P₂ (1/5, 2/5) <fig7_cayley_klein_beltrami_bridge:P2>` on conformal arc :g:`( U V ) <fig7_cayley_klein_beltrami_bridge:( U V )>` intersect the straight Beltrami–Klein chord :g:`/ U V / <fig7_cayley_klein_beltrami_bridge:/ U V />` at exact Weierstrass images :g:`K₁ (2/3, 1/3) <fig7_cayley_klein_beltrami_bridge:K1>` and :g:`K₂ (1/3, 2/3) <fig7_cayley_klein_beltrami_bridge:K2>` where $K(P) = 2P/(1 + \|P\|^2)$.
+
+.. toctree::
+   :hidden:
+
+   fr
+   summary
+   notes

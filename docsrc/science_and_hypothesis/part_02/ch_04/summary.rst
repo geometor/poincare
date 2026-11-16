@@ -1,11 +1,18 @@
 :layout: book
+:canonical_id: Chapter IV
+:order: 2
+:title: Chapter IV: Space and Geometry — Summary
+:breadcrumb_title: Chapter IV Summary
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-04-summary:
+.. _science-and-hypothesis-ch-04-summary:
 .. _science-and-hypothesis-unit-3-summary:
 
-Unit III: Space and Geometry — Summary
-======================================
+Chapter IV: Space and Geometry — Summary
+========================================
 
-.. rubric:: Analytical Digest of Part II, Chapter IV (*L'Espace et la Géométrie*)
+.. rubric:: Analytical Digest of Chapter IV: Perceptual Space, Compensated Displacements & the Heated Disk
 
 .. contents:: In This Summary
    :local:

@@ -1,13 +1,21 @@
 :layout: book
+:canonical_id: Chapter III
+:order: 1
+:title: Chapter III: Non-Euclidean Geometries
+:breadcrumb_title: Chapter III
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-03:
+.. _science-and-hypothesis-ch-03:
+.. _science-and-hypothesis-ch-03-en:
 .. _science-and-hypothesis-unit-2-en:
 
-Unit II: Non-Euclidean Geometries
-=================================
+Chapter III: Non-Euclidean Geometries
+=====================================
 
 .. rubric:: Henri Poincaré — *Science and Hypothesis*, Part II (*Space*), Chapter III
 
-.. contents:: In This Unit
+.. contents:: In This Chapter
    :local:
    :depth: 2
    :backlinks: none
@@ -109,3 +117,10 @@ On the Nature of Axioms: Geometric Conventionalism (``[p. 48–50]``)
 
 .. [#u2bolyai] *Editorial correction:* Greenstreet's 1905 London printing inadvertently translates Flammarion p. 50 (*« un Russe et un Hongrois, Lobatchevsky et Bolyai »*) as *"a Russian and a Bulgarian"*; :person:`János Bolyai <bolyai>` (1802–1860) was Hungarian, as rightly rendered in :person:`Halsted <halsted>`'s 1905 American edition (*"a Russian and a Hungarian"*).
 .. [#u2b1] *Logic*, c. viii., cf. Definitions, § 5-6. Tr.
+
+.. toctree::
+   :hidden:
+
+   fr
+   summary
+   notes

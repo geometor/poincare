@@ -234,7 +234,7 @@ def test_exported_svgs_codex_integrity_and_g_role_wiring() -> None:
     """Verify all 8 SVGs parse cleanly, match :g: targets, and book pages embed zero py_file."""
     report = audit_codex_repository(REPO_ROOT)
     assert report.witness_count == 3
-    assert report.unit_track_files == 16
+    assert report.unit_track_files == 20
     assert report.figure_count == 8
     assert report.dictionary_rows == 8
     assert report.concordance_entries == 12

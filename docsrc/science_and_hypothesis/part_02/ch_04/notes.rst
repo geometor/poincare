@@ -1,11 +1,18 @@
 :layout: book
+:canonical_id: Chapter IV
+:order: 2
+:title: Chapter IV: Space and Geometry — Scholarly Notes
+:breadcrumb_title: Chapter IV Notes
+:tracks: English: index | Français: fr | Summary: summary | Notes: notes
 
+.. _science-and-hypothesis-part-02-ch-04-notes:
+.. _science-and-hypothesis-ch-04-notes:
 .. _science-and-hypothesis-unit-3-notes:
 
-Unit III: Space and Geometry — Scholarly Notes
-==============================================
+Chapter IV: Space and Geometry — Scholarly Notes
+================================================
 
-.. rubric:: Variational Optics of the Heated Disk, Erlanger Programm & Beltrami–Klein Bridge
+.. rubric:: The Heated-Disk Conformal Metric, Fermat's Principle & the Beltrami–Klein Bridge
 
 .. contents:: In These Notes
    :local:
