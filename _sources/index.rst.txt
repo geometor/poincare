@@ -10,8 +10,7 @@ Henri Poincaré
 
 The works of :person:`Henri Poincaré <poincare>` (1854–1912), French mathematician and theoretical polymath, revolutionized geometric epistemology through non-Euclidean spaces, continuous transformation groups, and the conformal hyperbolic disk. Within the interconnected `GEOMETOR <https://geometor.com/books/>`_ semantic digital archive, these foundational treatises are liberated from static print bounds—decomposed into addressable semantic units, synchronized bilingual codices, calibrated vector diagrams, and cross-corpus citations speaking one shared geometric language.
 
-.. collection::
-   :type: book
+.. reference-directory::
    :sort: order
 
 .. toctree::

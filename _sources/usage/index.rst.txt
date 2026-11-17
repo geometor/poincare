@@ -63,7 +63,7 @@ Document collections throughout the site (such as the :doc:`Development Log <../
 6. People, Bibliography & Glossary Tooltips
 -------------------------------------------
 
-* **People (``:person:``)**: Historical figures (such as :person:`Henri Poincaré <poincare>`, :person:`W. J. Greenstreet <greenstreet>`, :person:`Sir Joseph Larmor <larmor>`, :person:`Nikolai Lobachevsky <lobachevsky>`, :person:`Bernhard Riemann <riemann>`, and :person:`David Hilbert <hilbert>`) display rich biographical hover cards linking to the :doc:`People Register <../science_and_hypothesis/persons>`.
+* **People (``:person:``)**: Historical figures (such as :person:`Henri Poincaré <poincare>`, :person:`W. J. Greenstreet <greenstreet>`, :person:`Sir Joseph Larmor <larmor>`, :person:`Nikolai Lobachevsky <lobachevsky>`, :person:`Bernhard Riemann <riemann>`, and :person:`David Hilbert <hilbert>`) display rich biographical hover cards linking to the :doc:`People Register <../science_and_hypothesis/people/index>`.
 * **Citations (``:cite:``)**: Inline citations link to authoritative editions in the :doc:`Bibliography <../science_and_hypothesis/bibliography>`.
 * **Technical Terms (``:term:``)**: Classical and modern geometric terms (such as *convention*, *dedekind-cut*, *heated-disk*, and *circle-inversion*) link directly to entries in the :doc:`Technical Glossary <../science_and_hypothesis/glossary>`.
 * **Theme Switching**: Toggle between Light and Dark themes via the header button to suit your reading environment.
