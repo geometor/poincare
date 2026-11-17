@@ -3,7 +3,7 @@
 :order: 3
 :title: Chapitre V : L'expérience et la géométrie
 :breadcrumb_title: Chapitre V
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-02-ch-05-fr:
 .. _science-and-hypothesis-ch-05-fr:

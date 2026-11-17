@@ -3,7 +3,7 @@
 :order: 1
 :title: Chapter I: On the Nature of Mathematical Reasoning — Summary
 :breadcrumb_title: Chapter I Summary
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-01-ch-01-summary:
 .. _science-and-hypothesis-ch-01-summary:

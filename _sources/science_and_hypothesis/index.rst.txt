@@ -4,10 +4,12 @@
 :nav_title: Science and Hypothesis
 :breadcrumb_title: Science and Hypothesis
 :layout: book
+:title: Science and Hypothesis
 :book_title: Science and Hypothesis
 :book_subtitle: La Science et l'Hypothèse — Henri Poincaré (1902 / English 1905)
 :author: Henri Poincaré
 :year: 1902 / 1905
+:tracks: English: index | French: title-fr
 :excerpt: Poincaré's foundational 1902 treatise on non-Euclidean geometry, the continuum, translation dictionaries, the heated-disk world, and geometric conventionalism.
 
 .. _science-and-hypothesis-index:
@@ -20,16 +22,12 @@ Science and Hypothesis
 
 .. container:: title-page
 
-   | **LA SCIENCE ET L'HYPOTHÈSE**
-   |
    | **Author**: :person:`Henri Poincaré <poincare>` (1854–1912)
    | **First French Edition (1902)**: *La Science et l'Hypothèse*, Bibliothèque de Philosophie scientifique (Paris: Ernest Flammarion, 1902)
    | **Authorized English Translations (1905)**: Translated by :person:`W. J. Greenstreet <greenstreet>` with Preface by :person:`Sir Joseph Larmor <larmor>` (London: Walter Scott, 1905), collated with the authorized American edition translated by :person:`George Bruce Halsted <halsted>` with :person:`Henri Poincaré's <poincare>` Special Preface (New York: The Science Press, 1905)
-   | **GEOMETOR Digital Edition**: Synchronized English, French (1902), Summary & Notes Tracks with Exact Symbolic Conformal Disk Models
+   | **GEOMETOR Digital Edition**: Synchronized *English · French · Summary · Notes* Tracks with Exact Symbolic Conformal Disk Models
 
 .. epigraph::
-
-   « Les axiomes géométriques ne sont donc ni des jugements synthétiques *a priori* ni des faits expérimentaux. Ce sont des *conventions* ; notre choix, parmi toutes les conventions possibles, est *guidé* par des faits expérimentaux ; mais il reste *libre* et n'est limité que par la nécessité d'éviter toute contradiction... En d'autres termes, *les axiomes de la géométrie* (je ne parle pas de ceux de l'arithmétique) *ne sont que des définitions déguisées*. »
 
    “The geometrical axioms are therefore neither synthetic *a priori* intuitions nor experimental facts. They are *conventions*. Our choice among all possible conventions is *guided* by experimental facts; but it remains *free*, and is only limited by the necessity of avoiding every contradiction... In other words, *the axioms of geometry* (I do not speak of those of arithmetic) *are only definitions in disguise*.”
 
@@ -69,3 +67,10 @@ Scholarly Apparatus
    bibliography
    persons
    glossary
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: Title Pages
+
+   title-fr
