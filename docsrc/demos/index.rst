@@ -1,4 +1,3 @@
-:navigation: header
 :order: 25
 :nav_title: Demos
 
