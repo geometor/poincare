@@ -20,6 +20,19 @@ Books in This Archive
 
 - `Science and Hypothesis <https://geometor.github.io/poincare/science_and_hypothesis/>`_ — La Science et l'Hypothèse (1902 / English 1905), featuring unabridged bilingual French-English codex tracks across number, magnitude, space, and hypotheses, paired with calibrated interactive SVG diagrams.
 
+Python Package & Modules
+------------------------
+
+The ``geometor-poincare`` Python package (``import geometor.poincare``) provides the executable symbolic geometry, construction, and compilation modules powering this archive:
+
+- ``concordance.py`` — Scholarly concordance, archival witness verification, and RST apparatus compiler.
+- ``disk.py`` — Exact symbolic constructions in the Poincaré Conformal Hyperbolic Disk Model.
+- ``render.py`` — Publication-grade interactive ``.euclid-graphic`` SVG renderer for ``geometor.poincare``.
+- ``cli.py`` — Command-line interface for ``geometor-poincare``.
+- ``sphinx_ext.py`` — Runtime Sphinx & photon-platform/publish integration for GEOMETOR Poincaré.
+
+See the `API Reference <https://geometor.github.io/poincare/modules/>`_ for full module documentation.
+
 Repository Contents
 -------------------
 
