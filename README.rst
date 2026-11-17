@@ -18,7 +18,7 @@ Mission
 Books in This Archive
 ---------------------
 
-- **`Science and Hypothesis <https://geometor.github.io/poincare/science_and_hypothesis/>`_** — La Science et l'Hypothèse (1902 / English 1905), featuring unabridged bilingual French-English codex tracks across number, magnitude, space, and hypotheses, paired with calibrated interactive SVG diagrams.
+- `Science and Hypothesis <https://geometor.github.io/poincare/science_and_hypothesis/>`_ — La Science et l'Hypothèse (1902 / English 1905), featuring unabridged bilingual French-English codex tracks across number, magnitude, space, and hypotheses, paired with calibrated interactive SVG diagrams.
 
 Repository Contents
 -------------------
