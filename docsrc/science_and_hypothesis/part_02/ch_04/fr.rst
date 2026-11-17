@@ -3,7 +3,7 @@
 :order: 2
 :title: Chapitre IV : L'espace et la géométrie
 :breadcrumb_title: Chapitre IV
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-02-ch-04-fr:
 .. _science-and-hypothesis-ch-04-fr:

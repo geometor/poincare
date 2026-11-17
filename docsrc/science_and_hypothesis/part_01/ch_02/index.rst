@@ -3,7 +3,7 @@
 :order: 2
 :title: Chapter II: Mathematical Magnitude and Experiment
 :breadcrumb_title: Chapter II
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-01-ch-02:
 .. _science-and-hypothesis-ch-02:

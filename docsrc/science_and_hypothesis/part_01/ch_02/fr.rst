@@ -3,7 +3,7 @@
 :order: 2
 :title: Chapitre II : La grandeur mathématique et l'expérience
 :breadcrumb_title: Chapitre II
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-01-ch-02-fr:
 .. _science-and-hypothesis-ch-02-fr:

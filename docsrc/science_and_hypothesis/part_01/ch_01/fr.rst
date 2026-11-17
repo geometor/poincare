@@ -3,7 +3,7 @@
 :order: 1
 :title: Chapitre I : Sur la nature du raisonnement mathématique
 :breadcrumb_title: Chapitre I
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-01-ch-01-fr:
 .. _science-and-hypothesis-ch-01-fr:

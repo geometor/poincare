@@ -3,6 +3,11 @@ GEOMETOR • poincare
 
 **Visit the Online Archive:** https://geometor.github.io/poincare/
 
+.. image:: docsrc/_static/figures/fig1_recurrence_continuum_cuts.svg
+   :alt: GEOMETOR • poincare featured geometric construction
+   :target: https://geometor.github.io/poincare/
+   :align: center
+
 **Henri Poincaré • La Science et l'Hypothèse (Science and Hypothesis) • semantic digital archive**
 
 Mission

@@ -3,7 +3,7 @@
 :order: 1
 :title: Chapter III: Non-Euclidean Geometries — Scholarly Notes
 :breadcrumb_title: Chapter III Notes
-:tracks: English: index | Français: fr | Summary: summary | Notes: notes
+:tracks: English: index | French: fr | Summary: summary | Notes: notes
 
 .. _science-and-hypothesis-part-02-ch-03-notes:
 .. _science-and-hypothesis-ch-03-notes:
