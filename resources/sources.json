@@ -1,0 +1,23 @@
+{
+  "repository": "geometor/poincare",
+  "rights_category": "public-domain",
+  "sources": [
+    {
+      "id": "poincare-1902-flammarion",
+      "title": "La Science et l'Hypothèse (1902) & 1905 English Translations",
+      "author": "Henri Poincaré (trans. Greenstreet & Halsted)",
+      "year": "1902",
+      "era": "Project Gutenberg / Wikisource",
+      "languages": [
+        "French",
+        "English"
+      ],
+      "site_url": "https://geometor.github.io/poincare/",
+      "local_path": "resources/",
+      "pages": null,
+      "publisher": "Ernest Flammarion (1902) / Walter Scott & Science Press (1905)",
+      "rights": "Public Domain (1902 / 1905)",
+      "excerpt": "French 1902 text paired with 1905 Greenstreet & Halsted English translations."
+    }
+  ]
+}
