@@ -1,13 +1,13 @@
+.. image:: docsrc/_static/logo.png
+   :alt: GEOMETOR • poincare Medallion
+   :target: https://geometor.github.io/poincare/
+   :width: 150px
+   :align: right
+
 GEOMETOR • poincare
 ===================
 
 **Visit the Online Archive:** https://geometor.github.io/poincare/
-
-.. image:: docsrc/_static/logo.png
-   :alt: GEOMETOR • poincare Medallion
-   :target: https://geometor.github.io/poincare/
-   :width: 180px
-   :align: center
 
 .. image:: docsrc/_static/figures/fig1_recurrence_continuum_cuts.svg
    :alt: GEOMETOR • poincare featured geometric construction
