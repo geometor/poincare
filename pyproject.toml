@@ -9,7 +9,7 @@ authors = [
   { name = "phi ARCHITECT", email = "phi@geometor.com" },
 ]
 description = "Scholarly 4-track Bilingual Digital Scriptorium Book Codex for Henri Poincaré's La Science et l'Hypothèse (1902 / 1905) paired with 100% exact SymPy + geometor.model constructions of the Poincaré Conformal Hyperbolic Disk Model."
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.13"
 license = { text = "MIT" }
 classifiers = [
